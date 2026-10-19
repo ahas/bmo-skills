@@ -1,0 +1,5 @@
+{
+  "name": "bmo-worker",
+  "description": "The skills a job worker is given, held in the bmo-skills repository rather than in this machine's configuration.",
+  "version": "0.1.0"
+}

@@ -135,11 +135,14 @@ The skills keep these exactly as written, since another unit reads them as writt
 
 ## Paths named as they stand
 
-Two paths stand in the skills literally, so the units behind them keep them reachable:
+Three paths stand in the skills literally, so the units behind them keep them reachable:
 
 - **`~/.local/share/bmo/deploy/bin/bmo`,** the installed entry point bmo-cli provides, which the skills
   run every `bmo` command through.
-- **`~/.local/share/bmo/deploy/prompts/rules/deep-dives.md`,** the deep dive rule file the agency deploys.
+- **`~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md`,** the deep dive rule file in the
+  agency's own deploy tree.
+- **`~/.local/share/bmo-script/songs/`,** where the song bench keeps each song's work folder, which
+  `song-cover` names.
 
 ## Versions
 

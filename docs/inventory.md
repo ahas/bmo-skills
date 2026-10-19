@@ -24,6 +24,7 @@ what is changed on the way in.
 | of which the plugin manifest | 1 | the same listing |
 | of which the project skill `song-cover` | 1 | the same listing |
 | of which the rule for writing a skill | 1 | the same listing; it becomes text of this repository's own documents rather than a file of its own |
+| The wording list behind a link | 1 | the source tree's root `WORDING.md`, which `ui-design-rules/wording.md` links to (「Worker skills」 below) |
 | Crates | 0 | #301: a data repository takes no code; the code this repository carries is its own placer and checks |
 | Packages | 0 | #301, as above |
 | Policy files | 0 | the reader trace of this item: no policy file is read for a skill; bmo-job's closing policy names the skill `ui-design-rules` and is a consumer, not taken (`boundary.md`) |
@@ -34,7 +35,15 @@ what is changed on the way in.
 
 `prompts/agents/worker/plugin/skills/<skill>/` → `<skill>/` at this repository's root, 68 files in 20
 folders, every relative path inside a folder unchanged. Each folder's `SKILL.md` gains its bundle,
-`worker` (`format.md`).
+`worker` (`format.md`), and the names below are replaced. Where a skill names a file of another unit,
+it names that unit with it: the language pack and its document are bmo-web's, the Korean ledger's check
+is bmo-testbed's, the launch lines and the worker's trailer are bmo-agency's, and the skills themselves
+are this repository's.
+
+- **`ui-design-rules/wording.md` is a symbolic link** in the source tree, to the root `WORDING.md`. The
+  file here is that document as the source commit holds it, and the link is not kept. The document is
+  the whole source tree's wording list: its allowed uses name the source tree's own paths, and stay as
+  written.
 
 | Skill | Files | Paths inside the folder |
 |---|---|---|
@@ -140,17 +149,18 @@ test here carries Hangul; the literal each such case drops is named in the table
 
 ## Names
 
-A per-file regex sweep over the 71 files for person names, agent names, machine names, account-shaped
-tokens, home paths, internal addresses and room ids. 16 files carry one or more, totalling 88 of the
-owner's name, 62 of the chat agent's name in Latin letters, 11 of the same name in Hangul, one machine
-name, one machine pool name, one home path and one account-shaped package scope. No IP address, room id
-or other machine name occurs; a second sweep for node-shaped tokens found the pool name and nothing
-else.
+A per-file regex sweep over the 71 files and the wording list behind the link for person names, agent
+names, machine names, project names, account-shaped tokens, home paths, internal addresses and room ids,
+run again without regard to case and for node-shaped tokens. 19 files carry one or more, totalling 88 of
+the owner's name, 62 of the chat agent's name in Latin letters, 11 of the same name in Hangul, two of
+another agent's name inside a path or an engine's name, two of the owner's account name in a heading,
+one machine name, one machine pool name, one project name standing for a kind of node, one home path
+and one account-shaped package scope. No IP address, room id or other machine name occurs.
 
 | File | Owner's name | Agent name, Latin | Agent name, Hangul | Other |
 |---|---|---|---|---|
 | `.claude/rules/skills.md` | | 2 | | |
-| `.claude/skills/song-cover/SKILL.md` | 13 | 21 | | a machine name, 1 |
+| `.claude/skills/song-cover/SKILL.md` | 13 | 21 | | a machine name, 1; a project name for a kind of node, 1 |
 | `prompts/agents/worker/plugin/.claude-plugin/plugin.json` | | 2 | | |
 | `asking-the-owner/SKILL.md` | 2 | 4 | | |
 | `beyond-the-checkout/SKILL.md` | 3 | 2 | 5 | a home path, 1 |
@@ -161,14 +171,25 @@ else.
 | `eli5/SKILL.md` | | 1 | | |
 | `marking-a-wait/SKILL.md` | | 4 | | |
 | `moving-korean-out-of-code/SKILL.md` | 2 | 1 | | |
+| `my-git-docs/SKILL.md` | | | | the owner's account name in its heading, 1 |
+| `my-nuxt-style/SKILL.md` | | | | the owner's account name in its heading, 1 |
 | `my-nuxt-style/skill/vue-nuxt.md` | | | | an account-shaped package scope, 1 |
+| `refactoring/SKILL.md` | | | | another agent's name inside an engine's name, 1 |
 | `researching-and-benching/SKILL.md` | 3 | 4 | | a machine pool name, 1 |
 | `ui-design-rules/SKILL.md` | 2 | | | |
-| `ui-design-rules/wording.md` | 39 | 5 | | |
+| `ui-design-rules/wording.md` (the wording list behind the link) | 39 | 5 | | another agent's name inside a document path, 1 |
 
-- **What replaces them.** The owner's name becomes the owner; an agent acting becomes the chat agent;
-  an agent name standing for the whole system becomes the system; the machine name becomes a neutral
-  example host, and the machine pool name the GPU node pool; the home path and the package scope become a description of the thing they point at.
+- **What replaces them.** The owner's name becomes the owner, and 오너 in a Korean sentence; an agent
+  acting becomes the chat agent; an agent name standing for the whole system becomes the system; the
+  machine name becomes a neutral example host, the machine pool name the GPU node pool, and the node
+  kind a node; the home path and the package scope become a description of the thing they point at;
+  the account name leaves the two headings; the engine's name becomes the neutral `local-llm`. The
+  wording list's paragraph on lines added by another agent's training review goes, since it names that
+  agent's training document of another repository.
+- **The agent engine's copy as the model.** bmo-agency's copy of the worker skills had already replaced
+  these names in 17 of the files; its wording is taken as it stands, but for the sentences where it
+  named its own repository, which name the repository that owns each thing instead.
 - **What stays as written.** The keywords a process matches on: 미결 and the two strand marks that
-  open each of its strands, which bmo-job's close reads (`boundary.md`). The 15 deploy paths under `~/.local/share/bmo`, which
-  name the installed `bmo` entry point and an agent rule file, and carry no account or machine name.
+  open each of its strands, which bmo-job's close reads (`boundary.md`). The 12 paths of the installed
+  `bmo` entry point, and the song bench's work folder path, which carry no account or machine name.
+  The deep dive rule path names the agent engine's own deploy tree, where that engine deploys it.
