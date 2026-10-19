@@ -24,18 +24,18 @@ what is changed on the way in.
 | of which the plugin manifest | 1 | the same listing |
 | of which the project skill `song-cover`, here `bmo-song-cover` | 1 | the same listing |
 | of which the rule for writing a skill | 1 | the same listing; it becomes text of this repository's own documents rather than a file of its own |
-| The wording list behind a link | 1 | the source tree's root `WORDING.md`, which `ux-design-rules/wording.md` links to (「Worker skills」 below) |
+| The wording list behind a link | 1 | the source tree's root `WORDING.md`, which `ahas-ux-design-rules/wording.md` links to (「Worker skills」 below) |
 | Crates | 0 | #301: a data repository takes no code; the code this repository carries is its own placer and checks |
 | Packages | 0 | #301, as above |
-| Policy files | 0 | the reader trace of this item: no policy file is read for a skill; bmo-job's closing policy names the design rules skill, here `ux-design-rules`, and is a consumer, not taken (`boundary.md`) |
+| Policy files | 0 | the reader trace of this item: no policy file is read for a skill; bmo-job's closing policy names the design rules skill, here `ahas-ux-design-rules`, and is a consumer, not taken (`boundary.md`) |
 | Tests | 24 cases ported, 2 left with the trailer | the test trace of this item, 「Tests」 below |
 | Service units | 0 | #301, as above |
 
 ## Worker skills
 
 `prompts/agents/worker/plugin/skills/<skill>/` → a folder at this repository's root, 68 files in 20
-folders, every relative path inside a folder unchanged. Each skill takes its category first in its
-name (`format.md`, 「Names」), and its folder with it, as the table below pairs them; this document
+folders, every relative path inside a folder unchanged. Each skill takes its scope and category first in
+its name (`format.md`, 「Names」), and its folder with it, as the table below pairs them; this document
 names a skill by its source-tree name wherever it speaks of the source tree. Each folder's `SKILL.md`
 gains its bundle, `worker` (`format.md`), and the names below are replaced. Where a skill names a file
 of another unit, it names that unit with it: the language pack and its document are bmo-web's, the Korean ledger's check
@@ -51,23 +51,23 @@ are this repository's.
 |---|---|---|---|
 | `asking-the-owner` | `bmo-asking-the-owner` | 1 | `SKILL.md` |
 | `beyond-the-checkout` | `bmo-beyond-the-checkout` | 1 | `SKILL.md` |
-| `clean-code` | `code-clean` | 3 | `SKILL.md`, `references/principles.md`, `references/typescript.md` |
+| `clean-code` | `ahas-code-clean` | 3 | `SKILL.md`, `references/principles.md`, `references/typescript.md` |
 | `closing-a-job` | `bmo-closing-a-job` | 1 | `SKILL.md` |
-| `design-boundaries` | `code-boundaries` | 1 | `SKILL.md` |
-| `design-patterns` | `code-design-patterns` | 5 | `SKILL.md`, `references/behavioral.md`, `references/beyond-gof.md`, `references/creational.md`, `references/structural.md` |
-| `docs-conventions` | `docs-conventions` | 1 | `SKILL.md` |
-| `eli5` | `docs-eli5` | 1 | `SKILL.md` |
-| `find-skills` | `tools-find-skills` | 1 | `SKILL.md` |
+| `design-boundaries` | `ahas-code-boundaries` | 1 | `SKILL.md` |
+| `design-patterns` | `ahas-code-design-patterns` | 5 | `SKILL.md`, `references/behavioral.md`, `references/beyond-gof.md`, `references/creational.md`, `references/structural.md` |
+| `docs-conventions` | `bmo-docs-conventions` | 1 | `SKILL.md` |
+| `eli5` | `bmo-docs-eli5` | 1 | `SKILL.md` |
+| `find-skills` | `ahas-tools-find-skills` | 1 | `SKILL.md` |
 | `marking-a-wait` | `bmo-marking-a-wait` | 1 | `SKILL.md` |
-| `moving-korean-out-of-code` | `code-korean-out` | 1 | `SKILL.md` |
-| `my-git-docs` | `docs-git` | 5 | `SKILL.md`, `skill/agent-enforcement.md`, `skill/changelog.md`, `skill/documentation.md`, `skill/git-workflow.md` |
-| `my-nuxt-style` | `ux-nuxt-style` | 6 | `SKILL.md`, `skill/agent-enforcement.md`, `skill/node-base.md`, `skill/typescript.md`, `skill/vue-nuxt.md`, `skill/vue-sfc-critical.md` |
-| `nuxt-ui` | `ux-nuxt-ui` | 15 | `SKILL.md`, `references/components.md`, `references/guidelines/component-selection.md`, `references/guidelines/conventions.md`, `references/guidelines/design-system.md`, `references/guidelines/forms.md`, `references/layouts/chat.md`, `references/layouts/dashboard.md`, `references/layouts/docs.md`, `references/layouts/editor.md`, `references/layouts/landing.md`, `references/recipes/auth.md`, `references/recipes/data-tables.md`, `references/recipes/navigation.md`, `references/recipes/overlays.md` |
-| `playwright-cli` | `tools-playwright-cli` | 10 | `SKILL.md`, `references/element-attributes.md`, `references/playwright-tests.md`, `references/request-mocking.md`, `references/running-code.md`, `references/session-management.md`, `references/storage-state.md`, `references/test-generation.md`, `references/tracing.md`, `references/video-recording.md` |
-| `refactoring` | `code-refactoring` | 3 | `SKILL.md`, `references/catalog.md`, `references/smells.md` |
-| `researching-and-benching` | `tools-researching-and-benching` | 1 | `SKILL.md` |
-| `test-writing` | `code-test-writing` | 1 | `SKILL.md` |
-| `ui-design-rules` | `ux-design-rules` | 9 | `SKILL.md`, `controls.md`, `floating.md`, `layout.md`, `lists.md`, `loading.md`, `motion.md`, `notices.md`, `wording.md` |
+| `moving-korean-out-of-code` | `bmo-code-korean-out` | 1 | `SKILL.md` |
+| `my-git-docs` | `ahas-docs-git` | 5 | `SKILL.md`, `skill/agent-enforcement.md`, `skill/changelog.md`, `skill/documentation.md`, `skill/git-workflow.md` |
+| `my-nuxt-style` | `ahas-ux-nuxt-style` | 6 | `SKILL.md`, `skill/agent-enforcement.md`, `skill/node-base.md`, `skill/typescript.md`, `skill/vue-nuxt.md`, `skill/vue-sfc-critical.md` |
+| `nuxt-ui` | `ahas-ux-nuxt-ui` | 15 | `SKILL.md`, `references/components.md`, `references/guidelines/component-selection.md`, `references/guidelines/conventions.md`, `references/guidelines/design-system.md`, `references/guidelines/forms.md`, `references/layouts/chat.md`, `references/layouts/dashboard.md`, `references/layouts/docs.md`, `references/layouts/editor.md`, `references/layouts/landing.md`, `references/recipes/auth.md`, `references/recipes/data-tables.md`, `references/recipes/navigation.md`, `references/recipes/overlays.md` |
+| `playwright-cli` | `ahas-tools-playwright-cli` | 10 | `SKILL.md`, `references/element-attributes.md`, `references/playwright-tests.md`, `references/request-mocking.md`, `references/running-code.md`, `references/session-management.md`, `references/storage-state.md`, `references/test-generation.md`, `references/tracing.md`, `references/video-recording.md` |
+| `refactoring` | `ahas-code-refactoring` | 3 | `SKILL.md`, `references/catalog.md`, `references/smells.md` |
+| `researching-and-benching` | `bmo-tools-researching-and-benching` | 1 | `SKILL.md` |
+| `test-writing` | `ahas-code-test-writing` | 1 | `SKILL.md` |
+| `ui-design-rules` | `ahas-ux-design-rules` | 9 | `SKILL.md`, `controls.md`, `floating.md`, `layout.md`, `lists.md`, `loading.md`, `motion.md`, `notices.md`, `wording.md` |
 | `warm-prefix` | `bmo-warm-prefix` | 1 | `SKILL.md` |
 
 ## The manifest, the project skill and the rule
@@ -125,19 +125,19 @@ table. A test name holding a Korean word takes the English for it as its functio
 | sends a job that changed a screen back through the design rules before it closes | `bmo-closing-a-job` | |
 | tells every job to ask the graph and to bring it up to date before the commit | `bmo-closing-a-job` | |
 | and to write down the word the owner used where the graph does not carry it yet | `bmo-closing-a-job` | |
-| the worker's own rules stand in the worker's own texts, and the skill says where each rule belongs | `docs-conventions` | |
-| the restructuring passes are found by the owner's words for the work, and skipped where nothing is restructured | `code-design-patterns` | the owner's three Korean words for the work; the clause they stand in is held from its English end |
+| the worker's own rules stand in the worker's own texts, and the skill says where each rule belongs | `bmo-docs-conventions` | |
+| the restructuring passes are found by the owner's words for the work, and skipped where nothing is restructured | `ahas-code-design-patterns` | the owner's three Korean words for the work; the clause they stand in is held from its English end |
 | the warm-prefix skill gives a job the launch line its item needs, and what a warm document costs to edit | `bmo-warm-prefix` | |
 | and the worker's beyond-the-checkout skill carries the same rule from its own side | `bmo-beyond-the-checkout` | |
 | with the estate to be read rather than remembered, and no credential of its own | `bmo-beyond-the-checkout` | |
-| the rules only some jobs meet stand in skills of their own, each saying when it is read | `bmo-asking-the-owner`, `tools-researching-and-benching`, `bmo-marking-a-wait`, `code-test-writing`, `bmo-beyond-the-checkout`, `code-boundaries`, `code-refactoring`, `code-clean` | the two Korean rules of `code-boundaries`; their section's English heading stands for them |
-| the design rules carry the sweep the closing skill sends a job back to | `ux-design-rules` | |
-| the design rules keep their core under 500 lines and name every area file beside it | `ux-design-rules` | |
-| the three restructuring skills each name the order and their place in it | `code-design-patterns`, `code-refactoring`, `code-clean` | |
+| the rules only some jobs meet stand in skills of their own, each saying when it is read | `bmo-asking-the-owner`, `bmo-tools-researching-and-benching`, `bmo-marking-a-wait`, `ahas-code-test-writing`, `bmo-beyond-the-checkout`, `ahas-code-boundaries`, `ahas-code-refactoring`, `ahas-code-clean` | the two Korean rules of `ahas-code-boundaries`; their section's English heading stands for them |
+| the design rules carry the sweep the closing skill sends a job back to | `ahas-ux-design-rules` | |
+| the design rules keep their core under 500 lines and name every area file beside it | `ahas-ux-design-rules` | |
+| the three restructuring skills each name the order and their place in it | `ahas-code-design-patterns`, `ahas-code-refactoring`, `ahas-code-clean` | |
 | and they are carried by a plugin the launch line can name | the manifest | |
-| a skill copied from elsewhere keeps its origin and licence beside it | `docs-eli5` | |
+| a skill copied from elsewhere keeps its origin and licence beside it | `bmo-docs-eli5` | |
 
-Beside them, the repository's own checks hold the rest of `format.md`: every name's category, every
+Beside them, the repository's own checks hold the rest of `format.md`: every name's scope and category, every
 skill's description, the manifest's version against `VERSION`, every file of a skill named by its
 `SKILL.md` and every file it names there, every skill a skill names, and no personal value by its shape.
 

@@ -1,0 +1,106 @@
+---
+name: ahas-ux-nuxt-ui
+bundle: worker
+description: Build UIs with @nuxt/ui v4 — 125+ accessible Vue components with Tailwind CSS theming. Use when creating interfaces, theming, building forms, or composing layouts like dashboards, docs sites and chat interfaces.
+---
+
+# Nuxt UI
+
+Vue component library built on [Reka UI](https://reka-ui.com/) + [Tailwind CSS](https://tailwindcss.com/) + [Tailwind Variants](https://www.tailwind-variants.org/). bmo-web uses it with Nuxt, in its `client/`, and bmo-ui builds its common components on it.
+
+## MCP Server
+
+For component API details (props, slots, events, full documentation, examples), use the [Nuxt UI MCP server](https://ui.nuxt.com/docs/getting-started/ai/mcp) where the line you run on carries it. Every MCP server an agent here is handed is fixed in its launch line, which is code of bmo-agency's repository (its `docs/launch-lines.md`): never add one with `claude mcp add` or an MCP file of your own. Where your line has none, read the component's page under https://ui.nuxt.com/docs/components/ with `web_fetch`, and its generated theme file (rule 3); a line that ought to carry the server is changed in bmo-agency's repository as the `bmo-warm-prefix` skill says.
+
+Key MCP tools:
+- `search-components` — find components by name, category, or intent (no params = list all)
+- `search-composables` — find composables by name or description (no params = list all)
+- `search-icons` — search Iconify icons (defaults to `lucide`), returns `i-{prefix}-{name}` names
+- `get-component` — full component documentation with usage examples
+- `get-component-metadata` — props, slots, events (lightweight, no docs content)
+- `get-example` — real-world code examples
+
+When you need to know **what a component accepts** or **how its API works**, use the MCP. This skill teaches you **when to use which component** and **how to build well**.
+
+## Core rules (always apply)
+
+1. **Always wrap the app in `UApp`** — required for toasts, tooltips, and programmatic overlays. Accepts a `locale` prop for i18n.
+2. **Always use semantic colors** — `text-default`, `bg-elevated`, `border-muted`, etc. Never use raw Tailwind palette colors like `text-gray-500`.
+3. **Read generated theme files for slot names** — `.nuxt/ui/<component>.ts`. These show every slot, variant, and default class for any component.
+4. **Override priority** (highest wins): `ui` prop / `class` prop → global config → theme defaults.
+5. **Icons use `i-{collection}-{name}` format** — `lucide` is the default collection. Use the MCP `search-icons` tool to find icons, or browse at [icones.js.org](https://icones.js.org).
+
+## How to use this skill
+
+Based on the task, load the relevant reference files **before writing any code**. Don't load everything — only what's needed.
+
+### Reference files
+
+**Guidelines** — design decisions and conventions:
+- [design-system](references/guidelines/design-system.md) — semantic colors, theming, brand customization, variants, the `ui` prop
+- [component-selection](references/guidelines/component-selection.md) — decision matrices: when to use Modal vs Slideover, Select vs SelectMenu, Toast vs Alert, etc.
+- [conventions](references/guidelines/conventions.md) — coding patterns, slot naming, items arrays, composables, keyboard shortcuts
+- [forms](references/guidelines/forms.md) — form validation, field layout, error handling, Standard Schema
+
+**Layouts** — full page structure patterns:
+- [landing](references/layouts/landing.md) — landing pages, blog, changelog, pricing
+- [dashboard](references/layouts/dashboard.md) — admin UI with sidebar and panels
+- [docs](references/layouts/docs.md) — documentation sites with navigation and TOC
+- [chat](references/layouts/chat.md) — AI chat with Vercel AI SDK
+- [editor](references/layouts/editor.md) — rich text editor with toolbars
+
+**Recipes** — complete patterns for common tasks:
+- [data-tables](references/recipes/data-tables.md) — tables with filters, pagination, sorting, selection
+- [auth](references/recipes/auth.md) — login, signup, forgot password forms
+- [overlays](references/recipes/overlays.md) — modals, slideovers, drawers, command palette
+- [navigation](references/recipes/navigation.md) — headers, sidebars, breadcrumbs, tabs
+
+**Quick reference:**
+- [components](references/components.md) — categorized component index for finding the right component name
+
+### Routing table
+
+| Task | Load these references |
+|---|---|
+| Build a landing page | design-system, conventions, landing |
+| Build a dashboard / admin UI | conventions, component-selection, dashboard |
+| Add a settings page | conventions, forms |
+| Create a login / signup form | conventions, forms, auth |
+| Display data in a table | conventions, component-selection, data-tables |
+| Customize theme / brand colors | design-system |
+| Add a chat interface | conventions, chat |
+| Add a modal, slideover, or drawer | conventions, component-selection, overlays |
+| Build site navigation | conventions, component-selection, navigation |
+| Build a documentation site | conventions, docs |
+| Render markdown | component-selection, components, docs |
+| Add a rich text editor | conventions, editor |
+| General UI work | conventions, component-selection |
+
+## Installation
+
+```bash
+bun add @nuxt/ui tailwindcss
+```
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui'],
+  css: ['~/assets/css/main.css']
+})
+```
+
+```css
+/* app/assets/css/main.css */
+@import "tailwindcss";
+@import "@nuxt/ui";
+```
+
+```vue
+<!-- app.vue -->
+<template>
+  <UApp>
+    <NuxtPage />
+  </UApp>
+</template>
+```

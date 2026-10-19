@@ -188,8 +188,8 @@ fn and_to_write_down_the_word_the_owner_used_where_the_graph_does_not_carry_it_y
 #[test]
 fn the_workers_own_rules_stand_in_the_workers_own_texts_and_the_skill_says_where_each_rule_belongs() {
   holds(
-    "docs-conventions",
-    &skill_flat("docs-conventions"),
+    "bmo-docs-conventions",
+    &skill_flat("bmo-docs-conventions"),
     &[
       "The worker's own rules stand in the worker's own texts, whatever repository the work is in",
       "hold that repository's own business",
@@ -203,8 +203,8 @@ fn the_workers_own_rules_stand_in_the_workers_own_texts_and_the_skill_says_where
 fn the_restructuring_passes_are_found_by_the_owners_words_for_the_work_and_skipped_where_nothing_is_restructured()
  {
   holds(
-    "code-design-patterns",
-    &skill_flat("code-design-patterns"),
+    "ahas-code-design-patterns",
+    &skill_flat("ahas-code-design-patterns"),
     &[
       "and reviewing a design mean the same",
       "Never start at a later pass and never reorder them.",
@@ -283,8 +283,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "tools-researching-and-benching",
-    &skill_flat("tools-researching-and-benching"),
+    "bmo-tools-researching-and-benching",
+    &skill_flat("bmo-tools-researching-and-benching"),
     &[
       "Use before the first step of any item that measures, compares, tunes or researches",
       "**1. The maker's material first.**",
@@ -303,8 +303,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "code-test-writing",
-    &skill_flat("code-test-writing"),
+    "ahas-code-test-writing",
+    &skill_flat("ahas-code-test-writing"),
     &[
       "A test never waits on the real clock.",
       "A test that starts a process takes it down itself",
@@ -316,10 +316,14 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     &skill_flat("bmo-beyond-the-checkout"),
     &["~/.local/share/bmo/deploy/bin/bmo job borrow <worker>"],
   );
-  holds("code-boundaries", &skill("code-boundaries"), &["## A list a person edits is a table"]);
   holds(
-    "code-refactoring",
-    &skill_flat("code-refactoring"),
+    "ahas-code-boundaries",
+    &skill("ahas-code-boundaries"),
+    &["## A list a person edits is a table"],
+  );
+  holds(
+    "ahas-code-refactoring",
+    &skill_flat("ahas-code-refactoring"),
     &[
       "It also carries the rule that a name never becomes a wrong name later",
       "- **A name is chosen so that it never becomes a wrong name later.**",
@@ -329,8 +333,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "code-clean",
-    &skill_flat("code-clean"),
+    "ahas-code-clean",
+    &skill_flat("ahas-code-clean"),
     &["「Names that stay true」 is that rule and its test."],
   );
 }
@@ -338,8 +342,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
 #[test]
 fn the_design_rules_carry_the_sweep_the_closing_skill_sends_a_job_back_to() {
   holds(
-    "ux-design-rules",
-    &skill("ux-design-rules"),
+    "ahas-ux-design-rules",
+    &skill("ahas-ux-design-rules"),
     &[
       "## Sweeping a screen before the work is closed",
       "Sweep only the screens this change built or touched",
@@ -352,15 +356,16 @@ fn the_design_rules_carry_the_sweep_the_closing_skill_sends_a_job_back_to() {
 #[test]
 fn the_three_restructuring_skills_each_name_the_order_and_their_place_in_it() {
   holds(
-    "code-design-patterns",
-    &skill_flat("code-design-patterns"),
+    "ahas-code-design-patterns",
+    &skill_flat("ahas-code-design-patterns"),
     &[
       "## Where this pass sits",
       "design patterns, then refactoring, then clean code",
       "The order is by reach",
     ],
   );
-  for (name, place) in [("code-refactoring", "Second of three"), ("code-clean", "Last of three")] {
+  for (name, place) in [("ahas-code-refactoring", "Second of three"), ("ahas-code-clean", "Last of three")]
+  {
     let body = skill_flat(name);
     holds(
       name,
@@ -368,7 +373,7 @@ fn the_three_restructuring_skills_each_name_the_order_and_their_place_in_it() {
       &[
         "## Where this pass sits",
         &format!("{place}: design patterns, then refactoring, then clean code"),
-        "`code-design-patterns` 「Where this pass sits」",
+        "`ahas-code-design-patterns` 「Where this pass sits」",
       ],
     );
     lacks(name, &body, &["The order is by reach"]);

@@ -16,22 +16,32 @@ readers did.
 
 ## Names
 
-- **A skill's name opens with its category,** then a dash and the skill's own words: lower-case words
-  joined by dashes, as `code-clean` or `bmo-closing-a-job`. The category says what kind of work the skill
-  is for, so a listing falls into groups by itself, and a reader tells a rule good in any project from a
-  procedure of this system's own by the name alone.
-- **The categories are these five,** and a skill takes the one its work belongs to:
+- **A skill's name opens with its scope, `bmo` or `ahas`, then its category,** then the skill's own
+  words: lower-case words joined by dashes, as `ahas-code-clean` or `bmo-code-korean-out`. The scope
+  tells a skill that works in any harness from one tied to this system, and the category says what kind
+  of work it is for, so a listing falls into groups by itself and a reader knows both by the name alone.
+- **The scopes are these two,** and a skill takes the one its use calls for:
+
+| Scope | Holds |
+|---|---|
+| `bmo` | A skill that means something only where this system stands: a procedure of its own jobs, or work carried out through its commands, its archive, its services or its worker's texts |
+| `ahas` | A skill whose rules hold in any harness and any project without this system: the owner's own standards and the outside tools used anywhere. A line naming how this system carries out one of its rules leaves it `ahas` |
+
+- **The categories are these four,** and a skill takes the one its work belongs to:
 
 | Category | Holds |
 |---|---|
 | `code` | How code is written, structured, tested and kept, in any project and any language |
 | `ux` | How a user interface is designed, and the style and component library its code is written with |
 | `docs` | How a document, an explanation or the git record is written |
-| `bmo` | The procedures of this system's own jobs: a skill that means something only where its job tools and services stand |
 | `tools` | Driving an outside program, or a kind of work carried out with one |
 
-- **A sixth category is added here first,** with what it holds, and the structure check's list of
-  categories with it; a skill in a category already here changes nothing outside its folder.
+- **An `ahas` skill always takes a category.** A `bmo` skill takes one where its work belongs to one of
+  them, and a procedure of this system's own jobs takes none: its words follow the scope, as
+  `bmo-closing-a-job`.
+- **A third scope or a fifth category is added here first,** with what it holds, and the structure
+  check's lists with it; a skill in a scope and category already here changes nothing outside its
+  folder.
 
 ## `SKILL.md`
 
@@ -66,7 +76,7 @@ A skill states the one bundle it belongs to, and nothing outside its folder list
   folder, saying when to read it. A file nothing names is never read.
 - **A skill names another skill by its name,** and every skill so named exists in this repository.
 
-## `ux-design-rules`
+## `ahas-ux-design-rules`
 
 - **Its core stays under 500 lines.** Loading the skill loads `SKILL.md` whole, so the rules every screen
   answers to stand there, and the detail of each area stands in an area file beside it.

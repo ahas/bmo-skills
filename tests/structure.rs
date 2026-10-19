@@ -8,16 +8,21 @@ use std::collections::BTreeSet;
 use std::path::Path;
 use support::{ROOT, files_under, front_matter, holds, read, skill, skill_names};
 
-/// The categories a skill's name opens with (`docs/format.md`, 「Names」).
-const CATEGORIES: [&str; 5] = ["code", "ux", "docs", "bmo", "tools"];
+/// The categories a skill's name takes after its scope (`docs/format.md`, 「Names」).
+const CATEGORIES: [&str; 4] = ["code", "ux", "docs", "tools"];
 
 #[test]
-fn every_skill_name_opens_with_its_category() {
+fn every_skill_name_opens_with_its_scope_then_its_category() {
   for name in skill_names() {
-    let category = name.split_once('-').map(|(category, _)| category);
+    let words: Vec<&str> = name.split('-').collect();
+    let opens = match words.as_slice() {
+      ["ahas", category, _, ..] => CATEGORIES.contains(category),
+      ["bmo", _, ..] => true,
+      _ => false,
+    };
     assert!(
-      category.is_some_and(|category| CATEGORIES.contains(&category)),
-      "{name} opens with none of the categories {CATEGORIES:?}"
+      opens,
+      "{name} opens with neither `bmo-` nor `ahas-` and one of the categories {CATEGORIES:?}"
     );
   }
 }
@@ -44,7 +49,7 @@ fn and_they_are_carried_by_a_plugin_the_launch_line_can_name() {
 
 #[test]
 fn a_skill_copied_from_elsewhere_keeps_its_origin_and_licence_beside_it() {
-  let license = front_matter("docs-eli5").license.expect("eli5 names its licence");
+  let license = front_matter("bmo-docs-eli5").license.expect("eli5 names its licence");
   assert!(license.starts_with("MIT"), "{license}");
   assert!(license.contains("anthropics/claude-plugins-community"), "{license}");
 }
@@ -87,13 +92,13 @@ fn every_skill_a_skill_names_is_there() {
 
 #[test]
 fn the_design_rules_keep_their_core_under_500_lines_and_name_every_area_file_beside_it() {
-  let core = skill("ux-design-rules");
+  let core = skill("ahas-ux-design-rules");
   assert!(core.lines().count() < 500, "the core is {} lines", core.lines().count());
-  holds("ux-design-rules", &core, &["## The rules by area"]);
+  holds("ahas-ux-design-rules", &core, &["## The rules by area"]);
 
   let entry = Regex::new(r"(?m)^- `([a-z-]+\.md)` — ").expect("an area entry");
   let entries: BTreeSet<String> = entry.captures_iter(&core).map(|found| found[1].to_owned()).collect();
-  let areas: BTreeSet<String> = files_under(&Path::new(ROOT).join("ux-design-rules"))
+  let areas: BTreeSet<String> = files_under(&Path::new(ROOT).join("ahas-ux-design-rules"))
     .iter()
     .map(|path| path.file_name().expect("a file name").to_string_lossy().into_owned())
     .filter(|file| file.ends_with(".md") && file != "SKILL.md" && file != "wording.md")
@@ -103,8 +108,8 @@ fn the_design_rules_keep_their_core_under_500_lines_and_name_every_area_file_bes
   for area in &areas {
     holds(
       area,
-      &read(&format!("ux-design-rules/{area}")),
-      &["Part of the `ux-design-rules` skill"],
+      &read(&format!("ahas-ux-design-rules/{area}")),
+      &["Part of the `ahas-ux-design-rules` skill"],
     );
   }
 }

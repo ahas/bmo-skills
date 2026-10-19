@@ -50,11 +50,11 @@ description: "How a job puts something in front of the owner: a decision that is
     `~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md` 「The narration」, spoken in the chat agent's
     voice and kept at the document's head as its 들으며 보세요 band.
   - A document with a narration is handed over only once its sound is kept: `archive-doc` returns
-    before the narration is spoken, and the `tools-researching-and-benching` skill says how to wait for it.
+    before the narration is spoken, and the `bmo-tools-researching-and-benching` skill says how to wait for it.
   - The console address it prints goes into your question, or opens your report as the
     `bmo-closing-a-job` skill sets.
 - **A page hosted elsewhere is out of his reach** once this session is gone, kept on somebody
   else's terms — a claude.ai artifact, a Claude Docs document, a gist, a paste. The tools that
   publish one are not on a job's line, and a question or a closing that carries such an address is
   refused.
-- **Its structure is drawn**, as the `docs-conventions` skill says of every document.
+- **Its structure is drawn**, as the `bmo-docs-conventions` skill says of every document.

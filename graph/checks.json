@@ -2,7 +2,7 @@
   {
     "id": "checks/repository",
     "title": "Repository checks",
-    "what": "The tests that hold the skills of bmo-skills to their format: the rules each skill carries, every file and skill a skill names, the manifest's version, and no personal value by shape. Lives in tests/, beside the testbed declaration.",
+    "what": "The tests that hold the skills of bmo-skills to their format: every name's scope and category, the rules each skill carries, every file and skill a skill names, the manifest's version, and no personal value by shape. Lives in tests/, beside the testbed declaration.",
     "files": [
       "tests/support/mod.rs",
       "tests/rules.rs",
@@ -16,6 +16,6 @@
     "needs": [
       "skills/bundle"
     ],
-    "base": "f8e673b9f9cc65204b89ddd50fd50fb6c2798c7d"
+    "base": "73d31752cb652db8a2dc0d893c81f3553153f2fb"
   }
 ]
