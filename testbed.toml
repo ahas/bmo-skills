@@ -1,0 +1,37 @@
+# How the testbed tests and checks this repository, in the testbed's declaration format. The repository
+# runs no service and deploys nothing of its own: each consumer's deployment places the bundle or the skill
+# it receives with the placer, `bmo-skills place` (`docs/boundary.md`).
+
+testbed = 0
+name = "bmo-skills"
+
+# The one Cargo package at the root: the placer's tests and the checks that hold the skills to
+# `docs/format.md`, all in `tests/`.
+[test]
+languages = ["cargo"]
+
+[check]
+# The sweeps that read the tree before anything runs: the README's folder table, the dependencies the
+# manifest names, Korean in the code and dashes in what the placer prints for a person. The ledger is the
+# Korean allowed per code file; it allows none. The skills are content, keep their own language and name
+# wrong forms on purpose, so no wording check reads them.
+quick = ["layout", "dependencies", "korean", "dashes"]
+korean_ledger = "korean-ledger.json"
+people_text = ["src/**/*.rs"]
+# The repository depends on no other unit, the base libraries included.
+base_libraries = []
+
+[[check.step]]
+id = "check"
+command = "cargo check --all-targets"
+lane = "wide"
+
+[[check.step]]
+id = "clippy"
+command = "cargo clippy --all-targets -- -D warnings"
+lane = "wide"
+
+[[check.step]]
+id = "fmt"
+command = "cargo fmt --check"
+lane = "wide"

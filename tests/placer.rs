@@ -53,6 +53,22 @@ fn names_in(dir: &Path) -> BTreeSet<String> {
     .collect()
 }
 
+/// What `list --json` answers for this checkout.
+fn listed() -> Vec<serde_json::Value> {
+  let output = run(&repository(), &["list", "--json"]);
+  assert_eq!(exit(&output), 0, "{}", stderr(&output));
+  serde_json::from_slice(&output.stdout).expect("the answer is JSON")
+}
+
+/// The names of the skills `list` gives `bundle`.
+fn listed_in(bundle: &str) -> BTreeSet<String> {
+  listed()
+    .iter()
+    .filter(|skill| skill["bundle"] == bundle)
+    .map(|skill| skill["name"].as_str().expect("a name").to_owned())
+    .collect()
+}
+
 /// A root holding the manifest and one skill folder whose `SKILL.md` front matter is `front`.
 fn root_with_skill(folder: &str, front: &str) -> TempDir {
   let root = TempDir::new().expect("a temporary root");
@@ -74,8 +90,9 @@ fn the_worker_placement_holds_the_manifest_and_every_worker_skill_byte_for_byte(
 
   assert_eq!(names_in(&plugin), BTreeSet::from([".claude-plugin".to_owned(), "skills".to_owned()]));
   let placed = names_in(&plugin.join("skills"));
-  assert_eq!(placed.len(), 20, "{placed:?}");
-  assert!(!placed.contains("song-cover"), "a project skill is not part of the plugin");
+  assert!(!placed.is_empty());
+  assert_eq!(placed, listed_in("worker"), "every worker skill and no other");
+  assert!(placed.is_disjoint(&listed_in("project")), "a project skill is not part of the plugin");
   assert_eq!(
     fs::read(plugin.join(".claude-plugin/plugin.json")).unwrap(),
     fs::read(repository().join(".claude-plugin/plugin.json")).unwrap()
@@ -147,9 +164,7 @@ fn an_earlier_placement_is_replaced_whole() {
 
   let output = run(&repository(), &["place", "--bundle", "worker", "--into", into]);
   assert_eq!(exit(&output), 0, "{}", stderr(&output));
-  let placed = names_in(&plugin.join("skills"));
-  assert_eq!(placed.len(), 20, "{placed:?}");
-  assert!(!placed.contains("gone-since"));
+  assert_eq!(names_in(&plugin.join("skills")), listed_in("worker"), "the stale skill is gone");
   assert_eq!(
     names_in(consumer.path()),
     BTreeSet::from(["plugin".to_owned()]),
@@ -159,20 +174,27 @@ fn an_earlier_placement_is_replaced_whole() {
 
 #[test]
 fn the_list_names_every_skill_with_its_bundle_and_files() {
-  let output = run(&repository(), &["list", "--json"]);
-  assert_eq!(exit(&output), 0, "{}", stderr(&output));
-  let listed: Vec<serde_json::Value> = serde_json::from_slice(&output.stdout).expect("the answer is JSON");
+  let listed = listed();
   let names: Vec<&str> = listed.iter().map(|skill| skill["name"].as_str().unwrap()).collect();
   let mut sorted = names.clone();
   sorted.sort();
   assert_eq!(names, sorted, "in name order");
-  assert_eq!(listed.len(), 21);
+
+  let folders: BTreeSet<String> = names_in(&repository())
+    .into_iter()
+    .filter(|name| repository().join(name).join("SKILL.md").is_file())
+    .collect();
+  assert_eq!(names.iter().map(|name| name.to_string()).collect::<BTreeSet<_>>(), folders);
   for skill in &listed {
-    let expected = if skill["name"] == "song-cover" { "project" } else { "worker" };
-    assert_eq!(skill["bundle"], expected, "{}", skill["name"]);
-    let files: Vec<&str> =
-      skill["files"].as_array().unwrap().iter().map(|file| file.as_str().unwrap()).collect();
-    assert!(files.contains(&"SKILL.md"), "{}", skill["name"]);
+    let name = skill["name"].as_str().unwrap();
+    assert!(skill["bundle"] == "worker" || skill["bundle"] == "project", "{name}");
+    let files: BTreeSet<PathBuf> = skill["files"]
+      .as_array()
+      .unwrap()
+      .iter()
+      .map(|file| PathBuf::from(file.as_str().unwrap()))
+      .collect();
+    assert_eq!(files, files_under(&repository().join(name)), "{name}");
   }
 }
 
