@@ -1,9 +1,9 @@
 # bmo-skills
 
-The skills a job worker is given, one folder per skill, and the placer that hands them over. Each skill is
-a `SKILL.md` with the files it names; its front matter says which bundle it belongs to: the `worker`
-bundle, the plugin every job worker is given, or `project`, a skill one repository's checkout keeps as its
-own. The repository runs nothing: a consumer's deployment runs `bmo-skills place`, which writes the worker
+The skills a job worker is given, one folder per skill named by its category first, and the placer that
+hands them over. Each skill is a `SKILL.md` with the files it names; its front matter says which bundle
+it belongs to: the `worker` bundle, the plugin every job worker is given, or `project`, a skill one
+repository's checkout keeps as its own. The repository runs nothing: a consumer's deployment runs `bmo-skills place`, which writes the worker
 plugin in Claude Code's standard plugin layout, or one skill into its own folder, into the consumer's tree.
 
 ## Layout
@@ -11,27 +11,27 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | Folder | Holds |
 |---|---|
 | `.claude-plugin/` | The manifest of the `bmo-worker` plugin the worker bundle is placed as |
-| `asking-the-owner/` | Putting a decision or a document in front of the owner |
-| `beyond-the-checkout/` | What a job owns once its work reaches past its own checkout |
-| `clean-code/` | The line-level pass of a refactoring, with its principles and language notes |
-| `closing-a-job/` | How a job ends: the graph, the close, what it may leave and the report |
-| `design-boundaries/` | Where a variation belongs, and where a list a person edits is kept |
-| `design-patterns/` | The structural pass of a refactoring, with its pattern catalogues |
+| `bmo-asking-the-owner/` | Putting a decision or a document in front of the owner |
+| `bmo-beyond-the-checkout/` | What a job owns once its work reaches past its own checkout |
+| `bmo-closing-a-job/` | How a job ends: the graph, the close, what it may leave and the report |
+| `bmo-marking-a-wait/` | Marking a deliberate wait on a job's item |
+| `bmo-song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
+| `bmo-warm-prefix/` | Changing what a running session holds as its cached prefix |
+| `code-boundaries/` | Where a variation belongs, where a list a person edits is kept, and how a base library is contributed to |
+| `code-clean/` | The line-level pass of a refactoring, with its principles and its Rust and TypeScript notes |
+| `code-design-patterns/` | The structural pass of a refactoring, with its pattern catalogues |
+| `code-korean-out/` | Taking the Korean out of a bundle of code files |
+| `code-refactoring/` | The module and function pass of a refactoring, with its catalogue and smells |
+| `code-test-writing/` | The rules a test is written to |
 | `docs-conventions/` | Where and how new information is recorded in a repository |
-| `eli5/` | Explaining a topic in pictures, as simply as it goes |
-| `find-skills/` | Finding a skill for a task among the public skills |
-| `marking-a-wait/` | Marking a deliberate wait on a job's item |
-| `moving-korean-out-of-code/` | Taking the Korean out of a bundle of code files |
-| `my-git-docs/` | The git workflow, documentation and changelog rules |
-| `my-nuxt-style/` | The coding style for Node.js, TypeScript and Vue or Nuxt projects |
-| `nuxt-ui/` | Building interfaces with Nuxt UI, with its component and layout references |
-| `playwright-cli/` | Driving a browser and writing Playwright tests, with its references |
-| `refactoring/` | The module and function pass of a refactoring, with its catalogue and smells |
-| `researching-and-benching/` | Researching, benching or tuning something the lab runs |
-| `song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
-| `test-writing/` | The rules a test is written to |
-| `ui-design-rules/` | The design rules for every user interface, by area, and the wording list |
-| `warm-prefix/` | Changing what a running session holds as its cached prefix |
+| `docs-eli5/` | Explaining a topic in pictures, as simply as it goes |
+| `docs-git/` | The git workflow, documentation and changelog rules |
+| `tools-find-skills/` | Finding a skill for a task among the public skills |
+| `tools-playwright-cli/` | Driving a browser and writing Playwright tests, with its references |
+| `tools-researching-and-benching/` | Researching, benching or tuning something the lab runs |
+| `ux-design-rules/` | The design rules for every user interface, by area, and the wording list |
+| `ux-nuxt-style/` | The coding style for Node.js, TypeScript and Vue or Nuxt projects |
+| `ux-nuxt-ui/` | Building interfaces with Nuxt UI, with its component and layout references |
 | `src/` | The `bmo-skills` placer: reading the skills, listing them and placing them |
 | `tests/` | The placer's tests and the checks that hold the skills to their format |
 | `docs/` | The canonical statements of the format, the boundary and the inventory |

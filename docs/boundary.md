@@ -81,10 +81,10 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 |---|---|---|---|
 | bmo-agency | the `worker` bundle | its own plugin directory, placed with `place --bundle worker` at its deployment | its worker launch line hands that directory to Claude Code as the plugin; its co-worker definitions read the manifest's name and the names under `skills/`, and keep only the preloaded skills the plugin carries; its prefix digest reads the manifest and every `skills/<name>/SKILL.md` |
 | every job worker | the `worker` bundle | the agency's plugin directory, through its launch line | Claude Code lists the skills to the job, and a job whose line shows no listing reads them at the skills path its trailer names |
-| the agency's `builder` co-worker | `design-patterns`, `refactoring`, `clean-code`, preloaded in that order | the same plugin | its definition names them as `bmo-worker:<name>` |
-| bmo-job | nothing placed | | its closing policy takes the word `ui-design-rules` in a report as the mark that a changed screen was swept against the design rules |
-| bmo-song | `song-cover` | its own checkout's `.claude/skills/song-cover/`, placed with `place --skill song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
-| the agency's chat procedures | nothing placed | | the song procedure names `song-cover` when it files a song item, and the TODO procedure names the builder's three skills |
+| the agency's `builder` co-worker | `code-design-patterns`, `code-refactoring`, `code-clean`, preloaded in that order | the same plugin | its definition names them as `bmo-worker:<name>` |
+| bmo-job | nothing placed | | its closing policy takes the word `ux-design-rules` in a report as the mark that a changed screen was swept against the design rules |
+| bmo-song | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
+| the agency's chat procedures | nothing placed | | the song procedure names `bmo-song-cover` when it files a song item, and the TODO procedure names the builder's three skills |
 | chat sessions and gates | none | | |
 
 A consumer that keeps a skill's name in its own text or policy relies on that name: renaming or removing
@@ -100,27 +100,27 @@ brief` stand there as not served yet. The graph tools a job calls are the agency
 
 | Skill | What it calls | The unit that answers | Skills it names |
 |---|---|---|---|
-| `asking-the-owner` | `job ask`, both to ask and to answer a talk; `archive doc`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; bmo-agency | `closing-a-job`, `docs-conventions`, `researching-and-benching` |
-| `beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-job; bmo-job; the checkout; outside every unit | |
-| `clean-code` | | | `design-patterns`, `refactoring` |
-| `closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here`, `--add` and `--resolve`; `work-order --todo`; the close and the suite it runs; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-job; bmo-agency; the umbrella repository | `beyond-the-checkout`, `researching-and-benching`, `ui-design-rules` |
-| `design-boundaries` | | | |
-| `design-patterns` | | | `clean-code`, `refactoring` |
-| `docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `asking-the-owner` |
-| `eli5` | `archive doc --html` | bmo-artifact | |
-| `find-skills` | the skills.sh directory and its `npx skills` commands; this repository's rule for writing a skill | outside every unit; this repository | |
-| `marking-a-wait` | `job wait`, over a unit or a command | bmo-job | |
-| `moving-korean-out-of-code` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `closing-a-job` |
-| `my-git-docs` | the checkout's own `AGENTS.md`, `CHANGELOG.md` and `README.md` | the checkout | |
-| `my-nuxt-style` | | | `refactoring` |
-| `nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `warm-prefix` |
-| `playwright-cli` | the `playwright-cli` program, `npx` and `npm` | outside every unit | |
-| `refactoring` | | | `clean-code`, `design-patterns` |
-| `researching-and-benching` | `job ask`; `archive doc` with its narration; `query`; `voice brief`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; not served yet; not served yet; bmo-brain; bmo-arbiter; bmo-agency | `asking-the-owner`, `marking-a-wait` |
-| `test-writing` | | | |
-| `ui-design-rules` | | | `nuxt-ui` |
-| `warm-prefix` | the launch lines and the document reload | bmo-agency | |
-| `song-cover` | the song bench, its commands and its canonical document | bmo-song | `asking-the-owner`, `marking-a-wait` |
+| `bmo-asking-the-owner` | `job ask`, both to ask and to answer a talk; `archive doc`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; bmo-agency | `bmo-closing-a-job`, `docs-conventions`, `tools-researching-and-benching` |
+| `bmo-beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-job; bmo-job; the checkout; outside every unit | |
+| `bmo-closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here`, `--add` and `--resolve`; `work-order --todo`; the close and the suite it runs; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-job; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `tools-researching-and-benching`, `ux-design-rules` |
+| `bmo-marking-a-wait` | `job wait`, over a unit or a command | bmo-job | |
+| `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking-the-owner`, `bmo-marking-a-wait` |
+| `bmo-warm-prefix` | the launch lines and the document reload | bmo-agency | |
+| `code-boundaries` | | | |
+| `code-clean` | | | `code-design-patterns`, `code-refactoring` |
+| `code-design-patterns` | | | `code-clean`, `code-refactoring` |
+| `code-korean-out` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `bmo-closing-a-job` |
+| `code-refactoring` | | | `code-clean`, `code-design-patterns` |
+| `code-test-writing` | | | |
+| `docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking-the-owner` |
+| `docs-eli5` | `archive doc --html` | bmo-artifact | |
+| `docs-git` | the checkout's own `AGENTS.md`, `CHANGELOG.md` and `README.md` | the checkout | |
+| `tools-find-skills` | the skills.sh directory and its `npx skills` commands; this repository's rule for writing a skill | outside every unit; this repository | |
+| `tools-playwright-cli` | the `playwright-cli` program, `npx` and `npm` | outside every unit | |
+| `tools-researching-and-benching` | `job ask`; `archive doc` with its narration; `query`; `voice brief`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; not served yet; not served yet; bmo-brain; bmo-arbiter; bmo-agency | `bmo-asking-the-owner`, `bmo-marking-a-wait` |
+| `ux-design-rules` | | | `ux-nuxt-ui` |
+| `ux-nuxt-style` | | | `code-refactoring` |
+| `ux-nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `bmo-warm-prefix` |
 
 ## Words other units match
 
@@ -130,6 +130,8 @@ The skills keep these exactly as written, since another unit reads them as writt
   `비모 몫:` and `하스 몫:`.
 - **The item states and the stop mark the close and the hold verbs read,** bmo-job's: `재개 대기`, `중지`
   and `[멈춤 요청]`.
+- **The skill name bmo-job's closing policy reads in a report,** `ux-design-rules`, as 「Who receives
+  what」 says.
 - **The command forms** of every `bmo` command in the table above, as bmo-cli and the unit behind it read
   them.
 
@@ -142,7 +144,7 @@ Three paths stand in the skills literally, so the units behind them keep them re
 - **`~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md`,** the deep dive rule file in the
   agency's own deploy tree.
 - **`~/.local/share/bmo-script/songs/`,** where the song bench keeps each song's work folder, which
-  `song-cover` names.
+  `bmo-song-cover` names.
 
 ## Versions
 

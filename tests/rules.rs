@@ -9,8 +9,8 @@ use support::{holds, lacks, skill, skill_flat};
 #[test]
 fn makes_the_checking_the_jobs_own_work() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "Verifying your own work is your own work.",
       "the work is not done",
@@ -21,9 +21,9 @@ fn makes_the_checking_the_jobs_own_work() {
 
 #[test]
 fn closes_a_job_by_handing_its_commit_over_after_the_whole_suite_where_the_change_reaches_it() {
-  let closing = skill_flat("closing-a-job");
+  let closing = skill_flat("bmo-closing-a-job");
   holds(
-    "closing-a-job",
+    "bmo-closing-a-job",
     &closing,
     &[
       "where your change reaches what the whole suite runs, the close runs the suite once, at the end",
@@ -34,7 +34,7 @@ fn closes_a_job_by_handing_its_commit_over_after_the_whole_suite_where_the_chang
     ],
   );
   lacks(
-    "closing-a-job",
+    "bmo-closing-a-job",
     &closing,
     &["put the change live", "the deploy job", "scripts/suite-deploy.ts"],
   );
@@ -43,8 +43,8 @@ fn closes_a_job_by_handing_its_commit_over_after_the_whole_suite_where_the_chang
 #[test]
 fn excuses_only_what_no_machine_can_reach_and_still_demands_an_account_of_it() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "what no machine can reach",
       "you write what you did check and what exactly is beyond a machine and why",
@@ -56,8 +56,8 @@ fn excuses_only_what_no_machine_can_reach_and_still_demands_an_account_of_it() {
 #[test]
 fn reports_nothing_unchecked_that_a_check_could_settle_and_names_only_what_is_beyond_reach() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "Nothing a check could settle is reported as unchecked.",
       "check first, in the maker's own material, the code, the issues and pull requests, and a real run",
@@ -70,8 +70,8 @@ fn reports_nothing_unchecked_that_a_check_could_settle_and_names_only_what_is_be
 #[test]
 fn keeps_a_task_handed_to_the_owner_out_of_the_unfinished_note() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &["is work somebody has to pick up next, never a task handed to"],
   );
 }
@@ -79,8 +79,8 @@ fn keeps_a_task_handed_to_the_owner_out_of_the_unfinished_note() {
 #[test]
 fn makes_closing_with_no_unfinished_note_the_ordinary_ending_rather_than_a_blank_field() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "Closing without it is the ordinary ending and the good one",
       "never a record of what you merely did not do",
@@ -91,8 +91,8 @@ fn makes_closing_with_no_unfinished_note_the_ordinary_ending_rather_than_a_blank
 #[test]
 fn keeps_a_row_from_becoming_the_other_way_out_of_finishing_it() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "a row is not the other way out",
       "the chat agent approves a row a job raised and launches it at once",
@@ -105,8 +105,8 @@ fn keeps_a_row_from_becoming_the_other_way_out_of_finishing_it() {
 #[test]
 fn keeps_a_structural_fix_the_work_needs_inside_the_job_and_leaves_only_what_it_cannot_reach() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "A structural fix the work needs is never left behind, as a note or as a row.",
       "a defect on the same code path as your own change",
@@ -121,8 +121,8 @@ fn keeps_a_structural_fix_the_work_needs_inside_the_job_and_leaves_only_what_it_
 #[test]
 fn leaves_no_improvement_behind_as_a_proposal_and_names_what_only_the_owner_can_give() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "the report's Left part is never a list of improvements or proposals",
       "The closing refuses a Left part, and a",
@@ -135,8 +135,8 @@ fn leaves_no_improvement_behind_as_a_proposal_and_names_what_only_the_owner_can_
 #[test]
 fn sends_the_job_to_finish_it_in_the_same_pass_or_to_raise_a_row_instead_of_writing_a_note() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "If the same pass finishes it, do it and write nothing",
       "raise it as its own row on your own judgement instead of leaving it as a note",
@@ -147,8 +147,8 @@ fn sends_the_job_to_finish_it_in_the_same_pass_or_to_raise_a_row_instead_of_writ
 #[test]
 fn sends_a_job_that_changed_a_screen_back_through_the_design_rules_before_it_closes() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "sweep it against",
       "design rules before you close",
@@ -163,8 +163,8 @@ fn sends_a_job_that_changed_a_screen_back_through_the_design_rules_before_it_clo
 #[test]
 fn tells_every_job_to_ask_the_graph_and_to_bring_it_up_to_date_before_the_commit() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "Bring the code dependency graph up to date in one pass just before the commit and never as you go",
       "a commit that touched a file the graph names and left the graph alone is refused",
@@ -175,8 +175,8 @@ fn tells_every_job_to_ask_the_graph_and_to_bring_it_up_to_date_before_the_commit
 #[test]
 fn and_to_write_down_the_word_the_owner_used_where_the_graph_does_not_carry_it_yet() {
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
     &[
       "bmo graph alias <id> --add",
       "his word exactly as he wrote it",
@@ -203,8 +203,8 @@ fn the_workers_own_rules_stand_in_the_workers_own_texts_and_the_skill_says_where
 fn the_restructuring_passes_are_found_by_the_owners_words_for_the_work_and_skipped_where_nothing_is_restructured()
  {
   holds(
-    "design-patterns",
-    &skill_flat("design-patterns"),
+    "code-design-patterns",
+    &skill_flat("code-design-patterns"),
     &[
       "and reviewing a design mean the same",
       "Never start at a later pass and never reorder them.",
@@ -217,8 +217,8 @@ fn the_restructuring_passes_are_found_by_the_owners_words_for_the_work_and_skipp
 fn the_warm_prefix_skill_gives_a_job_the_launch_line_its_item_needs_and_what_a_warm_document_costs_to_edit()
 {
   holds(
-    "warm-prefix",
-    &skill_flat("warm-prefix"),
+    "bmo-warm-prefix",
+    &skill_flat("bmo-warm-prefix"),
     &[
       "changes that line as part of the item",
       "never worked around with a second road beside the one it should have had",
@@ -232,9 +232,9 @@ fn the_warm_prefix_skill_gives_a_job_the_launch_line_its_item_needs_and_what_a_w
 
 #[test]
 fn and_the_workers_beyond_the_checkout_skill_carries_the_same_rule_from_its_own_side() {
-  let beyond = skill_flat("beyond-the-checkout");
+  let beyond = skill_flat("bmo-beyond-the-checkout");
   holds(
-    "beyond-the-checkout",
+    "bmo-beyond-the-checkout",
     &beyond,
     &[
       "Ownership is settled by the domain the work serves**, never by the directory a file lands in",
@@ -242,19 +242,23 @@ fn and_the_workers_beyond_the_checkout_skill_carries_the_same_rule_from_its_own_
       "even though not one byte of it is written inside the checkout",
     ],
   );
-  lacks("beyond-the-checkout", &beyond, &["A job works only inside the repository it runs in"]);
+  lacks(
+    "bmo-beyond-the-checkout",
+    &beyond,
+    &["A job works only inside the repository it runs in"],
+  );
   holds(
-    "closing-a-job",
-    &skill_flat("closing-a-job"),
-    &["Work the domain rule of the `beyond-the-checkout` skill gives a repository"],
+    "bmo-closing-a-job",
+    &skill_flat("bmo-closing-a-job"),
+    &["Work the domain rule of the `bmo-beyond-the-checkout` skill gives a repository"],
   );
 }
 
 #[test]
 fn with_the_estate_to_be_read_rather_than_remembered_and_no_credential_of_its_own() {
   holds(
-    "beyond-the-checkout",
-    &skill_flat("beyond-the-checkout"),
+    "bmo-beyond-the-checkout",
+    &skill_flat("bmo-beyond-the-checkout"),
     &[
       "The estate is written down and you read it rather than remember it",
       "the owner's infrastructure repository, which the owner's standing rules name, its `CLAUDE.md` first and then the document under its `docs/`",
@@ -268,8 +272,8 @@ fn with_the_estate_to_be_read_rather_than_remembered_and_no_credential_of_its_ow
 #[test]
 fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_it_is_read() {
   holds(
-    "asking-the-owner",
-    &skill_flat("asking-the-owner"),
+    "bmo-asking-the-owner",
+    &skill_flat("bmo-asking-the-owner"),
     &[
       "~/.local/share/bmo/deploy/bin/bmo job ask --todo <id>",
       "A minute with no answer settles the question on the option you recommended",
@@ -279,8 +283,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "researching-and-benching",
-    &skill_flat("researching-and-benching"),
+    "tools-researching-and-benching",
+    &skill_flat("tools-researching-and-benching"),
     &[
       "Use before the first step of any item that measures, compares, tunes or researches",
       "**1. The maker's material first.**",
@@ -291,16 +295,16 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "marking-a-wait",
-    &skill_flat("marking-a-wait"),
+    "bmo-marking-a-wait",
+    &skill_flat("bmo-marking-a-wait"),
     &[
       "~/.local/share/bmo/deploy/bin/bmo job wait --todo <id>",
       "Use before standing still on purpose for minutes",
     ],
   );
   holds(
-    "test-writing",
-    &skill_flat("test-writing"),
+    "code-test-writing",
+    &skill_flat("code-test-writing"),
     &[
       "A test never waits on the real clock.",
       "A test that starts a process takes it down itself",
@@ -308,18 +312,14 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "beyond-the-checkout",
-    &skill_flat("beyond-the-checkout"),
+    "bmo-beyond-the-checkout",
+    &skill_flat("bmo-beyond-the-checkout"),
     &["~/.local/share/bmo/deploy/bin/bmo job borrow <worker>"],
   );
+  holds("code-boundaries", &skill("code-boundaries"), &["## A list a person edits is a table"]);
   holds(
-    "design-boundaries",
-    &skill("design-boundaries"),
-    &["## A list a person edits is a table"],
-  );
-  holds(
-    "refactoring",
-    &skill_flat("refactoring"),
+    "code-refactoring",
+    &skill_flat("code-refactoring"),
     &[
       "It also carries the rule that a name never becomes a wrong name later",
       "- **A name is chosen so that it never becomes a wrong name later.**",
@@ -329,8 +329,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "clean-code",
-    &skill_flat("clean-code"),
+    "code-clean",
+    &skill_flat("code-clean"),
     &["「Names that stay true」 is that rule and its test."],
   );
 }
@@ -338,8 +338,8 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
 #[test]
 fn the_design_rules_carry_the_sweep_the_closing_skill_sends_a_job_back_to() {
   holds(
-    "ui-design-rules",
-    &skill("ui-design-rules"),
+    "ux-design-rules",
+    &skill("ux-design-rules"),
     &[
       "## Sweeping a screen before the work is closed",
       "Sweep only the screens this change built or touched",
@@ -352,15 +352,15 @@ fn the_design_rules_carry_the_sweep_the_closing_skill_sends_a_job_back_to() {
 #[test]
 fn the_three_restructuring_skills_each_name_the_order_and_their_place_in_it() {
   holds(
-    "design-patterns",
-    &skill_flat("design-patterns"),
+    "code-design-patterns",
+    &skill_flat("code-design-patterns"),
     &[
       "## Where this pass sits",
       "design patterns, then refactoring, then clean code",
       "The order is by reach",
     ],
   );
-  for (name, place) in [("refactoring", "Second of three"), ("clean-code", "Last of three")] {
+  for (name, place) in [("code-refactoring", "Second of three"), ("code-clean", "Last of three")] {
     let body = skill_flat(name);
     holds(
       name,
@@ -368,7 +368,7 @@ fn the_three_restructuring_skills_each_name_the_order_and_their_place_in_it() {
       &[
         "## Where this pass sits",
         &format!("{place}: design patterns, then refactoring, then clean code"),
-        "`design-patterns` 「Where this pass sits」",
+        "`code-design-patterns` 「Where this pass sits」",
       ],
     );
     lacks(name, &body, &["The order is by reach"]);
