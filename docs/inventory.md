@@ -28,7 +28,7 @@ what is changed on the way in.
 | Crates | 0 | #301: a data repository takes no code; the code this repository carries is its own placer and checks |
 | Packages | 0 | #301, as above |
 | Policy files | 0 | the reader trace of this item: no policy file is read for a skill; bmo-job's closing policy names the skill `ui-design-rules` and is a consumer, not taken (`boundary.md`) |
-| Tests | 26 cases ported | the test trace of this item, 「Tests」 below |
+| Tests | 24 cases ported, 2 left with the trailer | the test trace of this item, 「Tests」 below |
 | Service units | 0 | #301, as above |
 
 ## Worker skills
@@ -100,46 +100,52 @@ repository is their one owner; the agency receives the bundle as `boundary.md` s
 
 ### Ported here
 
-26 cases of the agent documents' test file in the source tree (`bot/bot/agents.test.ts`) check what a
-skill says. Several also check the worker's trailer; that half stays with bmo-agency, which owns the
-trailer, and the skill half is ported to `tests/` under the same name. A case that expects a Korean
-literal from a skill checks the same rule by an English anchor from the same passage instead, since no
-test here carries Hangul; the literal each such case drops is named in the table.
+26 cases of the agent documents' test file in the source tree (`bot/bot/agents.test.ts`) read the
+worker's trailer, its skills or both. The 24 that read a skill are ported to `tests/` under the same name,
+their skill passages as the name map leaves them; the trailer's half of a case stays with bmo-agency,
+which owns the trailer, and so do the two that read the trailer alone (「Left to the units that own the
+mechanism」). A case that expects a Korean literal from a skill checks the same rule by an English anchor
+from the same passage, since no test here carries Hangul; the literal each such case drops is named in the
+table. A test name holding a Korean word takes the English for it as its function name.
 
 | Old test name | Skills it reads | Korean literal dropped |
 |---|---|---|
-| sends a job to the worker's skills for the rules only some jobs meet, by their folder | `closing-a-job` | |
 | makes the checking the job's own work | `closing-a-job` | |
 | closes a job by handing its commit over, after the whole suite where the change reaches it | `closing-a-job` | |
-| excuses only what no machine can reach, and still demands an account of it | `closing-a-job` | |
+| excuses only what no machine can reach, and still demands an account of it | `closing-a-job` | the quoted request to have it checked, which the skill forbids; the passage's opening sentence stands for it |
 | reports nothing unchecked that a check could settle, and names only what is beyond reach | `closing-a-job` | |
-| keeps a task handed to the owner out of 미결 | `closing-a-job` | |
+| keeps a task handed to the owner out of 미결 | `closing-a-job` | 미결, opening the passage; the rest of its sentence is held |
 | makes closing with no 미결 the ordinary ending rather than a blank field | `closing-a-job` | |
 | keeps a row from becoming the other way out of finishing it | `closing-a-job` | |
 | keeps a structural fix the work needs inside the job, and leaves only what it cannot reach | `closing-a-job` | |
-| leaves no improvement behind as a proposal, and names what only the owner can give | `closing-a-job` | |
+| leaves no improvement behind as a proposal, and names what only the owner can give | `closing-a-job` | 미결, inside the refusal's sentence; the sentence is held on either side of it |
 | sends the job to finish it in the same pass, or to raise a row, instead of writing a note | `closing-a-job` | |
-| and keeps the measurements out of the prompt, where the rule alone belongs | `closing-a-job` | |
 | sends a job that changed a screen back through the design rules before it closes | `closing-a-job` | |
 | tells every job to ask the graph and to bring it up to date before the commit | `closing-a-job` | |
 | and to write down the word the owner used where the graph does not carry it yet | `closing-a-job` | |
 | the worker's own rules stand in the worker's own texts, and the skill says where each rule belongs | `docs-conventions` | |
-| the restructuring passes are found by the owner's words for the work, and skipped where nothing is restructured | `design-patterns` | |
+| the restructuring passes are found by the owner's words for the work, and skipped where nothing is restructured | `design-patterns` | the owner's three Korean words for the work; the clause they stand in is held from its English end |
 | the warm-prefix skill gives a job the launch line its item needs, and what a warm document costs to edit | `warm-prefix` | |
 | and the worker's beyond-the-checkout skill carries the same rule from its own side | `beyond-the-checkout` | |
 | with the estate to be read rather than remembered, and no credential of its own | `beyond-the-checkout` | |
-| the rules only some jobs meet stand in skills of their own, each saying when it is read | `asking-the-owner`, `researching-and-benching`, `marking-a-wait`, `test-writing`, `beyond-the-checkout`, `design-boundaries`, `refactoring`, `clean-code` | |
+| the rules only some jobs meet stand in skills of their own, each saying when it is read | `asking-the-owner`, `researching-and-benching`, `marking-a-wait`, `test-writing`, `beyond-the-checkout`, `design-boundaries`, `refactoring`, `clean-code` | the two Korean rules of `design-boundaries`; their section's English heading stands for them |
 | the design rules carry the sweep the closing skill sends a job back to | `ui-design-rules` | |
 | the design rules keep their core under 500 lines and name every area file beside it | `ui-design-rules` | |
 | the three restructuring skills each name the order and their place in it | `design-patterns`, `refactoring`, `clean-code` | |
 | and they are carried by a plugin the launch line can name | the manifest | |
 | a skill copied from elsewhere keeps its origin and licence beside it | `eli5` | |
 
+Beside them, the repository's own checks hold the rest of `format.md`: every skill's description, the
+manifest's version against `VERSION`, every file of a skill named by its `SKILL.md` and every file it
+names there, every skill a skill names, and no personal value by its shape.
+
 ### Left to the units that own the mechanism
 
 | Old test | What it checks | Unit |
 |---|---|---|
 | the two prefix tests of the server's launch line prefix module | the prefix digest's reading of the plugin folder and its prompt-shaping paths | bmo-agency, which already holds them |
+| sends a job to the worker's skills for the rules only some jobs meet, by their folder | the trailer's pointer to the skills folder | bmo-agency, which owns the trailer |
+| and keeps the measurements out of the prompt, where the rule alone belongs | the trailer's figures | bmo-agency, which owns the trailer |
 | a skills line is read as a list, and a document without one carries none | the co-worker definition reader | bmo-agency |
 | and the builder is told the same order it is handed the three skills in | the builder's definition | bmo-agency |
 | and the skills rule is the one place that states what a skill carries and where its material comes from | the source tree's scoped rule files | none: the rule is text of this repository's own documents |

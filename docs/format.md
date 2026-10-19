@@ -65,6 +65,9 @@ A skill states the one bundle it belongs to, and nothing outside its folder list
   unit matches on stay exactly as that unit matches them (`boundary.md`, 「Words other units match」).
 - **No personal value and no agent name.** The owner is the owner, the chat agent is the chat agent, and a
   machine, an account, a home path or an internal address appears only as a neutral example.
+- **An outside address is public by nature:** a name reserved for examples, or a public site, package
+  scope or code keyword of the software the skill teaches. The personal-value check holds which those
+  are, and refuses any other host, address, id or handle by its shape.
 
 ## The manifest
 
