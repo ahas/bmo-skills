@@ -143,8 +143,9 @@ test here carries Hangul; the literal each such case drops is named in the table
 A per-file regex sweep over the 71 files for person names, agent names, machine names, account-shaped
 tokens, home paths, internal addresses and room ids. 16 files carry one or more, totalling 88 of the
 owner's name, 62 of the chat agent's name in Latin letters, 11 of the same name in Hangul, one machine
-name, one home path and one account-shaped package scope. No IP address, room id or other machine name
-occurs.
+name, one machine pool name, one home path and one account-shaped package scope. No IP address, room id
+or other machine name occurs; a second sweep for node-shaped tokens found the pool name and nothing
+else.
 
 | File | Owner's name | Agent name, Latin | Agent name, Hangul | Other |
 |---|---|---|---|---|
@@ -161,13 +162,13 @@ occurs.
 | `marking-a-wait/SKILL.md` | | 4 | | |
 | `moving-korean-out-of-code/SKILL.md` | 2 | 1 | | |
 | `my-nuxt-style/skill/vue-nuxt.md` | | | | an account-shaped package scope, 1 |
-| `researching-and-benching/SKILL.md` | 3 | 4 | | |
+| `researching-and-benching/SKILL.md` | 3 | 4 | | a machine pool name, 1 |
 | `ui-design-rules/SKILL.md` | 2 | | | |
 | `ui-design-rules/wording.md` | 39 | 5 | | |
 
 - **What replaces them.** The owner's name becomes the owner; an agent acting becomes the chat agent;
   an agent name standing for the whole system becomes the system; the machine name becomes a neutral
-  example host; the home path and the package scope become a description of the thing they point at.
+  example host, and the machine pool name the GPU node pool; the home path and the package scope become a description of the thing they point at.
 - **What stays as written.** The keywords a process matches on: 미결 and the two strand marks that
   open each of its strands, which bmo-job's close reads (`boundary.md`). The 15 deploy paths under `~/.local/share/bmo`, which
   name the installed `bmo` entry point and an agent rule file, and carry no account or machine name.
