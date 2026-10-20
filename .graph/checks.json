@@ -1,0 +1,24 @@
+[
+  {
+    "id": "checks/repository",
+    "title": "Repository checks",
+    "what": "The tests that hold every skill to the repository's format and the repository to its rules: names and categories, the manifest's version, the files a skill names, and no personal value by shape. Lives in tests/, declared by testbed.toml.",
+    "files": [
+      "tests/support/mod.rs",
+      "tests/rules.rs",
+      "tests/structure.rs",
+      "tests/personal.rs",
+      "Cargo.toml",
+      "testbed.toml",
+      "korean-ledger.json",
+      "VERSION"
+    ],
+    "symbols": [],
+    "aliases": [],
+    "needs": [
+      "skills/bundle"
+    ],
+    "base": "7c94787414cff525898512bbb3d8393e96339cad",
+    "changed": 1792497905857
+  }
+]

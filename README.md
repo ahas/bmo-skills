@@ -35,7 +35,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `src/` | The `bmo-skills` placer: reading the skills, listing them and placing them |
 | `tests/` | The placer's tests and the checks that hold the skills to their format |
 | `docs/` | The canonical statements of the format, the boundary and the inventory |
-| `graph/` | The code dependency graph: one node per feature with its files and what it reads, written only by `bmo graph` |
+| `.graph/` | The code dependency graph: one node per feature with its files and what it reads, written only by `bmo graph` |
 
 At the root stand the Cargo manifest, the version, `testbed.toml` with its Korean ledger, `rustfmt.toml`
 and `CLAUDE.md`.

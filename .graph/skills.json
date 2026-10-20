@@ -1,0 +1,74 @@
+[
+  {
+    "id": "skills/bundle",
+    "title": "Skill library",
+    "what": "The skills a job worker or a project receives, one folder per skill at the root, with its SKILL.md, its reference files and the bmo-worker plugin manifest. Its shape is docs/format.md and its receivers docs/boundary.md.",
+    "files": [
+      "ahas-code-boundaries/",
+      "ahas-code-clean/",
+      "ahas-code-design-patterns/",
+      "ahas-code-refactoring/",
+      "ahas-code-test-writing/",
+      "ahas-docs-git/",
+      "ahas-tools-find-skills/",
+      "ahas-tools-playwright-cli/",
+      "ahas-ux-design-rules/",
+      "ahas-ux-nuxt-style/",
+      "ahas-ux-nuxt-ui/",
+      "bmo-asking-the-owner/",
+      "bmo-beyond-the-checkout/",
+      "bmo-closing-a-job/",
+      "bmo-code-korean-out/",
+      "bmo-docs-conventions/",
+      "bmo-docs-eli5/",
+      "bmo-marking-a-wait/",
+      "bmo-song-cover/",
+      "bmo-tools-researching-and-benching/",
+      "bmo-warm-prefix/",
+      ".claude-plugin/plugin.json",
+      "docs/format.md",
+      "docs/boundary.md",
+      "docs/inventory.md"
+    ],
+    "symbols": [],
+    "aliases": [
+      "스킬",
+      "스킬 묶음",
+      "카테고리별 prefix"
+    ],
+    "needs": [],
+    "base": "7c94787414cff525898512bbb3d8393e96339cad",
+    "changed": 1792497897089
+  },
+  {
+    "id": "skills/placer",
+    "title": "Skill placer",
+    "what": "The bmo-skills binary: it reads the skill folders, lists them, and places the worker bundle as a plugin or one skill into a consumer's tree. Its verbs and exit codes are in docs/boundary.md.",
+    "files": [
+      "src/main.rs",
+      "src/lib.rs",
+      "src/skill.rs",
+      "src/place.rs",
+      "Cargo.toml",
+      "docs/boundary.md",
+      "tests/placer.rs"
+    ],
+    "symbols": [
+      "Placed",
+      "place_bundle",
+      "place_skill",
+      "Bundle",
+      "Skill",
+      "read_skills",
+      "Fault"
+    ],
+    "aliases": [
+      "bmo-skills"
+    ],
+    "needs": [
+      "skills/bundle"
+    ],
+    "base": "7c94787414cff525898512bbb3d8393e96339cad",
+    "changed": 1792497905851
+  }
+]

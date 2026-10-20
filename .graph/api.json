@@ -1,0 +1,21 @@
+[
+  {
+    "id": "api/cli",
+    "title": "Command API",
+    "what": "The words of bmo-skills, list and place with --bundle or --skill, their options, and its exit codes, as docs/boundary.md states them.",
+    "files": [
+      "docs/boundary.md",
+      "src/main.rs"
+    ],
+    "symbols": [],
+    "aliases": [],
+    "needs": [
+      "skills/placer"
+    ],
+    "base": "7c94787414cff525898512bbb3d8393e96339cad",
+    "changed": 1792497903858,
+    "boundary": {
+      "side": "exposes"
+    }
+  }
+]
