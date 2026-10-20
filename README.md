@@ -47,6 +47,7 @@ At the root stand the Cargo manifest, the version, `testbed.toml` with its Korea
 | `docs/format.md` | The shape of a skill folder, its front matter and its bundle, and what a skill may carry |
 | `docs/boundary.md` | The placer's verbs, the manifest, which unit receives which skills from where, what each skill calls on another unit, and the version rule |
 | `docs/inventory.md` | Every file with its source and place, what was left to other units, the tests ported and every name replaced |
+| `docs/PERSONAL-DATA.md` | What personal data never goes into the repository, where a value lives instead, the two allowed values, and the check that holds it out |
 
 ## Version
 

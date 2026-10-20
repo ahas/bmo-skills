@@ -11,14 +11,15 @@
       "Cargo.toml",
       "testbed.toml",
       "korean-ledger.json",
-      "VERSION"
+      "VERSION",
+      "docs/PERSONAL-DATA.md"
     ],
     "symbols": [],
     "aliases": [],
     "needs": [
       "skills/bundle"
     ],
-    "base": "a64c44df4c70a7f8570bc9b03be29f7794b325f2",
-    "changed": 1792506668954
+    "base": "a095f161059e13d5b804e310906d7658f3c037de",
+    "changed": 1792527400567
   }
 ]
