@@ -12,8 +12,8 @@
     "needs": [
       "skills/placer"
     ],
-    "base": "7c94787414cff525898512bbb3d8393e96339cad",
-    "changed": 1792497903858,
+    "base": "a64c44df4c70a7f8570bc9b03be29f7794b325f2",
+    "changed": 1792506666835,
     "boundary": {
       "side": "exposes"
     }

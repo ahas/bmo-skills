@@ -73,6 +73,7 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 - **The plugin is named `bmo-worker`,** and every skill of the `worker` bundle is called as
   `bmo-worker:<name>`.
 - **Its version is the repository's `VERSION`.**
+- **Its licence is `MIT`,** the repository's, stated in the manifest beside the root `LICENSE`.
 - **It names no skill folder,** since a placement puts the skills in the standard layout's own folder.
 
 ## Who receives what

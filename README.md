@@ -37,8 +37,8 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `docs/` | The canonical statements of the format, the boundary and the inventory |
 | `.graph/` | The code dependency graph: one node per feature with its files and what it reads, written only by `bmo graph` |
 
-At the root stand the Cargo manifest, the version, `testbed.toml` with its Korean ledger, `rustfmt.toml`
-and `CLAUDE.md`.
+At the root stand the Cargo manifest, the version, `testbed.toml` with its Korean ledger, `rustfmt.toml`,
+`LICENSE` and `CLAUDE.md`. The repository is MIT-licensed.
 
 ## Documents
 

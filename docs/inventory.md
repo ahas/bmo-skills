@@ -43,9 +43,9 @@ is bmo-testbed's, the launch lines and the worker's trailer are bmo-agency's, an
 are this repository's.
 
 - **The design rules' `wording.md` is a symbolic link** in the source tree, to the root `WORDING.md`. The
-  file here is that document as the source commit holds it, and the link is not kept. The document is
-  the whole source tree's wording list: its allowed uses name the source tree's own paths, and stay as
-  written.
+  link is not kept. The document here is the whole source tree's wording list, its allowed uses naming
+  the source tree's own paths; the rows whose allowed use is a line of the owner's own words are not
+  carried, since those lines are his chat and not a rule, and every other row stays as written.
 
 | Skill in the source tree | Folder here | Files | Paths inside the folder |
 |---|---|---|---|
