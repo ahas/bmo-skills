@@ -66,8 +66,10 @@ These rules hold every change to this repository.
 
 - One Cargo package at the root, holding the placer in `src/` and the checks in `tests/`, no other build
   tool's manifest, and no directory named after its parent.
-- **`.graph/` is the code dependency graph**, written only by `bmo graph` in this checkout. A commit that
-  adds, moves or removes a node's files brings its node along in the same commit.
+- **`.graph/` is the code dependency graph**, written only by `bmo graph` in this checkout. A change that
+  adds, moves or removes a node's files brings its node up to date in the checkout. Its area files are
+  generated and untracked, so a fresh checkout builds them again, while `settings.toml` is the repository's
+  configuration and stays tracked.
 
 ## The stages of a change
 
