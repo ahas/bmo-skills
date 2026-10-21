@@ -5,7 +5,8 @@ What this repository never carries, where a value lives instead, and what holds 
 ## What never goes in
 
 No personal value is written into a skill, `README.md`, a document under `docs/`, the placer's
-code or its comments, a check or its fixtures, or a commit message. The values are:
+code or its comments, a check or its fixtures, the dependency graph under `.graph/`, or a commit
+message. The values are:
 
 - a person's name, handle or account id;
 - an email address;
@@ -28,8 +29,9 @@ Two values stand as they are: `ahas`, the name this repository and its skill sco
 
 ## The check
 
-`tests/personal.rs` reads every skill folder, the manifest, `docs/`, `src/` and the root's markdown,
-and reports a value it finds by shape: an email address, a phone number, a token, a home path, an IP
-address, and the chat, account, room and user ids, private hosts and account handles it holds. The
-public sites, the reserved example names and the code keywords the skills teach are allowed by name.
-No personal value is kept in the repository as a term list: the check goes by shape alone.
+`tests/personal.rs` reads every skill folder, the manifest, `docs/`, `src/`, the dependency graph
+under `.graph/` and the root's markdown, and reports a value it finds by shape: an email address, a
+phone number, a token, a home path, an IP address, and the chat, account, room and user ids, private
+hosts and account handles it holds. The public sites, the reserved example names and the code
+keywords the skills teach are allowed by name. No personal value is kept in the repository as a term
+list: the check goes by shape alone.

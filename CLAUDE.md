@@ -42,13 +42,13 @@ These rules hold every change to this repository.
   permanently and outside every prompt.
 - **A skill copied whole from elsewhere keeps its origin and licence in its front matter alone,** the
   one part no prompt loads whole (`docs/format.md`).
-- **「조사해서 스킬로 만들어」 is two steps, and the first is the search:** the searcher runs, and the
-  skill is written out of the document that search wrote. A job whose item asks for a skill out of
-  research writes it from the search's document in the 아카이브 the row names and opens no source of its
-  own; reading the web itself and leaving only a skill behind is not this instruction carried out. A job
-  handed no such document writes no skill from its own reading: launching a search is the chat agent's,
-  in chat, so the job names it in its report as the chat agent's step and finishes the rest of the item
-  around it.
+- **A request to research a matter and make a skill of it is two steps, and the first is the search:**
+  the searcher runs, and the skill is written out of the document that search wrote. A job whose item
+  asks for a skill out of research writes it from the search's document in the 아카이브 the row names
+  and opens no source of its own; reading the web itself and leaving only a skill behind is not this
+  instruction carried out. A job handed no such document writes no skill from its own reading:
+  launching a search is the chat agent's, in chat, so the job names it in its report as the chat
+  agent's step and finishes the rest of the item around it.
 
 ## Language
 

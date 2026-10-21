@@ -1,8 +1,9 @@
-//! No personal value by its shape in the skills, the manifest, the placer or the documents: no chat or
-//! account id, email address, phone number, token, IP address, private host, home path, checkout layout
-//! or account handle. The check goes by pattern; what it lets through is public by nature, the reserved
-//! example names, the public sites, package scopes and code keywords the skills teach, and the two values
-//! `docs/PERSONAL-DATA.md` allows, and no list of people's names is kept anywhere.
+//! No personal value by its shape in the skills, the manifest, the dependency graph, the placer or the
+//! documents: no chat or account id, email address, phone number, token, IP address, private host, home
+//! path, checkout layout or account handle. The check goes by pattern; what it lets through is public by
+//! nature, the reserved example names, the public sites, package scopes and code keywords the skills
+//! teach, and the two values `docs/PERSONAL-DATA.md` allows, and no list of people's names is kept
+//! anywhere.
 
 mod support;
 
@@ -142,12 +143,14 @@ fn hits(path: &str, text: &str) -> Vec<String> {
   found
 }
 
-/// The skill folders, the manifest, the placer, the documents and the root's markdown.
+/// The skill folders, the manifest, the dependency graph, the placer, the documents and the root's
+/// markdown.
 fn read_files() -> Vec<PathBuf> {
   let root = Path::new(ROOT);
   let mut paths: Vec<PathBuf> =
     skill_names().iter().flat_map(|name| files_under(&root.join(name))).collect();
   paths.extend(files_under(&root.join(".claude-plugin")));
+  paths.extend(files_under(&root.join(".graph")));
   paths.extend(files_under(&root.join("src")));
   paths.extend(files_under(&root.join("docs")));
   paths.extend(
