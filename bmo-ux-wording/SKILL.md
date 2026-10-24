@@ -16,7 +16,7 @@ guide.
 
 - **`WORDING.md` at the root of the bmo-web repository.** That repository's checkout is the one holding
   the console; read the file there.
-- **This repository carries no copy, and no other repository receives one.** The guide is not placed by a
+- **bmo-skills carries no copy, and no other repository receives one.** The guide is not placed by a
   deployment and is not read by a running unit.
 - **The words themselves stand in the console's Korean pack, which the guide names.** The guide says
   which word a concept takes and how the sentence is written; the pack shows that word on the screen.
@@ -48,9 +48,9 @@ guide.
 
 ## Reporting and fixing a use
 
-- A use is a Korean text on a screen that departs from the guide: a word the guide says it replaces,
-  another word where the guide gives one, English dropped into a Korean sentence, a mixed style, or a
-  dash between words.
+- A use is a piece of Korean text on a screen that departs from the guide: a word the guide says it
+  replaces, another word where the guide gives one, English dropped into a Korean sentence, a mixed
+  style, or a dash between words.
 - Fix it where it stands, in the same pass: the pack's value and any text the screen writes itself.
   Search the pack and the screen for the word and its forms, so one fix reaches every place the same
   text is shown.
