@@ -101,7 +101,7 @@ fn the_design_rules_keep_their_core_under_500_lines_and_name_every_area_file_bes
   let areas: BTreeSet<String> = files_under(&Path::new(ROOT).join("ahas-ux-design-rules"))
     .iter()
     .map(|path| path.file_name().expect("a file name").to_string_lossy().into_owned())
-    .filter(|file| file.ends_with(".md") && file != "SKILL.md" && file != "wording.md")
+    .filter(|file| file.ends_with(".md") && file != "SKILL.md")
     .collect();
   assert!(!areas.is_empty());
   assert_eq!(entries, areas, "the core names exactly the area files beside it");

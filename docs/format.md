@@ -82,8 +82,9 @@ A skill states the one bundle it belongs to, and nothing outside its folder list
   answers to stand there, and the detail of each area stands in an area file beside it.
 - **The core names every area file beside it,** one entry each under its section of the rules by area,
   and each area file opens by saying it is part of the skill. Every entry names a file that is there.
-- **`wording.md` is no area file:** it is the list of banned terms and the one word each screen concept
-  takes, which the core sends a job to read before it writes Korean text.
+- **The UI wording guide is not an area file and is not carried here.** The core sends a job to the
+  `bmo-ux-wording` skill before it writes Korean text; that skill says where the guide lives, how a term
+  is added, and how a use is reported and fixed.
 
 ## What a skill carries
 

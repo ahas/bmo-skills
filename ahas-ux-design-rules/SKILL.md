@@ -1,7 +1,7 @@
 ---
 name: "ahas-ux-design-rules"
 bundle: worker
-version: "1.18.0"
+version: "1.18.1"
 description: "The owner's design rules for every user interface a worker builds, restyles or reviews: the stack and component choice, type, contrast and spacing, layout, forms, states and motion, notices and indicators, controls and bars, tables and lists, navigators, search, overlays, the back gesture, mobile, and UI wording. Use before the first edit of any screen, when reviewing one, and again before the work on a screen is closed, to sweep what the change touched against these rules."
 ---
 
@@ -367,8 +367,9 @@ screen says otherwise, the work follows these rules for what it builds and repor
   2. English must not be dropped into Korean text. Right: '툴바를 눌러'; wrong: 'toolbar를 눌러'.
   3. English stays only where no Hangul spelling is in common use — code identifiers, commands,
      file names, product and library names.
-  4. Read `wording.md` before writing Korean text: the banned terms, and under 「Console text」
-     the one word each UI concept takes in every inflection, one style per screen, no dash.
+  4. Read the UI wording guide through the `bmo-ux-wording` skill before writing Korean text: the one
+     word each console concept takes in every inflection, one style per screen, no dash. That skill says
+     where the guide lives, how a term is added, and how a use is reported and fixed.
 - A page, section or panel header must not carry a sentence introducing what the screen is.
   1. The title and the layout alone must make clear what the screen is for.
   2. Sentences that describe the screen or explain how to use it — "~한 기록입니다", "~를 봅니다",

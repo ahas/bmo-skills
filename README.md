@@ -19,7 +19,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `ahas-docs-git/` | The git workflow, documentation and changelog rules |
 | `ahas-tools-find-skills/` | Finding a skill for a task among the public skills |
 | `ahas-tools-playwright-cli/` | Driving a browser and writing Playwright tests, with its references |
-| `ahas-ux-design-rules/` | The design rules for every user interface, by area, and the wording list |
+| `ahas-ux-design-rules/` | The design rules for every user interface, by area |
 | `ahas-ux-nuxt-style/` | The coding style for Node.js, TypeScript and Vue or Nuxt projects |
 | `ahas-ux-nuxt-ui/` | Building interfaces with Nuxt UI, with its component and layout references |
 | `bmo-asking-the-owner/` | Putting a decision or a document in front of the owner |
@@ -31,6 +31,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `bmo-marking-a-wait/` | Marking a deliberate wait on a job's item |
 | `bmo-song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
 | `bmo-tools-researching-and-benching/` | Researching, benching or tuning something the lab runs |
+| `bmo-ux-wording/` | Where the console's UI wording guide lives, how a term is added and how a use is fixed |
 | `bmo-warm-prefix/` | Changing what a running session holds as its cached prefix |
 | `src/` | The `bmo-skills` placer: reading the skills, listing them and placing them |
 | `tests/` | The placer's tests and the checks that hold the skills to their format |

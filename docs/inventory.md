@@ -19,12 +19,12 @@ what is changed on the way in.
 
 | What | Count | Source |
 |---|---|---|
-| Files read from the source tree | 71 | `git ls-tree` at the source commit, as above |
-| of which worker skill files (`prompts/agents/worker/plugin/skills/` → `<skill>/`) | 68, in 20 folders | the same listing |
+| Files taken from the source tree | 70 | `git ls-tree` at the source commit answers 71 paths; the design rules' wording link is not carried (「Worker skills」 below) |
+| of which worker skill files (`prompts/agents/worker/plugin/skills/` → `<skill>/`) | 67, in 20 folders | the same listing, the wording link left out |
 | of which the plugin manifest | 1 | the same listing |
 | of which the project skill `song-cover`, here `bmo-song-cover` | 1 | the same listing |
 | of which the rule for writing a skill | 1 | the same listing; it becomes text of this repository's own documents rather than a file of its own |
-| The wording list behind a link | 1 | the source tree's root `WORDING.md`, which `ahas-ux-design-rules/wording.md` links to (「Worker skills」 below) |
+| The UI wording guide | 0 carried | bmo-web's `WORDING.md` at that repository's root, read through `bmo-ux-wording`; this repository holds no copy (「Worker skills」 below) |
 | Crates | 0 | #301: a data repository takes no code; the code this repository carries is its own placer and checks |
 | Packages | 0 | #301, as above |
 | Policy files | 0 | the reader trace of this item: no policy file is read for a skill; bmo-job's closing policy names the design rules skill, here `ahas-ux-design-rules`, and is a consumer, not taken (`boundary.md`) |
@@ -33,7 +33,7 @@ what is changed on the way in.
 
 ## Worker skills
 
-`prompts/agents/worker/plugin/skills/<skill>/` → a folder at this repository's root, 68 files in 20
+`prompts/agents/worker/plugin/skills/<skill>/` → a folder at this repository's root, 67 files in 20
 folders, every relative path inside a folder unchanged. Each skill takes its scope and category first in
 its name (`format.md`, 「Names」), and its folder with it, as the table below pairs them; this document
 names a skill by its source-tree name wherever it speaks of the source tree. Each folder's `SKILL.md`
@@ -42,10 +42,9 @@ of another unit, it names that unit with it: the language pack and its document 
 is bmo-testbed's, the launch lines and the worker's trailer are bmo-agency's, and the skills themselves
 are this repository's.
 
-- **The design rules' `wording.md` is a symbolic link** in the source tree, to the root `WORDING.md`. The
-  link is not kept. The document here is the whole source tree's wording list, its allowed uses naming
-  the source tree's own paths; the rows whose allowed use is a line of the owner's own words are not
-  carried, since those lines are his chat and not a rule, and every other row stays as written.
+- **The design rules carry no wording file.** The UI wording guide is bmo-web's `WORDING.md` at that
+  repository's root, kept by hand; this repository holds no copy. The `bmo-ux-wording` skill says where
+  the guide stands, how a term is added, and how a use is reported and fixed.
 
 | Skill in the source tree | Folder here | Files | Paths inside the folder |
 |---|---|---|---|
@@ -67,8 +66,12 @@ are this repository's.
 | `refactoring` | `ahas-code-refactoring` | 3 | `SKILL.md`, `references/catalog.md`, `references/smells.md` |
 | `researching-and-benching` | `bmo-tools-researching-and-benching` | 1 | `SKILL.md` |
 | `test-writing` | `ahas-code-test-writing` | 1 | `SKILL.md` |
-| `ui-design-rules` | `ahas-ux-design-rules` | 9 | `SKILL.md`, `controls.md`, `floating.md`, `layout.md`, `lists.md`, `loading.md`, `motion.md`, `notices.md`, `wording.md` |
+| `ui-design-rules` | `ahas-ux-design-rules` | 8 | `SKILL.md`, `controls.md`, `floating.md`, `layout.md`, `lists.md`, `loading.md`, `motion.md`, `notices.md` |
 | `warm-prefix` | `bmo-warm-prefix` | 1 | `SKILL.md` |
+
+**The UI wording skill has no source-tree folder.** `bmo-ux-wording` is written here, one file, `SKILL.md`,
+and it names bmo-web's `WORDING.md` as the guide a job reads, follows, adds a term to and fixes a use
+from.
 
 ## The manifest, the project skill and the rule
 
@@ -152,18 +155,18 @@ skill's description, the manifest's version against `VERSION`, every file of a s
 | and the builder is told the same order it is handed the three skills in | the builder's definition | bmo-agency |
 | and the skills rule is the one place that states what a skill carries and where its material comes from | the source tree's scoped rule files | none: the rule is text of this repository's own documents |
 | every rule scoped to part of the tree names its paths, and AGENTS.md names every rule | the source tree's scoped rule files and its AGENTS.md | none: the source tree's own layout |
-| the repository wording check's test (`repo/checks/wording.test.ts`) | the wording check's targets, one of which is `ui-design-rules/wording.md` left out | not this unit: the wording check is the testbed's mechanism, and this repository declares none (`format.md`) |
+| the repository wording check's test (`repo/checks/wording.test.ts`) | the wording check's targets in the source tree | not this unit: the wording check is the testbed's mechanism, and this repository declares none (`format.md`) |
 | the markup formatter's test (`markup/markup/format.test.ts`) | formatting of a sample reply that mentions skill folders | not this unit: the markup library |
 
 ## Names
 
-A per-file regex sweep over the 71 files and the wording list behind the link for person names, agent
-names, machine names, project names, account-shaped tokens, home paths, internal addresses and room ids,
-run again without regard to case and for node-shaped tokens. 19 files carry one or more, totalling 88 of
-the owner's name, 62 of the chat agent's name in Latin letters, 11 of the same name in Hangul, two of
-another agent's name inside a path or an engine's name, two of the owner's account name in a heading,
-one machine name, one machine pool name, one project name standing for a kind of node, one home path
-and one account-shaped package scope. No IP address, room id or other machine name occurs.
+A per-file regex sweep over the 70 files this repository carries from the source tree for person names,
+agent names, machine names, project names, account-shaped tokens, home paths, internal addresses and room
+ids, run again without regard to case and for node-shaped tokens. 18 files carry one or more, totalling
+49 of the owner's name, 57 of the chat agent's name in Latin letters, 11 of the same name in Hangul, one
+of another agent's name inside an engine's name, two of the owner's account name in a heading, one
+machine name, one machine pool name, one project name standing for a kind of node, one home path and one
+account-shaped package scope. No IP address, room id or other machine name occurs.
 
 | File in the source tree | Owner's name | Agent name, Latin | Agent name, Hangul | Other |
 |---|---|---|---|---|
@@ -185,15 +188,12 @@ and one account-shaped package scope. No IP address, room id or other machine na
 | `refactoring/SKILL.md` | | | | another agent's name inside an engine's name, 1 |
 | `researching-and-benching/SKILL.md` | 3 | 4 | | a machine pool name, 1 |
 | `ui-design-rules/SKILL.md` | 2 | | | |
-| `ui-design-rules/wording.md` (the wording list behind the link) | 39 | 5 | | another agent's name inside a document path, 1 |
 
 - **What replaces them.** The owner's name becomes the owner, and 오너 in a Korean sentence; an agent
   acting becomes the chat agent; an agent name standing for the whole system becomes the system; the
   machine name becomes a neutral example host, the machine pool name the GPU node pool, and the node
   kind a node; the home path and the package scope become a description of the thing they point at;
-  the account name leaves the two headings; the engine's name becomes the neutral `local-llm`. The
-  wording list's paragraph on lines added by another agent's training review goes, since it names that
-  agent's training document of another repository.
+  the account name leaves the two headings; the engine's name becomes the neutral `local-llm`.
 - **The agent engine's copy as the model.** bmo-agency's copy of the worker skills had already replaced
   these names in 17 of the files; its wording is taken as it stands, but for the sentences where it
   named its own repository, which name the repository that owns each thing instead.
