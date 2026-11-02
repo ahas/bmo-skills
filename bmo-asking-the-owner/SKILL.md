@@ -1,7 +1,7 @@
 ---
 name: "bmo-asking-the-owner"
 bundle: worker
-version: "1.1.0"
+version: "1.2.0"
 description: "How a job puts something in front of the owner: a decision that is genuinely his (hard to undo, or settled by his own taste) asked with bmo job ask, and a document for him to read or approve filed in the deployment's 아카이브. Use before asking him anything and before handing him any document."
 ---
 
@@ -31,12 +31,13 @@ description: "How a job puts something in front of the owner: a decision that is
     anew and `--recommend`, plus `--question` or `--why` where those changed.
   - Only he ends it, by choosing. Never take his words as a choice yourself, and never carry on
     while the question is open: keep answering with `--talk` until a line comes back.
-- **A question is never a way to stall.** A minute with no answer settles the question on the option
-  you recommended and says so in the chat. Where the owner stops the clock from the console to read it,
-  the wait is his, thirty minutes at the most, and the command still returns one line either way.
-  While you talk the clock stays stopped, thirty minutes from the last line either of you said.
-- **A wait can outlast the Bash tool's ten minutes** once the clock is stopped. The tool then moves
-  the call to the background; wait on its output, bounded, and read it before doing anything else.
+- **A question waits for his answer, however long that takes.** No clock settles it for him and none
+  cuts the talk short: the command returns only once he has chosen, or talked. Since your run waits
+  holding its checkout's lock the whole while, put to him only what is really his.
+- **The Bash tool waits for the command however long it runs,** as long as the call names no
+  `timeout` or names the largest, 2147483647 ms, which the tool hook asks of this command. Where the
+  call does run in the background, wait for it to end — the tool tells you when the task finishes, and
+  until then read its output one read to a call — and read what it printed before doing anything else.
 
 ## A document for him to read
 

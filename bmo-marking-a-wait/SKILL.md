@@ -1,7 +1,7 @@
 ---
 name: "bmo-marking-a-wait"
 bundle: worker
-version: "1.0.0"
+version: "1.1.0"
 description: "Marking a deliberate wait on the job's TODO item so the chat agent does not take a quiet job for a dead one. Use before standing still on purpose for minutes: waiting on a unit, another process or a long training, judging or checking run, or anything one tool call will sit through for minutes."
 ---
 
@@ -19,6 +19,6 @@ description: "Marking a deliberate wait on the job's TODO item so the chat agent
   `~/.local/share/bmo/deploy/bin/bmo job wait --todo <id> --what '<무엇>' --until 30m -- <명령…>`.
   The mark stands on that run and clears the moment it ends, its exit code passed through.
 - **Otherwise clear it** with `--clear` once the wait is over.
-- **The mark is believed only while its target lives and its time has not passed.** A target that
-  ends lets it go by itself, and a wait outliving the time you gave is told to the chat agent as exactly that,
-  so give the end you actually expect.
+- **The mark stands while its target lives.** A target that ends lets it go by itself. The end you
+  give paces the watch, never the wait: a wait outliving it is told to the chat agent once as exactly
+  that, its target still alive, and nothing ends the wait for it. So give the end you actually expect.

@@ -276,7 +276,7 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     &skill_flat("bmo-asking-the-owner"),
     &[
       "~/.local/share/bmo/deploy/bin/bmo job ask --todo <id>",
-      "A minute with no answer settles the question on the option you recommended",
+      "A question waits for his answer, however long that takes.",
       "~/.local/share/bmo/deploy/bin/bmo archive doc --title",
       "a question or a closing that carries such an address is refused",
       "A document with a narration is handed over only once its sound is kept",
