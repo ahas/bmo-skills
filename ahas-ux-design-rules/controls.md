@@ -51,6 +51,14 @@ every screen answers to and the sweep.
     moment it is turned while the rest waits for the footer.
   - Wrong: 저장 asking "저장할까요?" before it saves; a dialog that, closed right after a save went
     through, asks whether to throw changes away.
+- A setting's choices must be its real values only; no choice stands for "the default" in place of a
+  value.
+  1. The value equal to the default carries `(기본값)` after it: in the list of choices, in the cell or
+     field showing the chosen value, and in the placeholder of a box whose empty value stands for it.
+  2. A setting left unset shows the value it runs on, marked the same way, where that value is known.
+     Where it is not known, the field stands empty, with no word standing in for a value.
+  3. No column, chip or label says where a value comes from with a word for "default".
+  - Wrong: a list of '기본값', '켬', '끔'. Right: '켬 (기본값)', '끔'.
 - A text box must grow with its text, and a screen has only one scroll.
   1. A long body input — in a form, a panel, a dialog, anywhere inside a scrolling region — has no
      maximum height at any width and never scrolls inside; only the region holding it scrolls.
