@@ -15,7 +15,7 @@ languages = ["cargo"]
 # manifest names, Korean in the code and dashes in what the placer prints for a person. The ledger is the
 # Korean allowed per code file; it allows none. The skills are content, keep their own language and name
 # wrong forms on purpose, so no wording check reads them.
-quick = ["layout", "dependencies", "korean", "dashes"]
+quick = ["layout", "dependencies", "korean", "dashes", "cargo-profile"]
 korean_ledger = "korean-ledger.json"
 people_text = ["src/**/*.rs"]
 # The repository depends on no other unit, the base libraries included.

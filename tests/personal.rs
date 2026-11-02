@@ -5,7 +5,7 @@
 //! teach, and the two values `docs/PERSONAL-DATA.md` allows, and no list of people's names is kept
 //! anywhere.
 
-mod support;
+use crate::support;
 
 use regex::Regex;
 use std::path::{Path, PathBuf};

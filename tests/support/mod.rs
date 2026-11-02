@@ -1,8 +1,5 @@
 //! What the checks share: the root, the skill folders, and a skill's text as its readers take it.
 
-// Each test file is its own crate and uses only part of this module.
-#![allow(dead_code)]
-
 use gray_matter::Matter;
 use gray_matter::engine::YAML;
 use serde::Deserialize;
@@ -46,7 +43,6 @@ pub fn skill_names() -> Vec<String> {
 /// The front matter keys a check reads.
 #[derive(Deserialize)]
 pub struct FrontMatter {
-  pub name: Option<String>,
   pub description: Option<String>,
   pub license: Option<String>,
 }

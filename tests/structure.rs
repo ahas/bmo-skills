@@ -1,7 +1,7 @@
 //! The shape `docs/format.md` holds every skill to, beyond what the placer reads: each skill's name, its
 //! folder and its bundle are read whole by the placer's own checks on this checkout (`placer.rs`).
 
-mod support;
+use crate::support;
 
 use regex::Regex;
 use std::collections::BTreeSet;

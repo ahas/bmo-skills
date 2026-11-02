@@ -2,7 +2,7 @@
 //! would leave its rule read by nobody, so each is held here by the passage itself. Each test is named
 //! after the case of the source tree that held the same passages (`docs/inventory.md`, 「Tests」).
 
-mod support;
+use crate::support;
 
 use support::{holds, lacks, skill, skill_flat};
 
