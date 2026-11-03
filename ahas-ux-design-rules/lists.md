@@ -23,15 +23,19 @@ every screen answers to and the sweep.
   3. A cell that only shows a derived value is not pressable.
 - When a table leads to no detail page but needs an edit form of more than one cell's value, the
   form must open in a modal from the row's more-menu.
-- A table must have exactly one column that takes the width left over: the one carrying the row's
-  title, the words that say which record the row is. Every other column is laid out at its own
-  content's width, up to a ceiling of its own, and never stretches to fill what is left.
-  1. A column whose cells vary in length keeps that ceiling, and a cell too long for it is cut or
-     scrolled inside its own cell.
-  2. A column's width is one width down the whole table, so the cells line up: what the column's
-     own contents ask for, not what is available.
-  3. Dragging a column's edge changes that column alone: the flexible column still takes what is
-     left, and the content-width columns still do not stretch.
+- A table's columns behave as a spreadsheet's do — the owner's words: 「그냥 엑셀 생각해봐」. Every
+  column, the one carrying the row's title among them, stands at its own width, and no column takes
+  the width left over.
+  1. A column first stands as wide as its own content asks — its name and its widest cell — up to a
+     ceiling of its own where its cells vary in length; a cell too long for it is cut inside its own
+     cell.
+  2. A column's width is one width down the whole table, so the cells line up.
+  3. Room the columns do not use stays empty at the table's trailing edge; no column stretches into
+     it.
+  4. Dragging a column's edge changes that column alone, by what the pointer moved, so the edge
+     stays under the pointer; every other column keeps its width, and the table grows or shrinks by
+     the drag.
+  5. A table wider than its box scrolls sideways inside it.
 - A table listing data — rows of records, however many — must let every column's width be adjusted
   by dragging the edge of its column header. A table whose shape its design fixes, such as a
   settings table whose columns are one axis of the setting, is not adjusted this way.
