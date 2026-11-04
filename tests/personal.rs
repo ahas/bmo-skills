@@ -207,6 +207,6 @@ ask @some_bot
   );
   let public = "see https://ui.nuxt.com/docs, mail user@example.com and dev@ahas.io, ask @ahas, \
                 run on 127.0.0.1, import from '@nuxt/ui', `@click`, \
-                ~/.local/share/bmo/deploy/bin/bmo, a 86400000 ms day, shipped 2026-10-21";
+                ~/.local/bin/bmo, a 86400000 ms day, shipped 2026-10-21";
   assert!(hits("public", public).is_empty(), "{:?}", hits("public", public));
 }

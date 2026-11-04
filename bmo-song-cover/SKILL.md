@@ -33,8 +33,8 @@ This skill is how a job carries a song request through it.
    is named in the report as host work for the chat agent where deno is the one missing.
 2. `bun scripts/song.ts make "<title>" [--artist "<singer>"] [--remix [--style "<style>"] | --transpose <n>] [--voice natural] [--seed <n>] --chat <his chat id>`
    — it finds the recording, starts the run, follows it to its end and posts every video into his
-   chat as it is made. A run takes tens of minutes: start it as a background task, mark the wait
-   (`bmo-marking-a-wait`) on its process, and read its output file, one read to a call, until it ends.
+   chat as it is made. A run takes tens of minutes: start it as a background task, and read its output file, one read to a
+   call, until it ends.
    Run again with the same arguments, it takes up where it stopped.
 3. Read its output lines (`docs/song.md`, 「Its output」): `UNAVAILABLE` a candidate recording yt-dlp
    could not download, passed over for the next, `RECORDING` the recording chosen and downloaded,

@@ -275,9 +275,10 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     "bmo-asking-the-owner",
     &skill_flat("bmo-asking-the-owner"),
     &[
-      "~/.local/share/bmo/deploy/bin/bmo job ask --todo <id>",
+      "`bmo job ask --todo <id>",
       "A question waits for his answer, however long that takes.",
-      "~/.local/share/bmo/deploy/bin/bmo archive doc --title",
+      "it exits 1, prints no option on stdout and closes the question unsent",
+      "`bmo archive doc --title",
       "a question or a closing that carries such an address is refused",
       "A document with a narration is handed over only once its sound is kept",
     ],
@@ -295,14 +296,6 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     ],
   );
   holds(
-    "bmo-marking-a-wait",
-    &skill_flat("bmo-marking-a-wait"),
-    &[
-      "~/.local/share/bmo/deploy/bin/bmo job wait --todo <id>",
-      "Use before standing still on purpose for minutes",
-    ],
-  );
-  holds(
     "ahas-code-test-writing",
     &skill_flat("ahas-code-test-writing"),
     &[
@@ -314,7 +307,7 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
   holds(
     "bmo-beyond-the-checkout",
     &skill_flat("bmo-beyond-the-checkout"),
-    &["~/.local/share/bmo/deploy/bin/bmo job borrow <worker>"],
+    &["`bmo job borrow <repository>`"],
   );
   holds(
     "ahas-code-boundaries",

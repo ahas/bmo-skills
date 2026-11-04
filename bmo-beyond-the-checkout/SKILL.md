@@ -30,11 +30,10 @@ description: "What a job owns and where it may write once the work reaches past 
   its support worktrees — is that worker's, and what is left open in it is parked as its holder's
   own when that holder stops, so your files would leave with it.
 - **Another repository is borrowed.** Where the work needs another repository changed, borrow one of
-  its checkouts for this job with `~/.local/share/bmo/deploy/bin/bmo job borrow <worker>`: it
-  hands you a free one and holds it until the job ends.
-  - Work, commit and close there the way that repository closes a job.
-  - A support worktree — and a base checkout whose repository has support workers — is put on a
-    branch of your item, committed and not pushed, and its close lands it on main.
+  its checkouts for this job with `bmo job borrow <repository>`: it prints a free one and holds it until
+  the job ends, a support worktree first and the base checkout where none of those is free. Where every
+  one of them is at work it says so: borrow once one is free, or raise the work as a row of that repository.
+  - Work, commit, push and close there the way that repository closes a job.
 - The job guard refuses a write into anyone else's checkout and says the same.
 
 ## Reaching the infrastructure
