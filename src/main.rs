@@ -61,12 +61,16 @@ struct What {
 #[derive(Clone, Copy, ValueEnum)]
 enum PluginBundle {
   Worker,
+  Coder,
+  Producer,
 }
 
 impl PluginBundle {
   fn bundle(self) -> Bundle {
     match self {
       PluginBundle::Worker => Bundle::Worker,
+      PluginBundle::Coder => Bundle::Coder,
+      PluginBundle::Producer => Bundle::Producer,
     }
   }
 }

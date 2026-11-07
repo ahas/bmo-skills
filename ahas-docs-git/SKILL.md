@@ -1,6 +1,6 @@
 ---
 name: "ahas-docs-git"
-bundle: worker
+bundle: coder
 version: "1.1.0"
 description: "Strict git workflow + documentation + changelog rules (language-agnostic)."
 ---

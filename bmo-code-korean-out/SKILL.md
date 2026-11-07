@@ -1,6 +1,6 @@
 ---
 name: "bmo-code-korean-out"
-bundle: worker
+bundle: coder
 version: "1.1.0"
 description: "Taking the Korean out of a bundle of code files as the Korean-in-the-code ledger asks: a fixed sentence a person reads into the bot's language pack, text only an agent reads and comments into English, test input into neutral English or a check by key, data left alone. Use when an item hands you a bundle of files or a directory to clear of Korean, or before writing any Korean into a code file."
 ---

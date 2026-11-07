@@ -1,6 +1,6 @@
 ---
 name: "ahas-ux-nuxt-style"
-bundle: worker
+bundle: coder
 version: "2.0.1"
 description: "Strict coding style rules for Node.js + TypeScript + Vue/Nuxt projects (git/docs skill separated)."
 ---

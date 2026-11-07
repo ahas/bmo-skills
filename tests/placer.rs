@@ -190,7 +190,10 @@ fn the_list_names_every_skill_with_its_bundle_and_files() {
   assert_eq!(names.iter().map(|name| name.to_string()).collect::<BTreeSet<_>>(), folders);
   for skill in &listed {
     let name = skill["name"].as_str().unwrap();
-    assert!(skill["bundle"] == "worker" || skill["bundle"] == "project", "{name}");
+    assert!(
+      ["worker", "coder", "producer", "project"].contains(&skill["bundle"].as_str().unwrap()),
+      "{name}"
+    );
     let files: BTreeSet<PathBuf> = skill["files"]
       .as_array()
       .unwrap()

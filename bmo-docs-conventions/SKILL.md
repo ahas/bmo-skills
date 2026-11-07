@@ -1,6 +1,6 @@
 ---
 name: "bmo-docs-conventions"
-bundle: worker
+bundle: coder
 version: "1.6.0"
 description: "Where and how to record new information in a repository (working rules and whose they are, design, follow-up tasks, technical facts, progress), the language and shape of a document, and what a document or a code comment must never carry. Use before changing code that a document under docs/ describes, and when leaving a note, documenting a design, writing a comment, storing something you learned, cleaning up documentation, or whenever a document is about to carry a change record, a source location, or a pasted snippet."
 ---

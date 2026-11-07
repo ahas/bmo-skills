@@ -2,15 +2,16 @@
 
 The skills a job worker is given, one folder per skill named by its scope, `bmo` or `ahas`, and its category first, and the placer that
 hands them over. Each skill is a `SKILL.md` with the files it names; its front matter says which bundle
-it belongs to: the `worker` bundle, the plugin every job worker is given, or `project`, a skill one
-repository's checkout keeps as its own. The repository runs nothing: a consumer's deployment runs `bmo-skills place`, which writes the worker
+it belongs to: the `worker` bundle every general job worker is given, the `coder` bundle a coder's
+coding and design runs are given, the `producer` bundle a producer's video runs are given, or `project`,
+a skill one repository's checkout keeps as its own. The repository runs nothing: a consumer's deployment runs `bmo-skills place`, which writes the worker
 plugin in Claude Code's standard plugin layout, or one skill into its own folder, into the consumer's tree.
 
 ## Layout
 
 | Folder | Holds |
 |---|---|
-| `.claude-plugin/` | The manifest of the `bmo-worker` plugin the worker bundle is placed as |
+| `.claude-plugin/` | The manifest of the `bmo-worker` plugin every placed bundle is written as |
 | `ahas-code-boundaries/` | Where a variation belongs, where a list a person edits is kept, and how a base library is contributed to |
 | `ahas-code-clean/` | The line-level pass of a refactoring, with its principles and its Rust and TypeScript notes |
 | `ahas-code-design-patterns/` | The structural pass of a refactoring, with its pattern catalogues |
@@ -22,6 +23,8 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `ahas-ux-design-rules/` | The design rules for every user interface, by area |
 | `ahas-ux-nuxt-style/` | The coding style for Node.js, TypeScript and Vue or Nuxt projects |
 | `ahas-ux-nuxt-ui/` | Building interfaces with Nuxt UI, with its component and layout references |
+| `ahas-video-code-rendered/` | Making a video as code, every frame a function of time, with a treatment, measured timing, scene modules and an offline render |
+| `ahas-video-shotcraft/` | Making a video with the video-shotcraft studio (Remotion), from the setup to the render and the licence lines |
 | `bmo-asking-the-owner/` | Putting a decision or a document in front of the owner |
 | `bmo-beyond-the-checkout/` | What a job owns once its work reaches past its own checkout |
 | `bmo-closing-a-job/` | How a job ends: the graph, the close, what it may leave and the report |

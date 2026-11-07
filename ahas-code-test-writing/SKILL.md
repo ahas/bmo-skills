@@ -1,6 +1,6 @@
 ---
 name: "ahas-code-test-writing"
-bundle: worker
+bundle: coder
 version: "1.0.0"
 description: "The three rules a test is written to, since every test is paid for on every run of the suite after it: no waiting on the real clock, every process it starts taken down with its descendants, and no check made again that another test already makes. Use before writing or changing a test."
 ---

@@ -1,6 +1,6 @@
 ---
 name: "ahas-code-boundaries"
-bundle: worker
+bundle: coder
 version: "1.2.0"
 description: "Where a variation belongs when the members of a family or the services on a shared base each need their own value or behavior, where a list a person edits is kept, and how a base library is contributed to. Use when factoring a common supertype, designing a framework or base package others build on, introducing a registry or lookup table, adding a branch that turns on a type name or a service name, or adding to a list — workers, rooms, rules — that the owner may later rename, add to or remove from, or when a repository needs something its base library does not serve."
 ---

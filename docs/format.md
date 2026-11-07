@@ -27,7 +27,7 @@ readers did.
 | `bmo` | A skill that means something only where this system stands: a procedure of its own jobs, or work carried out through its commands, its archive, its services or its worker's texts |
 | `ahas` | A skill whose rules hold in any harness and any project without this system: the owner's own standards and the outside tools used anywhere. A line naming how this system carries out one of its rules leaves it `ahas` |
 
-- **The categories are these four,** and a skill takes the one its work belongs to:
+- **The categories are these five,** and a skill takes the one its work belongs to:
 
 | Category | Holds |
 |---|---|
@@ -35,6 +35,7 @@ readers did.
 | `ux` | How a user interface is designed, and the style and component library its code is written with |
 | `docs` | How a document, an explanation or the git record is written |
 | `tools` | Driving an outside program, or a kind of work carried out with one |
+| `video` | How a video is made: the studio it is made with, its shots and timing, the render and the frames checked before it goes out |
 
 - **An `ahas` skill always takes a category.** A `bmo` skill takes one where its work belongs to one of
   them, and a procedure of this system's own jobs takes none: its words follow the scope, as
@@ -52,7 +53,7 @@ the skill's rules, read whole when the skill is loaded.
 |---|---|---|
 | `name` | yes | The skill's name, equal to its folder's name; consumers call it by this name |
 | `description` | yes | When the skill is read: the situation it is for and what it covers. It is what an agent sees before loading the skill, so it names the situation rather than summarising the rules |
-| `bundle` | yes | Which consumers receive the skill (「Bundles」 below): `worker` or `project` |
+| `bundle` | yes | Which consumers receive the skill (「Bundles」 below): `worker`, `coder`, `producer` or `project` |
 | `version` | no | The skill's own version, in semantic versioning, raised when its rules change |
 | `license` | only for a skill copied from elsewhere | The licence and the origin: the maker, the package and the place it was copied from. A skill written here carries none |
 | `allowed-tools` | no | The tools the skill may use without asking, in Claude Code's own form |
@@ -63,11 +64,15 @@ No other key is read by this repository; Claude Code reads the ones it knows and
 
 A skill states the one bundle it belongs to, and nothing outside its folder lists it.
 
-- **`worker`:** the bmo-worker plugin, which every job worker is given. Its skills are called as
-  `bmo-worker:<name>`.
+- **`worker`:** the bmo-worker plugin every general job worker is given.
+- **`coder`:** the bmo-worker plugin a coder's coding and design runs are given.
+- **`producer`:** the bmo-worker plugin a producer's video runs are given.
 - **`project`:** a skill one repository's checkout receives as its own project skill, under its
   `.claude/skills/<name>/`. Which checkout receives it is that repository's own deployment's choice
   (`boundary.md`).
+
+Every bundle but `project` is placed as the `bmo-worker` plugin, so its skills are called as
+`bmo-worker:<name>`.
 
 ## Area and reference files
 

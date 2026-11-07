@@ -1,6 +1,6 @@
 ---
 name: "bmo-warm-prefix"
-bundle: worker
+bundle: coder
 version: "1.0.0"
 description: "Changing what a running session holds as its cached prefix: a document that stands in a session's system prompt, or how an agent's Claude process is started — its launch line, model, effort, permissions, tools, system prompt and environment. Use before editing either."
 ---

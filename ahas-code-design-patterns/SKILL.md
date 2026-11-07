@@ -1,6 +1,6 @@
 ---
 name: "ahas-code-design-patterns"
-bundle: worker
+bundle: coder
 version: "2.2.0"
 description: "The structural pass of a refactoring: judging whether the shape a piece of code already has is the right one for what actually varies in it, across the GoF patterns and the enterprise, dependency-injection and functional patterns beyond them. Use first, before the refactoring and ahas-code-clean passes, whenever code is to be restructured — the owner calls it 리팩토링, and 정리, 클린코드 and reviewing a design mean the same — a new module's shape is being decided, or an existing structure is under review."
 ---

@@ -1,6 +1,6 @@
 ---
 name: "ahas-code-refactoring"
-bundle: worker
+bundle: coder
 version: "2.3.0"
 description: "The module-and-function pass of a refactoring: finding the code smells in a unit and applying the named refactoring each smell asks for, from Martin Fowler's catalogue and its smells. It also carries the rule that a name never becomes a wrong name later: every name, of a file, a unit, a key or a table alike, says what the thing is, never a fact that can change (where it runs, who uses it, an account, an address), and the fact itself is read from its source, never fixed into code. Use second, after the ahas-code-design-patterns pass has settled the structure and before the ahas-code-clean pass, whenever code is being restructured without changing what it does, and before naming anything new."
 ---

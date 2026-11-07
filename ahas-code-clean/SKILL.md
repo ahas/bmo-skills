@@ -1,6 +1,6 @@
 ---
 name: "ahas-code-clean"
-bundle: worker
+bundle: coder
 version: "2.3.0"
 description: "The line-level pass of a refactoring: names, functions, comments, formatting, objects and data structures, error handling, boundaries, tests, classes and concurrency, judged one line at a time against SOLID, DRY, KISS, YAGNI, the Law of Demeter, least astonishment and the other standing principles. Use third and last, after the ahas-code-design-patterns pass has settled the structure and the refactoring pass has moved the parts, and on its own whenever code is being read for readability, a Rust crate is laid out or linted, or logic more than one runtime needs is being written."
 ---

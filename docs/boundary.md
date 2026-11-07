@@ -31,11 +31,11 @@ bmo-skills list [--json] [--from <root>]
 ### `place --bundle`
 
 ```
-bmo-skills place --bundle worker --into <dir> [--from <root>]
+bmo-skills place --bundle worker|coder|producer --into <dir> [--from <root>]
 ```
 
 - Writes the bmo-worker plugin into `<dir>` in Claude Code's standard plugin layout: the manifest at
-  `.claude-plugin/plugin.json`, and every skill whose bundle is `worker` at `skills/<name>/`, each file of
+  `.claude-plugin/plugin.json`, and every skill of the bundle named at `skills/<name>/`, each file of
   its folder byte for byte. Nothing else stands in `<dir>` afterwards.
 - `<dir>` is replaced whole, and only where it is absent, empty, or an earlier placement: a directory whose
   `.claude-plugin/plugin.json` names the plugin `bmo-worker`.
@@ -70,7 +70,7 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 
 ## The manifest
 
-- **The plugin is named `bmo-worker`,** and every skill of the `worker` bundle is called as
+- **The plugin is named `bmo-worker`,** and every skill of any placed bundle is called as
   `bmo-worker:<name>`.
 - **Its version is the repository's `VERSION`.**
 - **Its licence is `MIT`,** the repository's, stated in the manifest beside the root `LICENSE`.
@@ -80,9 +80,11 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 
 | Consumer | What it receives | From where | How it reads it |
 |---|---|---|---|
-| bmo-agency | the `worker` bundle | its own plugin directory, placed with `place --bundle worker` at its deployment | its worker launch line hands that directory to Claude Code as the plugin; its co-worker definitions read the manifest's name and the names under `skills/`, and keep only the preloaded skills the plugin carries; its prefix digest reads the manifest and every `skills/<name>/SKILL.md` |
-| every job worker | the `worker` bundle | the agency's plugin directory, through its launch line | Claude Code lists the skills to the job, and a job whose line shows no listing reads them at the skills path its trailer names |
-| the agency's `builder` co-worker | `ahas-code-design-patterns`, `ahas-code-refactoring`, `ahas-code-clean`, preloaded in that order | the same plugin | its definition names them as `bmo-worker:<name>` |
+| bmo-agency | the `worker`, `coder` and `producer` bundles | its own plugin directories, each placed with `place --bundle worker|coder|producer` at its deployment | each line hands its directory to Claude Code as the plugin; its co-worker definitions read the manifest's name and the names under `skills/`, and keep only the preloaded skills the plugin carries; its prefix digest reads the manifest and every `skills/<name>/SKILL.md` |
+| every general job worker | the `worker` bundle | the agency's worker plugin directory, through its launch line | Claude Code lists the skills to the job, and a job whose line shows no listing reads them at the skills path its trailer names |
+| a coder's run | the `coder` bundle | the agency's coder plugin directory, through its launch line | its coding and design work reads those skills; its co-worker definitions carry them |
+| a producer's run | the `producer` bundle | the agency's producer plugin directory, through its launch line | its video work reads those skills |
+| the agency's `builder` co-worker | `ahas-code-design-patterns`, `ahas-code-refactoring`, `ahas-code-clean`, preloaded in that order | the coder plugin | its definition names them as `bmo-worker:<name>` |
 | bmo-job | nothing placed | | its closing policy takes the word `ahas-ux-design-rules` in a report as the mark that a changed screen was swept against the design rules |
 | bmo-song | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
 | the agency's chat procedures | nothing placed | | the song procedure names `bmo-song-cover` when it files a song item, and the TODO procedure names the builder's three skills |

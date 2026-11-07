@@ -14,18 +14,24 @@ pub const SKILL_FILE: &str = "SKILL.md";
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize)]
 #[serde(rename_all = "lowercase")]
 pub enum Bundle {
-  /// The plugin every job worker is given.
+  /// The plugin every general job worker is given.
   Worker,
+  /// The plugin a coder's coding and design runs are given.
+  Coder,
+  /// The plugin a producer's video runs are given.
+  Producer,
   /// A project skill one repository's checkout receives into its own skills folder.
   Project,
 }
 
 impl Bundle {
-  const ALL: [Bundle; 2] = [Bundle::Worker, Bundle::Project];
+  const ALL: [Bundle; 4] = [Bundle::Worker, Bundle::Coder, Bundle::Producer, Bundle::Project];
 
   pub fn as_str(self) -> &'static str {
     match self {
       Bundle::Worker => "worker",
+      Bundle::Coder => "coder",
+      Bundle::Producer => "producer",
       Bundle::Project => "project",
     }
   }

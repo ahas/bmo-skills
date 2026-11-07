@@ -1,6 +1,6 @@
 ---
 name: "bmo-ux-wording"
-bundle: worker
+bundle: coder
 version: "1.0.0"
 description: "The console's UI wording guide: where WORDING.md stands, when to read it, how a term is added to it, and how a use that departs from it is reported and fixed. Use before writing or changing any Korean text a screen shows, and when a review finds a screen's wording off the guide."
 ---
