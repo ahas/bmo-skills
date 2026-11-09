@@ -1,7 +1,7 @@
 ---
 name: "bmo-asking-the-owner"
 bundle: worker
-version: "1.2.0"
+version: "1.3.0"
 description: "How a job puts something in front of the owner: a decision that is genuinely his (hard to undo, or settled by his own taste) asked with bmo job ask, and a document for him to read or approve filed in the deployment's 아카이브. Use before asking him anything and before handing him any document."
 ---
 
@@ -53,6 +53,16 @@ description: "How a job puts something in front of the owner: a decision that is
   or an HTML page with `--html <file>`. It prints the document's number and the address to hand over.
   - With no `--chat` it is his own.
   - `--replace <id>` rewrites it under its number as the design moves.
+- **Its pictures stand in its body, at the place its words speak of them.** A reference you collected, a
+  result you drew, a chart, a screenshot: each is drawn there as a markdown picture whose target is the
+  file's own name, and the file is handed over in the same call with `--file <path>`, once for each. A
+  rewrite hands over only the files the document does not keep yet, and a changed file under a new name.
+  - What is compared stands side by side: the pictures of one comparison in one table row, the reference
+    first.
+  - The files list under the document is where he saves a file, never where he is sent to look. A document
+    whose pictures are only attached, its body words and figures alone, is not finished.
+  - A file he saves or plays and the body does not draw — a data file, a recording — is handed over the
+    same way and named in the body where it is spoken of.
   - A long reading he studies — how something is built, a deep investigation — also takes a narration:
     `bmo brief-attach <document number> <file>` with a script for the ear by the rules of a deep dive's, in
     `~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md` 「The narration」, spoken in the chat agent's

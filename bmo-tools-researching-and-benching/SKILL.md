@@ -1,7 +1,7 @@
 ---
 name: "bmo-tools-researching-and-benching"
 bundle: worker
-version: "1.1.0"
+version: "1.2.0"
 description: "How a job researches, benches or tunes something the lab runs — an engine, a model, a library, a card, a setting: the maker's own material first, then what the lab can do with it, then measurement; every option tried until none the job can try is left, with none handed back to the owner and no interim report; one final document in the deployment's 아카이브, reported once its narration is spoken; and the bench lock released before the report. Use before the first step of any item that measures, compares, tunes or researches something to run on the lab's machines."
 ---
 
@@ -69,6 +69,9 @@ flowchart TD
   `bmo brief-attach` as the `bmo-asking-the-owner` skill says: what the maker states first, then the method, the raw material,
   the tables and figures, the reasoning behind the verdict, the configuration adopted, and the
   options for later.
+- **What was collected and what was made is shown in it.** Every reference gathered beforehand and every
+  sample, picture or output the bench produced is drawn in the body beside the figures it backs, as that
+  skill's rule for a document's pictures says, never left as a list of attached files.
 - **What is still open is only what no job can reach now,** each with what puts it there. A value a
   job could have measured is measured, never marked `추정` or `확인 필요`.
 - **The narration** is written by the rules of a deep dive's, `deep-dives.md` 「The narration」.
