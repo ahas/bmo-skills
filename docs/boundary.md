@@ -80,11 +80,10 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 
 | Consumer | What it receives | From where | How it reads it |
 |---|---|---|---|
-| bmo-agency | the `worker`, `coder` and `producer` bundles | its own plugin directories, each placed with `place --bundle worker|coder|producer` at its deployment | each line hands its directory to Claude Code as the plugin; its co-worker definitions read the manifest's name and the names under `skills/`, and keep only the preloaded skills the plugin carries; its prefix digest reads the manifest and every `skills/<name>/SKILL.md` |
+| bmo-agency | the `worker`, `coder` and `producer` bundles | its own plugin directories, each placed with `place --bundle worker|coder|producer` at its deployment | each line hands its directory to Claude Code as the plugin; its prefix digest reads the manifest and every `skills/<name>/SKILL.md` |
 | every general job worker | the `worker` bundle | the agency's worker plugin directory, through its launch line | Claude Code lists the skills to the job, and a job whose line shows no listing reads them at the skills path its trailer names |
-| a coder's run | the `coder` bundle | the agency's coder plugin directory, through its launch line | its coding and design work reads those skills; its co-worker definitions carry them |
+| a coder's run | the `coder` bundle | the agency's coder plugin directory, through its launch line | its coding and design work reads those skills |
 | a producer's run | the `producer` bundle | the agency's producer plugin directory, through its launch line | its video work reads those skills |
-| the agency's `builder` co-worker | `ahas-code-design-patterns`, `ahas-code-refactoring`, `ahas-code-clean`, preloaded in that order | the coder plugin | its definition names them as `bmo-worker:<name>` |
 | bmo-job | nothing placed | | its closing policy takes the word `ahas-ux-design-rules` in a report as the mark that a changed screen was swept against the design rules |
 | bmo-song | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
 | the agency's chat procedures | nothing placed | | the song procedure names `bmo-song-cover` when it files a song item, and the TODO procedure names the builder's three skills |
@@ -97,7 +96,7 @@ a skill is a major change (「Versions」).
 
 A skill reaches another unit only through words it tells a job to run or to read. A `bmo` command is
 bmo-cli's, which hands it to the unit that serves it, as bmo-cli's own boundary document states: `job
-ask`, `job borrow`, `job wait`, `job close`, `todo` and `work-order` go to bmo-job; `archive doc` to
+ask`, `job borrow`, `job wait`, `job close` and `todo` go to bmo-job; `archive doc` to
 bmo-artifact; `check` and `cargo` to bmo-testbed; `reload` to bmo-agency; `graph`, `query` and `voice
 brief` stand there as not served yet. The graph tools a job calls are the agency's worker tools.
 
@@ -116,7 +115,7 @@ brief` stand there as not served yet. The graph tools a job calls are the agency
 | `ahas-ux-nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `bmo-warm-prefix` |
 | `bmo-asking-the-owner` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-agency | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching` |
 | `bmo-beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-agency; bmo-job; the checkout; outside every unit | |
-| `bmo-closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here` and `--add`; `work-order --todo`; the close and the suite it runs; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-job; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
+| `bmo-closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here` and `--add`; the close and the suite it runs; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
 | `bmo-code-korean-out` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `bmo-closing-a-job` |
 | `bmo-docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking-the-owner` |
 | `bmo-docs-eli5` | `archive doc --html` | bmo-artifact | |

@@ -36,9 +36,8 @@ These rules hold every change to this repository.
 ## Writing a skill
 
 - **A skill carries the rules it teaches and nothing about where they came from:** no source list, no
-  bibliography, no licence in its body. A skill is read before its reader has been asked anything, and
-  the `builder` co-worker starts with three already read, so every line is paid for on every run that
-  holds it. Researched material keeps its sources with the search, in its own rows and document,
+  bibliography, no licence in its body. A skill is read before its reader has been asked anything, so every
+  line is paid for on every run that holds it. Researched material keeps its sources with the search, in its own rows and document,
   permanently and outside every prompt.
 - **A skill copied whole from elsewhere keeps its origin and licence in its front matter alone,** the
   one part no prompt loads whole (`docs/format.md`).
