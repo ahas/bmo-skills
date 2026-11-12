@@ -173,16 +173,17 @@ every screen answers to and the sweep.
   3. The toolbar must span the container edge to edge, its top and bottom borders continuing the
      borders of the tab bar and the editor.
   4. Items inside the toolbar are separated by dividers and must not each carry their own border.
-  5. An item button whose whole content is an icon must be a square as wide as the toolbar is tall,
-     so the row reads as one band of equal cells and a finger has the whole height to aim at. That
-     square is a floor, not a fixed width, and no button in a toolbar wraps its word — both set as
-     「Buttons and menus」 in `controls.md` says.
-  6. A control drawn smaller than the row is tall — a checkbox, a small mark — must stand in a cell
-     of that same square, and the whole cell must be pressable and carry the hover and press colors:
-     a box of a few pixels is nothing a finger can aim at.
+  5. A button in a toolbar is the component library's small button, its own size, centered in the
+     row with room above and below it: never a cell stretched to the row's height or width. Its hover
+     and press colors fill the button's own rounded shape and nothing round it, so a hovered button
+     never paints the row from edge to edge. An icon-only button is the library's small square icon
+     button, and no button in a toolbar wraps its word — as 「Buttons and menus」 in `controls.md` says.
+  6. A control drawn smaller than a small button — a checkbox, a small mark — stands with its words as
+     one pressable control of the library's own, its hover confined to that control as a button's
+     is.
   7. A cell is as wide as what it holds. The room a cell of words keeps on either side must not be
      laid around a cell holding only buttons — a group of actions, the menu button a folded group
-     opens from — whose buttons are already the row's squares, nor over a library component's own
+     opens from — whose buttons already carry their own room, nor over a library component's own
      padding. Set once on the toolbar, off what a cell holds.
   8. On mobile the toolbar must be as thin as a single row of compact controls.
   - Wrong: an editor's symbol controls scattered as separate buttons detached from the editor.
@@ -194,8 +195,12 @@ every screen answers to and the sweep.
 - **Top bar**
   1. The top bar must hold only elements that span the whole app and mean the same on every page —
      opening the sidebar, usage, global search.
-  2. An action button that concerns only one page's content — fetching the original, refresh, edit —
-     must not go in the top bar, but in that page's title area.
+  2. Nothing but the page's name and mark stands beside the title in the top bar: no action, no way
+     back, no switch. An action that concerns only one page — creating an item, fetching the original,
+     refresh, edit, translate — goes into the page's own row directly under the top bar, at its right
+     end; the way back to where the reader came from goes at that row's left end. Where the page
+     already has a row there — its tab bar, its toolbar — that row holds them; otherwise the page
+     draws one, and never a second.
   3. Information in the top bar must be a button that opens a popover, unless it is useful to see at
      all times. On mobile it must always be a button with a popover.
 - **Bars lying over a conversation**

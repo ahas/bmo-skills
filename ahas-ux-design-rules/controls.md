@@ -98,8 +98,8 @@ every screen answers to and the sweep.
   2. Where the width runs out, the answer is the one its container already has for overflow —
      scrolling sideways, an ellipsis, folding the group behind a menu — never a second line.
   3. The rule is set once for the container that holds the buttons, never button by button. In a
-     toolbar that container is the toolbar itself, at the one place that already tells an item
-     button from the rest, where its square floor is set too (the Toolbar rules in `layout.md`).
+     toolbar that container is the toolbar itself, where its buttons' small size is set too (the
+     Toolbar rules in `layout.md`).
   4. A rule that fixes a button's width must be a floor rather than a fixed size, so a longer label
      pushes the button wider instead of folding into it. A stylesheet reads a button's elements, not
      its text, so a rule meant for icon-only buttons also catches a button whose word sits straight
