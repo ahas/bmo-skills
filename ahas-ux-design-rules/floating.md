@@ -67,6 +67,8 @@ every screen answers to and the sweep.
      something answering a hold of its own — a menu, the start of choosing — the tooltip comes up
      with it, and goes once the finger moves on.
   3. The next touch anywhere closes it, and a touch on what it stands on does not open it again.
+- A control a key presses must name that key in its tooltip, after the tooltip's words, so the key
+  is learned where the control is.
 - A tooltip's words must wrap inside a width a phone has room for, never be cut a second time.
 - Text cut short to fit its box must show whole in a tooltip, and only where it is actually cut.
   1. Whether it is cut is measured as the tooltip is about to open, so widening the box stops it and

@@ -147,6 +147,17 @@ every screen answers to and the sweep.
   content — must have room kept for it at the foot of that list: the list's scrolling area ends with
   padding at least as tall as the button and the gap it keeps from the edge, so the last item,
   scrolled to its end, stands clear of the button.
+- A screen's create action must be the interface's one shared create component, never a button of
+  the screen's own. The screen supplies what is created and what pressing it does; the look and the
+  place are the component's.
+  1. On a wide screen it is a neutral ghost icon button at the right end of the screen's own row (the
+     Top bar rules in `layout.md`). Its tooltip names what it creates, then the key that presses it.
+  2. On a phone it is one primary icon button floating at the bottom right of the screen. Its corner
+     is a button's tier, never round, and the list under it keeps room at its foot as any floating
+     button's does.
+  3. No primary icon button stands in a row, and no create button carries both an icon and a word.
+  - Wrong: a filled button with a plus and the word "New" at the head of a list, beside a round
+    floating plus on the same screen's phone layout.
 
 ## Search
 
