@@ -113,14 +113,14 @@ brief` stand there as not served yet. The graph tools a job calls are the agency
 | `ahas-ux-design-rules` | | | `ahas-ux-nuxt-ui`, `bmo-ux-wording` |
 | `ahas-ux-nuxt-style` | | | `ahas-code-refactoring` |
 | `ahas-ux-nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `bmo-warm-prefix` |
-| `bmo-asking-the-owner` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-agency | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching` |
+| `bmo-asking` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-agency | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching` |
 | `bmo-beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-agency; bmo-job; the checkout; outside every unit | |
 | `bmo-closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here` and `--add`; the close and the suite it runs; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
 | `bmo-code-korean-out` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `bmo-closing-a-job` |
-| `bmo-docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking-the-owner` |
+| `bmo-docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking` |
 | `bmo-docs-eli5` | `archive doc --html` | bmo-artifact | |
-| `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking-the-owner` |
-| `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter; bmo-agency | `bmo-asking-the-owner` |
+| `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking` |
+| `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter; bmo-agency | `bmo-asking` |
 | `bmo-ux-wording` | bmo-web's `WORDING.md` at that repository's root and the console's Korean pack, which the guide names | bmo-web | |
 | `bmo-warm-prefix` | the launch lines and the document reload | bmo-agency | |
 

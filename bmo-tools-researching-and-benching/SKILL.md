@@ -66,7 +66,7 @@ flowchart TD
 ## The final document
 
 - **A deep dive in the deployment's 아카이브,** filed with `bmo archive doc` and given its narration with
-  `bmo brief-attach` as the `bmo-asking-the-owner` skill says: what the maker states first, then the method, the raw material,
+  `bmo brief-attach` as the `bmo-asking` skill says: what the maker states first, then the method, the raw material,
   the tables and figures, the reasoning behind the verdict, the configuration adopted, and the
   options for later.
 - **What was collected and what was made is shown in it.** Every reference gathered beforehand and every

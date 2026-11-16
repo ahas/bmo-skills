@@ -272,12 +272,13 @@ fn with_the_estate_to_be_read_rather_than_remembered_and_no_credential_of_its_ow
 #[test]
 fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_it_is_read() {
   holds(
-    "bmo-asking-the-owner",
-    &skill_flat("bmo-asking-the-owner"),
+    "bmo-asking",
+    &skill_flat("bmo-asking"),
     &[
       "`bmo job ask --todo <id>",
-      "A question waits for his answer, however long that takes.",
-      "it exits 1, prints no option on stdout and closes the question unsent",
+      "A question waits for its answer, however long that takes.",
+      "it exits 1, prints nothing on stdout and closes the question unsent",
+      "An acknowledgement is written on the question and handed to nobody, so it wakes nobody",
       "`bmo archive doc --title",
       "a question or a closing that carries such an address is refused",
       "A document with a narration is handed over only once its sound is kept",

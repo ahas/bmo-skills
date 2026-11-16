@@ -25,7 +25,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `ahas-ux-nuxt-ui/` | Building interfaces with Nuxt UI, with its component and layout references |
 | `ahas-video-code-rendered/` | Making a video as code, every frame a function of time, with a treatment, measured timing, scene modules and an offline render |
 | `ahas-video-shotcraft/` | Making a video with the video-shotcraft studio (Remotion), from the setup to the render and the licence lines |
-| `bmo-asking-the-owner/` | Putting a decision or a document in front of the owner |
+| `bmo-asking/` | Asking the supervisor what a job cannot settle itself, and filing a document for the owner |
 | `bmo-beyond-the-checkout/` | What a job owns once its work reaches past its own checkout |
 | `bmo-closing-a-job/` | How a job ends: the graph, the close, what it may leave and the report |
 | `bmo-code-korean-out/` | Taking the Korean out of a bundle of code files |

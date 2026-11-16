@@ -48,7 +48,7 @@ are this repository's.
 
 | Skill in the source tree | Folder here | Files | Paths inside the folder |
 |---|---|---|---|
-| `asking-the-owner` | `bmo-asking-the-owner` | 1 | `SKILL.md` |
+| `asking-the-owner` | `bmo-asking` | 1 | `SKILL.md` |
 | `beyond-the-checkout` | `bmo-beyond-the-checkout` | 1 | `SKILL.md` |
 | `clean-code` | `ahas-code-clean` | 3 | `SKILL.md`, `references/principles.md`, `references/typescript.md` |
 | `closing-a-job` | `bmo-closing-a-job` | 1 | `SKILL.md` |
@@ -133,7 +133,7 @@ table. A test name holding a Korean word takes the English for it as its functio
 | the warm-prefix skill gives a job the launch line its item needs, and what a warm document costs to edit | `bmo-warm-prefix` | |
 | and the worker's beyond-the-checkout skill carries the same rule from its own side | `bmo-beyond-the-checkout` | |
 | with the estate to be read rather than remembered, and no credential of its own | `bmo-beyond-the-checkout` | |
-| the rules only some jobs meet stand in skills of their own, each saying when it is read | `bmo-asking-the-owner`, `bmo-tools-researching-and-benching`, `bmo-marking-a-wait`, `ahas-code-test-writing`, `bmo-beyond-the-checkout`, `ahas-code-boundaries`, `ahas-code-refactoring`, `ahas-code-clean` | the two Korean rules of `ahas-code-boundaries`; their section's English heading stands for them |
+| the rules only some jobs meet stand in skills of their own, each saying when it is read | `bmo-asking`, `bmo-tools-researching-and-benching`, `bmo-marking-a-wait`, `ahas-code-test-writing`, `bmo-beyond-the-checkout`, `ahas-code-boundaries`, `ahas-code-refactoring`, `ahas-code-clean` | the two Korean rules of `ahas-code-boundaries`; their section's English heading stands for them |
 | the design rules carry the sweep the closing skill sends a job back to | `ahas-ux-design-rules` | |
 | the design rules keep their core under 500 lines and name every area file beside it | `ahas-ux-design-rules` | |
 | the three restructuring skills each name the order and their place in it | `ahas-code-design-patterns`, `ahas-code-refactoring`, `ahas-code-clean` | |

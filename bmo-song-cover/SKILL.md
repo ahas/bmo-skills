@@ -104,7 +104,7 @@ This skill is how a job carries a song request through it.
 ## Rules the owner set
 
 - **The lyrics are the original's, whole and in their order.** Shortening them, or dropping a verse,
-  is asked of the owner first (`bmo-asking-the-owner`). A chorus the recording sings more often than the
+  is asked of the owner first (`bmo-asking`). A chorus the recording sings more often than the
   page writes it is written out again by the lyrics stage, from the page's own lines; nobody types
   it.
 - **Only the lyrics given are sung.** The trim stage silences the chat agent's voice outside the stretches the
