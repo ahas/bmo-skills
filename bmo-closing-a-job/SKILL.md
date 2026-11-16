@@ -1,8 +1,8 @@
 ---
 name: "bmo-closing-a-job"
 bundle: worker
-version: "1.2.0"
-description: "How a job ends: the graph brought up to date and the alias his words call for, the design sweep of a screen it changed, the commit and the close, the item marked done or held, what a 미결 strand and a raised row may carry, checking the work by machine instead of asking the owner, and the three-part report. Use before the first commit of a job's change, and again before writing its report."
+version: "1.3.0"
+description: "How a job ends: the graph brought up to date and the alias his words call for, the design sweep of a screen it changed, the steps a testbed declaration it changed may declare, the commit and the close, the item marked done or held, what a 미결 strand and a raised row may carry, checking the work by machine instead of asking the owner, and the three-part report. Use before the first commit of a job's change, and again before writing its report."
 ---
 
 # Closing a job
@@ -14,6 +14,10 @@ Bring the code dependency graph up to date in one pass just before the commit an
 ## A screen the job changed
 
 Where this job changed a screen — a `.vue` file, or whatever a screen is made of in your checkout — sweep it against the owner's design rules before you close; where it changed none, skip this paragraph whole. The rules are the `ahas-ux-design-rules` skill: load the skill again at the end rather than trusting what you read before the first edit, drive each screen you touched rather than reading its source alone, fix what the sweep finds in this same pass, and write the sweep into the report under Checked the way that skill's sweep section says.
+
+## A testbed declaration the job changed
+
+Where this job writes or edits a repository's testbed declaration, its `testbed.toml`, it declares no check step the testbed already runs; where it changed none, skip this paragraph whole. The testbed checks every Rust repository it tests and deploys by itself (bmo-testbed's `docs/checks.md`): its static check, which the close and every deployment's gate run, formats and lints the Cargo workspace's own crates with `cargo fmt --check` and `cargo clippy --all-targets`, every warning an error, wherever the change reaches a crate, and the change check runs `cargo check` on every crate the change marks. So a declaration carries no `[[check.step]]` that type-checks, lints or formats those crates: no `cargo check`, `cargo clippy` or `cargo fmt`, through plain `cargo` or the testbed's Cargo verb, whatever flags it adds. Such a step is never free: the change check runs it as declared, and so does a deployment whose range reaches no crate, a plain `cargo` step compiling outside the testbed's shared build directory. A declared step adds only what the testbed does not do, such as a front end's type check or build, or a check of the repository's own. Where the declaration this job touches already carries such a step, take it out in the same change.
 
 ## Closing the change
 
