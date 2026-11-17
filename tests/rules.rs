@@ -113,7 +113,7 @@ fn keeps_a_structural_fix_the_work_needs_inside_the_job_and_leaves_only_what_it_
       "is yours to design, implement and test inside this job",
       "\"it needs a design of its own\" or \"it is a larger change\" is not a reason to stop short of it",
       "--unfinished is for work this job's hands could not reach: what only",
-      "can give — a password, an account of his, a judgement of his own taste, a change to STRUCTURE.md",
+      "can give — a password or an account of his that no saved secret holds, a judgement of his own taste, a change to STRUCTURE.md",
     ],
   );
 }
