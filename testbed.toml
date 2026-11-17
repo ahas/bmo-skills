@@ -20,18 +20,5 @@ korean_ledger = "korean-ledger.json"
 people_text = ["src/**/*.rs"]
 # The repository depends on no other unit, the base libraries included.
 base_libraries = []
-
-[[check.step]]
-id = "check"
-command = "cargo check --all-targets"
-lane = "wide"
-
-[[check.step]]
-id = "clippy"
-command = "cargo clippy --all-targets -- -D warnings"
-lane = "wide"
-
-[[check.step]]
-id = "fmt"
-command = "cargo fmt --check"
-lane = "wide"
+# No check step is declared: the testbed's static check formats and lints the Cargo package, and its
+# change check type-checks it, wherever a change reaches the package.
