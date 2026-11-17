@@ -161,31 +161,6 @@ fn sends_a_job_that_changed_a_screen_back_through_the_design_rules_before_it_clo
 }
 
 #[test]
-fn tells_every_job_to_ask_the_graph_and_to_bring_it_up_to_date_before_the_commit() {
-  holds(
-    "bmo-closing-a-job",
-    &skill_flat("bmo-closing-a-job"),
-    &[
-      "Bring the code dependency graph up to date in one pass just before the commit and never as you go",
-      "a commit that touched a file the graph names and left the graph alone is refused",
-    ],
-  );
-}
-
-#[test]
-fn and_to_write_down_the_word_the_owner_used_where_the_graph_does_not_carry_it_yet() {
-  holds(
-    "bmo-closing-a-job",
-    &skill_flat("bmo-closing-a-job"),
-    &[
-      "bmo graph alias <id> --add",
-      "his word exactly as he wrote it",
-      "never your own name for it and never a phrase you tidied",
-    ],
-  );
-}
-
-#[test]
 fn the_workers_own_rules_stand_in_the_workers_own_texts_and_the_skill_says_where_each_rule_belongs() {
   holds(
     "bmo-docs-conventions",

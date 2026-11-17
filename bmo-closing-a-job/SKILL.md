@@ -1,15 +1,11 @@
 ---
 name: "bmo-closing-a-job"
 bundle: worker
-version: "1.3.1"
-description: "How a job ends: the graph brought up to date and the alias his words call for, the design sweep of a screen it changed, the steps a testbed declaration it changed may declare, the commit and the close, the item marked done or held, what a 미결 strand and a raised row may carry, checking the work by machine instead of asking the owner, and the three-part report. Use before the first commit of a job's change, and again before writing its report."
+version: "1.4.0"
+description: "How a job ends: the design sweep of a screen it changed, the steps a testbed declaration it changed may declare, the commit and the close, the item marked done or held, what a 미결 strand and a raised row may carry, checking the work by machine instead of asking the owner, and the three-part report. Use before the first commit of a job's change, and again before writing its report."
 ---
 
 # Closing a job
-
-## The graph
-
-Bring the code dependency graph up to date in one pass just before the commit and never as you go — a node whose files moved, a symbol gone, an edge gone or new — and put that pass in the same commit as the code: a commit that touched a file the graph names and left the graph alone is refused. A node's title and what are English (the graph tool refuses prose that reads as Korean), a Korean screen label inside them quoted as it stands. A what is one or two sentences on what the feature is and where it lives, at most 300 characters (the tool enforces it): where your change made it wrong, rewrite the wrong sentence rather than appending what you did; detailed behaviour goes in the feature's document under docs/, the history in the commit, his words in an alias. Where the item's own words named the feature in a way the graph does not carry yet, put that word on the node with `bmo graph alias <id> --add '<the word>'`: his word exactly as he wrote it, never your own name for it and never a phrase you tidied, since the line is worth having only as the way he actually asks. An alias does not rewrite the node's base commit, so it costs the node nothing.
 
 ## A screen the job changed
 
@@ -75,11 +71,7 @@ goes behind an expandable quote.
    why — a check that needs this job's commit live among them, with that commit — and is left out where
    there is none; a verify stage leaves nothing in it, since confirming those is its work. Left lists only the rows this job raised, by number, a fact the next reader
    needs, and what no job can reach now with what puts it there; it is never a list of checks,
-   measurements or lookups this job could have made. Where your commits change files the code
-   dependency graph names, one part is Impact: a line for each node `graph_impact` reached that the
-   change touches, and how each was verified, by the test run, the check or the read of the code
-   that settled it. The runner asks again for a report of such a change that has no Impact part, or
-   whose item has no `graph_impact` call on record.
+   measurements or lookups this job could have made.
 3. The conclusion, one line of counts, never a sentence of prose: the final result in numbers a
    reader can check, joined with · dots — what is done, what is left, what passed — in counts
    this job can actually make: items done and left, tests passed, files changed, what was
@@ -95,10 +87,6 @@ An example of the whole shape:
     1. Added the three-paragraph shape and an example to the worker's instructions.
     2. Added one line to the format rulebook and the decision step saying a job report is an
        informational answer.
-
-    Impact
-    1. bot/job-report: the report shape check changed; its tests ran.
-    2. bot/answer-rules: the format rulebook gained a line; read against the decision step.
 
     Checked
     1. Added tests for the shape check.

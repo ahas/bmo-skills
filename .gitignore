@@ -1,3 +1,2 @@
 /target
-.graph/*
-!.graph/settings.toml
+.graph/

@@ -1,7 +1,0 @@
-repository = "bmo-skills"
-base = false
-
-[coverage]
-# The one package's src/, every file of it named by the placer's node: the crate root holds the Fault type its
-# modules share. The tests stand under tests/, which coverage leaves out, and the repository has no client project.
-layout = "bmo-next"

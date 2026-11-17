@@ -1,7 +1,7 @@
 ---
 name: "bmo-code-korean-out"
 bundle: coder
-version: "1.1.0"
+version: "1.1.1"
 description: "Taking the Korean out of a bundle of code files as the Korean-in-the-code ledger asks: a fixed sentence a person reads into the bot's language pack, text only an agent reads and comments into English, test input into neutral English or a check by key, data left alone. Use when an item hands you a bundle of files or a directory to clear of Korean, or before writing any Korean into a code file."
 ---
 
@@ -82,7 +82,7 @@ test expectations and the document that quotes it.
 2. `bmo check korean --settle` lowers the ledger; commit it with the change.
 3. The tests the change touched, one file to a process: `bun test <file>`; the suite runs each file
    alone, and so do you.
-4. Update the graph nodes of every file whose words moved, and close as `bmo-closing-a-job` says.
+4. Close as `bmo-closing-a-job` says.
 
 ## Example commits
 

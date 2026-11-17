@@ -27,7 +27,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `ahas-video-shotcraft/` | Making a video with the video-shotcraft studio (Remotion), from the setup to the render and the licence lines |
 | `bmo-asking/` | Asking the supervisor what a job cannot settle itself, and filing a document for the owner |
 | `bmo-beyond-the-checkout/` | What a job owns once its work reaches past its own checkout |
-| `bmo-closing-a-job/` | How a job ends: the graph, the close, what it may leave and the report |
+| `bmo-closing-a-job/` | How a job ends: the close, what it may leave and the report |
 | `bmo-code-korean-out/` | Taking the Korean out of a bundle of code files |
 | `bmo-docs-conventions/` | Where and how new information is recorded in a repository |
 | `bmo-docs-eli5/` | Explaining a topic in pictures, as simply as it goes |
@@ -38,7 +38,6 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `src/` | The `bmo-skills` placer: reading the skills, listing them and placing them |
 | `tests/` | The placer's tests and the checks that hold the skills to their format |
 | `docs/` | The canonical statements of the format, the boundary and the inventory |
-| `.graph/` | The code dependency graph: one node per feature with its files and what it reads, written only by `bmo graph` |
 
 At the root stand the Cargo manifest, the version, `testbed.toml` with its Korean ledger, `rustfmt.toml`,
 `LICENSE` and `CLAUDE.md`. The repository is MIT-licensed.

@@ -96,7 +96,6 @@ holds them: they define the worker and its co-workers, not a skill.
 | `prompts/agents/worker/settings.json` | bmo-agency |
 | `prompts/agents/worker/trailer.md` | bmo-agency |
 | `prompts/agents/worker/standing-rules.md` | bmo-agency |
-| `prompts/agents/worker/graph.md` | bmo-agency |
 
 bmo-agency also holds a copy of the plugin and its 68 skill files inside its own prompts tree. This
 repository is their one owner; the agency receives the bundle as `boundary.md` says.
@@ -126,8 +125,6 @@ table. A test name holding a Korean word takes the English for it as its functio
 | leaves no improvement behind as a proposal, and names what only the owner can give | `bmo-closing-a-job` | 미결, inside the refusal's sentence; the sentence is held on either side of it |
 | sends the job to finish it in the same pass, or to raise a row, instead of writing a note | `bmo-closing-a-job` | |
 | sends a job that changed a screen back through the design rules before it closes | `bmo-closing-a-job` | |
-| tells every job to ask the graph and to bring it up to date before the commit | `bmo-closing-a-job` | |
-| and to write down the word the owner used where the graph does not carry it yet | `bmo-closing-a-job` | |
 | the worker's own rules stand in the worker's own texts, and the skill says where each rule belongs | `bmo-docs-conventions` | |
 | the restructuring passes are found by the owner's words for the work, and skipped where nothing is restructured | `ahas-code-design-patterns` | the owner's three Korean words for the work; the clause they stand in is held from its English end |
 | the warm-prefix skill gives a job the launch line its item needs, and what a warm document costs to edit | `bmo-warm-prefix` | |

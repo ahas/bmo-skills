@@ -97,8 +97,8 @@ a skill is a major change (「Versions」).
 A skill reaches another unit only through words it tells a job to run or to read. A `bmo` command is
 bmo-cli's, which hands it to the unit that serves it, as bmo-cli's own boundary document states: `job
 ask`, `job borrow`, `job wait`, `job close` and `todo` go to bmo-job; `archive doc` to
-bmo-artifact; `check` and `cargo` to bmo-testbed; `reload` to bmo-agency; `graph`, `query` and `voice
-brief` stand there as not served yet. The graph tools a job calls are the agency's worker tools.
+bmo-artifact; `check` and `cargo` to bmo-testbed; `reload` to bmo-agency; `query` and `voice
+brief` stand there as not served yet.
 
 | Skill | What it calls | The unit that answers | Skills it names |
 |---|---|---|---|
@@ -115,7 +115,7 @@ brief` stand there as not served yet. The graph tools a job calls are the agency
 | `ahas-ux-nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `bmo-warm-prefix` |
 | `bmo-asking` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-agency | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching` |
 | `bmo-beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-agency; bmo-job; the checkout; outside every unit | |
-| `bmo-closing-a-job` | `graph alias`; the graph tool `graph_impact`; `todo` with `--done`, `--stop-here` and `--add`; the close and the suite it runs; the testbed declaration's check steps and the static and change checks that make a Cargo step redundant; the document reload; `STRUCTURE.md` | bmo-graph, not served yet; bmo-agency's worker tools; bmo-job; bmo-job; bmo-testbed; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
+| `bmo-closing-a-job` | `todo` with `--done`, `--stop-here` and `--add`; the close and the suite it runs; the testbed declaration's check steps and the static and change checks that make a Cargo step redundant; the document reload; `STRUCTURE.md` | bmo-job; bmo-job; bmo-testbed; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
 | `bmo-code-korean-out` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `bmo-closing-a-job` |
 | `bmo-docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking` |
 | `bmo-docs-eli5` | `archive doc --html` | bmo-artifact | |
