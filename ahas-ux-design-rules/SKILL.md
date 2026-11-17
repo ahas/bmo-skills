@@ -1,7 +1,7 @@
 ---
 name: "ahas-ux-design-rules"
 bundle: coder
-version: "1.18.1"
+version: "1.19.0"
 description: "The owner's design rules for every user interface a worker builds, restyles or reviews: the stack and component choice, type, contrast and spacing, layout, forms, states and motion, notices and indicators, controls and bars, tables and lists, navigators, search, overlays, the back gesture, mobile, and UI wording. Use before the first edit of any screen, when reviewing one, and again before the work on a screen is closed, to sweep what the change touched against these rules."
 ---
 
@@ -295,7 +295,8 @@ screen says otherwise, the work follows these rules for what it builds and repor
   bar. Read it when a page or a panel is laid out, a region scrolls, or a tab bar, view switch,
   toolbar or top bar stands on it.
 - `controls.md` — Forms; Buttons and menus; Search. Read it when the screen has a field, a button,
-  a menu or a search.
+  a menu or a search. Where a submit button stands (add, send, approve, save) or a button shares a
+  row with a field or a select, its place is the first rule of 「Buttons and menus」.
 - `notices.md` — Messages and notices; Always-visible indicators. Read it when the screen tells the
   user something — a result, an error, a warning, a confirmation — or keeps an indicator in view.
 - `lists.md` — Tables; List items; Reordering and choosing; Navigators; Conversations. Read it when

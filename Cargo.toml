@@ -4,7 +4,7 @@
 [package]
 name = "bmo-skills"
 description = "The skill bundle, one folder per skill, and the placer that writes a bundle or a skill into a consumer's tree."
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 license = "MIT"
 publish = false

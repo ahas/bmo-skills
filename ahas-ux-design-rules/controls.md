@@ -74,9 +74,21 @@ every screen answers to and the sweep.
 
 ## Buttons and menus
 
-- Action buttons must always sit at the right of their container.
-- A single-line text field and its button may share a row when there is room.
-- Under a text box of two or more lines, the button must go on the next row.
+- Action buttons must always sit at the right of their container. A submit button, one that commits
+  what the reader entered or chose (add, send, approve, save, confirm, apply), holds to this wherever
+  it stands, alone or beside other controls.
+  1. It stands at the right end of its row or container, never straight after the content on its left
+     with empty room trailing it.
+  2. Where it shares a row with a field or a select, the row takes one of two layouts: the control on
+     its left takes all the room left over, shrinking with the row as 「Forms」 says, or a spacer that
+     takes that room stands between the control and the button. The button keeps its own content's
+     width either way.
+  3. Only a single-line field or a select shares the button's row, and only where there is room.
+     Under a text box of two or more lines the button goes on the next row, at that row's right end.
+  - Wrong: a field of fixed width with its 추가 button pressed against its right side, and the rest of
+    the row empty after them.
+  - Right: the field stretched across the row with 추가 at its right end; or a select of its own width
+    at the left, a spacer, and 추가 at the right end.
 - A group of buttons must be all icon buttons or all text buttons, never a mix.
 - The number of buttons in a group decides their shape:
   1. Three or fewer: icon buttons, each with a tooltip.
