@@ -84,7 +84,9 @@ every screen answers to and the sweep.
      takes that room stands between the control and the button. The button keeps its own content's
      width either way.
   3. Only a single-line field or a select shares the button's row, and only where there is room.
-     Under a text box of two or more lines the button goes on the next row, at that row's right end.
+     Where the row has no room, and under a text box of two or more lines, the button goes on the
+     next row, at that row's right end. A box that holds its buttons inside its own edge, as a
+     message input does, keeps them there, on its last line at its right end (`layout.md`).
   - Wrong: a field of fixed width with its 추가 button pressed against its right side, and the rest of
     the row empty after them.
   - Right: the field stretched across the row with 추가 at its right end; or a select of its own width
