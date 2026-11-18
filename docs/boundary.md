@@ -122,6 +122,7 @@ brief` stand there as not served yet.
 | `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking` |
 | `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter; bmo-agency | `bmo-asking` |
 | `bmo-ux-wording` | bmo-web's `WORDING.md` at that repository's root and the console's Korean pack, which the guide names | bmo-web | |
+| `bmo-waiting-on-long-work` | `check`; `job close`; a test or build through `bmo-testbed`; the call clock a job's shell calls are held to | bmo-testbed; bmo-job; bmo-testbed; bmo-agency | |
 | `bmo-warm-prefix` | the launch lines and the document reload | bmo-agency | |
 
 ## Words other units match

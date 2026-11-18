@@ -34,6 +34,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `bmo-song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
 | `bmo-tools-researching-and-benching/` | Researching, benching or tuning something the lab runs |
 | `bmo-ux-wording/` | Where the console's UI wording guide lives, how a term is added and how a use is fixed |
+| `bmo-waiting-on-long-work/` | Starting work that outlasts a few minutes in the background and waiting on it with one bounded wait |
 | `bmo-warm-prefix/` | Changing what a running session holds as its cached prefix |
 | `src/` | The `bmo-skills` placer: reading the skills, listing them and placing them |
 | `tests/` | The placer's tests and the checks that hold the skills to their format |
