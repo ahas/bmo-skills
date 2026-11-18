@@ -97,6 +97,9 @@ every screen answers to and the sweep.
      ceiling.
   3. Where the row runs short of width, the cells with a width of their own give way first; the
      title is cut last.
+- In an item or a card laid out as lines rather than table cells, chips that show a state or a tag
+  must never stand inline with the title. The title keeps its own line, and the chips go on a row
+  of their own.
 - A line cut short to fit its box must always let the reader see its whole value where it stands,
   in the tooltip every cut line gets by hover, keyboard focus or a held finger (「Tooltips」 in
   `floating.md`), with nothing written for it on the screen. A detail that carries the same value in

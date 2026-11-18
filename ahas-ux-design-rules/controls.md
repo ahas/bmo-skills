@@ -108,6 +108,10 @@ every screen answers to and the sweep.
     the row empty after them.
   - Right: the field stretched across the row with 추가 at its right end; or a select of its own width
     at the left, a spacer, and 추가 at the right end.
+- A button must never stand straight after words whose length changes with state, such as a
+  status, a count, a timer or a name. A spacer takes the room between them so the button stays at
+  the right end, or the words go on a row of their own. Changing those words must never move the
+  button.
 - A group of buttons must be all icon buttons or all text buttons, never a mix.
 - The number of buttons in a group decides their shape:
   1. Three or fewer: icon buttons, each with a tooltip.
