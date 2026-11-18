@@ -1,7 +1,7 @@
 ---
 name: "bmo-waiting-on-long-work"
 bundle: worker
-version: "1.1.0"
+version: "1.2.0"
 description: "How a job runs and waits on work that may outlast a few minutes â€” the change check, the close, a test or build through the testbed, a task launched on another service: why a quiet call in the foreground is cut, how such work is started in the background, the one bounded wait on it, and what counts as its end. Use before running any command that may run past three minutes, and before writing any wait, poll or loop that watches other work."
 ---
 
@@ -18,8 +18,12 @@ description: "How a job runs and waits on work that may outlast a few minutes â€
   steps run on another machine or wait in the testbed's line, and the process here burns next to nothing
   meanwhile, but its output grows: the check says once a minute which step still runs, the close says
   once a minute where it stands, a testbed run waiting for its turn says its place every thirty seconds,
-  and a run on another machine passes its output back as it comes. So the clock leaves them running in
-  the foreground, however long the work behind them takes.
+  and a run on another machine passes its output back as it comes and says once a minute that it still
+  runs there where nothing came back, through its copies, its locks and its line there alike. So the
+  clock leaves them running in the foreground, however long the work behind them takes.
+- **The clock counts only output that reaches a file:** the call's own output, or a file the command
+  writes to with `>`. A check piped into `tail` or `grep` writes nothing the clock can read until it
+  ends, so it is cut like a silent one: send the output to a file and read the file.
 - **A wait that says nothing is still cut,** a sleep, a read on a pipe or a poll that writes nothing:
   in the foreground it is killed at about five minutes, or put to the supervisor where it starts a
   process on every pass.
@@ -35,7 +39,7 @@ description: "How a job runs and waits on work that may outlast a few minutes â€
 - **Work that may run past three minutes is started with `run_in_background: true` where other work
   can go on meanwhile:** `bmo check`, `bmo job close`, a test or build through `bmo-testbed`. Where
   nothing else is left to do, it may run in the foreground instead, with the Bash tool's largest
-  `timeout`, since it writes as it waits. A wait on a task of another service writes nothing, so it is
+  `timeout` and its output going to the call or to a file, since it writes as it waits. A wait on a task of another service writes nothing, so it is
   always started in the background. Work started in the background puts its output and its exit status
   into one file under the scratchpad, named by its absolute path:
 
