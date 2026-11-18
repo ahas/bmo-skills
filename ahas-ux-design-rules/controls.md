@@ -25,32 +25,49 @@ every screen answers to and the sweep.
   1. No section, field, list or switch inside it saves on its own, and none carries a save button of
      its own.
   2. Every change is held in the form until that one save sends all of them together.
-  3. Whether the form holds a change is read by comparing each field with its saved value, never by
-     a flag set on input: a field typed back to what is saved is no change.
-  4. The save is enabled only while something differs from what is saved, and disabled otherwise.
+  3. Whether the form holds a change is read as the next rule reads it, against the values it opened
+     with.
+  4. The save is enabled only while something differs from those values, and disabled otherwise.
   5. The save goes at once. No confirmation stands between the press and the save, whatever the save
      sets off; what a field's change sets off — something restarted, reloaded or reset — is said
      beside that field while it differs.
-  6. A save that went through makes what was saved the new saved value, from what the server
-     answered: the form then holds no change, the save is disabled again, and closing or leaving
-     asks nothing.
-  7. Closing or leaving asks whether to throw changes away only while a change is held — the close
-     button, Esc, a press outside, the back gesture, another page or tab. With nothing changed it
-     closes at once.
-  8. A modal opened from inside the form to write one piece of it hands the piece back to the form
+  6. A save that went through makes what was saved the values the form opened with, from what the
+     server answered: the form then holds no change, the save is disabled again, and closing or
+     leaving asks nothing.
+  7. A modal opened from inside the form to write one piece of it hands the piece back to the form
      with a confirm button, never saves it itself.
-  9. A refused save keeps every change as written, with the reason beside the field it names, and
+  8. A refused save keeps every change as written, with the reason beside the field it names, and
      what it saved before the refusal stands as saved.
-  10. Not a form, and taking effect as it is done: a table whose cells are each their own editor, a
+  9. Not a form, and taking effect as it is done: a table whose cells are each their own editor, a
      page of standing switches, and the records of a list each stored on its own — adding, changing,
      moving or removing one. A list that is itself one setting, as an order, is a field of the form,
      and a switch shown inside a form is part of it; both wait for its save.
-  11. The dialog and the page frame hold the guard and the save once for the whole interface; no form
-     writes its own.
+  10. The dialog and the page frame hold the save once for the whole interface; no form writes its
+     own.
   - Wrong: a settings modal with a save button under each section, or a switch inside it saving the
     moment it is turned while the rest waits for the footer.
   - Wrong: 저장 asking "저장할까요?" before it saves; a dialog that, closed right after a save went
     through, asks whether to throw changes away.
+- A dialog, a sheet or a page form — one that edits and one that creates alike — asks whether to
+  throw changes away only while its values differ from the values it opened with.
+  1. The values it opened with are read once its data has loaded, never before: a form filled in after
+     it is drawn is compared with what it was filled in with, not with the empty fields drawn first. A
+     form that creates opens with its blanks and defaults.
+  2. Each field is compared with its own opened-with value, never by a flag set on input: a value
+     changed and changed back is no change.
+  3. Opened and closed untouched, it closes at once and asks nothing. After a save went through,
+     closing asks nothing.
+  4. Every way out asks alike: the close button, Esc, a press outside, the back gesture, another page
+     or tab.
+  5. The question is a floating element of its own (`floating.md`): Back, Esc and a press outside
+     answer it as staying, and the form stays open under it with every change as written. Only its
+     discard throws the changes away and goes.
+  6. It is built only through the shared form-save module, once for the whole interface. In bmo-ui
+     that module's `useCloseGuard` guards a dialog or a sheet and `useLeaveGuard` a page, both fed
+     by its helper that keeps a form's opened-with values once its data has loaded. No screen keeps a
+     dirty flag of its own or writes its own question.
+  - Wrong: a dialog opened and closed untouched asking whether to throw changes away, because the
+    values it compares against were read before its data arrived.
 - A setting's choices must be its real values only; no choice stands for "the default" in place of a
   value.
   1. The value equal to the default carries `(기본값)` after it: in the list of choices, in the cell or

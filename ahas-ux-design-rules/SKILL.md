@@ -35,6 +35,9 @@ screen says otherwise, the work follows these rules for what it builds and repor
   and the wording rules on every label written.
 - Drive the screen, do not only read its source: hover, a press state, a scrollbar's edge, a drawer
   closing on Back and a mobile width are answered only by the screen running.
+- Drive the close of every dialog, sheet and page form the change reached. Open and close it
+  untouched, then change a value, change it back and close: nothing may ask. Then change a value
+  and close: it must ask, and Back on the question must leave it open with the change kept.
 - Fix what the sweep finds in the same pass. A rule that can be met is met here, never left.
 - Write the sweep down: which screens were swept, which sections they were held to, what changed
   because of it, and every place a rule could not be met, with why. A place left unmet is named,
@@ -296,7 +299,8 @@ screen says otherwise, the work follows these rules for what it builds and repor
   toolbar or top bar stands on it.
 - `controls.md` — Forms; Buttons and menus; Search. Read it when the screen has a field, a button,
   a menu or a search. Where a submit button stands (add, send, approve, save) or a button shares a
-  row with a field or a select, its place is the first rule of 「Buttons and menus」.
+  row with a field or a select, its place is the first rule of 「Buttons and menus」. When a dialog, a
+  sheet or a page form asks before its changes are thrown away is 「Forms」 too.
 - `notices.md` — Messages and notices; Always-visible indicators. Read it when the screen tells the
   user something — a result, an error, a warning, a confirmation — or keeps an indicator in view.
 - `lists.md` — Tables; List items; Reordering and choosing; Navigators; Conversations. Read it when
