@@ -64,13 +64,16 @@ description: "How a job runs and waits on work that may outlast a few minutes â€
 - **It is waited on by the id its launch returned,** never by a time window, a name prefix or the
   newest entry: the launch's own answer is the only thing that names it.
 - **Any state but the ones the service names as still going is the end,** done, failed and an id the
-  service no longer knows alike. An empty state is a read that failed: look at the service before
-  starting the wait again.
+  service no longer knows alike. The field and every still-going state are read from the service's
+  own schema before the wait is written, never guessed: a task service may name half a dozen, held,
+  reserved and halting among them, and a wait that lists too few ends at the first one it misses. An
+  empty state is a read that failed: look at the service before starting the wait again.
 - **The wait runs in the background** like the work above, polling that one id at a bound and writing
-  its end into its file, and is waited on the same way:
+  its end into its file, and is waited on the same way. `.status` and `(pending|processing)` stand for
+  the schema's own field and its whole list of still-going states:
 
   ```
-  timeout 3600 zsh -c 'until s=$(curl -fsS "https://service.example/tasks/<id>" | jq -r .state); [ "$s" != queued ] && [ "$s" != running ]; do sleep 20; done; echo "state=$s"' > /abs/scratchpad/task.out 2>&1; echo "exit=$?" >> /abs/scratchpad/task.out
+  timeout 3600 zsh -c 'while s=$(curl -fsS "https://service.example/tasks/<id>" | jq -r .status); [[ $s == (pending|processing) ]]; do sleep 20; done; echo "state=$s"' > /abs/scratchpad/task.out 2>&1; echo "exit=$?" >> /abs/scratchpad/task.out
   ```
 
 ## What never stands in for it
