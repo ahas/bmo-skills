@@ -1,7 +1,7 @@
 ---
 name: "ahas-ux-design-rules"
 bundle: coder
-version: "1.19.0"
+version: "1.20.0"
 description: "The owner's design rules for every user interface a worker builds, restyles or reviews: the stack and component choice, type, contrast and spacing, layout, forms, states and motion, notices and indicators, controls and bars, tables and lists, navigators, search, overlays, the back gesture, mobile, and UI wording. Use before the first edit of any screen, when reviewing one, and again before the work on a screen is closed, to sweep what the change touched against these rules."
 ---
 
