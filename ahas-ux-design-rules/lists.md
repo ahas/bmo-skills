@@ -90,9 +90,6 @@ every screen answers to and the sweep.
   rule but one says.
 - Every other cell — who it is from, a state, a label, a date, a count — is laid out at the size of
   its own content and never stretches to fill what is left.
-- In an item or a card laid out as lines rather than table cells, chips that show a state or a tag
-  never stand inline with the title. The title keeps its own line, and the chips go on a row of
-  their own.
   1. A cell whose content varies in length keeps a ceiling on its width, and what does not fit is
      cut or scrolled inside that cell rather than taking width from the title.
   2. A cell every row carries in the same place stands in a column of one width down the whole

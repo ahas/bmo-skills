@@ -104,9 +104,6 @@ every screen answers to and the sweep.
      Where the row has no room, and under a text box of two or more lines, the button goes on the
      next row, at that row's right end. A box that holds its buttons inside its own edge, as a
      message input does, keeps them there, on its last line at its right end (`layout.md`).
-- A button must never stand straight after words whose length changes with state: a status, a
-  count, a timer, a name. A spacer takes the room between them so the button stays at the right end,
-  or the words go on a row of their own. Changing those words must never move the button.
   - Wrong: a field of fixed width with its 추가 button pressed against its right side, and the rest of
     the row empty after them.
   - Right: the field stretched across the row with 추가 at its right end; or a select of its own width
