@@ -302,7 +302,8 @@ screen says otherwise, the work follows these rules for what it builds and repor
   row with a field or a select, its place is the first rule of 「Buttons and menus」. When a dialog, a
   sheet or a page form asks before its changes are thrown away is 「Forms」 too.
 - `notices.md` — Messages and notices; Always-visible indicators. Read it when the screen tells the
-  user something — a result, an error, a warning, a confirmation — or keeps an indicator in view.
+  user something — a result, an error, a warning, a confirmation — asks before an action, or keeps
+  an indicator in view.
 - `lists.md` — Tables; List items; Reordering and choosing; Navigators; Conversations. Read it when
   the screen shows a table or a list of items, lets items be reordered or several be chosen, walks
   a hierarchy one level at a time, or holds a conversation.

@@ -28,8 +28,8 @@ every screen answers to and the sweep.
      the only way in.
   2. One that leads nowhere is dismissed by that same press.
   3. This holds equally for one the operating system draws and one the interface draws itself.
-  4. A button inside it is only for a second thing it offers — taking back what was just done,
-     answering a question.
+  4. A button inside it is only for a second thing it offers, such as taking back what was just
+     done.
 - Several messages arriving at once must not stack into a column, which covers the screen they are
   reporting on.
   1. One stands and the rest wait in a line.
@@ -39,18 +39,27 @@ every screen answers to and the sweep.
   4. A message that may be said again before the first has gone is named, and the second replaces
      the first where it stands.
   5. The line is held to a length, and what is dropped is its oldest end.
-- A yes-or-no question, with nothing to fill in, stands in that same pill.
-  1. It has no time of its own and stands until it is answered.
-  2. Its words are not a press: only its two buttons answer it, the way out first and the way through
-     last, at the trailing edge.
-  3. The back gesture takes it back, and a transient notice is out of its reach, as 「Modals,
-     drawers and floating elements」 in `floating.md` says.
+- The pill tells and never asks. It carries a notice of something that arrived and the word that an
+  action went through or did not, and nothing else.
+- A question the reader answers before an action — whether to throw changes away included — is a
+  small dialog in the middle of the screen, the interface's one question dialog, never the pill.
+  1. Its title is the question, naming what the action is taken on or throws away. The item stands
+     under it where the question does not name it, and what going through does stands in its body
+     where that is more than the question says.
+  2. Its foot holds the way out first, and the way through last, in the error colour, under the
+     action's own verb rather than a bare yes.
+  3. Only the way through answers yes. The way out, its close, Esc, a press outside and the back
+     gesture close it and answer no (「Modals, drawers and floating elements」 in `floating.md`).
   4. A question asked while the page is already being left takes no history entry of its own: it is
-     holding that navigation, and the navigation moves the history itself.
-  5. A confirmation that carries a field, a choice or a form is a centred modal instead.
+     holding that navigation, and the navigation moves the history itself. Every other way out still
+     answers it.
+  5. A confirmation that carries a field, a choice or a form is a centred modal of its own.
+  6. One shared question module opens it; no screen draws its own. In bmo-ui that is `askQuestion`,
+     opening `QuestionDialog`.
+  - Wrong: "삭제할까요?" standing in the message pill with 예 and 아니오 buttons. Right: the question
+    dialog titled with what is deleted, 취소 first and 삭제 last in the error colour.
 - A confirmation about one row or one item stays where that item is: a step that row grows, not a
-  thing floating over the screen. A question at the top of the screen says nothing about which row
-  it is about.
+  question dialog over the screen.
 - A form's own refusal stays in the form, beside the field that was refused: a state of the screen
   rather than news.
 - What has not been confirmed yet is not a failure.

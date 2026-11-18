@@ -59,9 +59,9 @@ every screen answers to and the sweep.
      closing asks nothing.
   4. Every way out asks alike: the close button, Esc, a press outside, the back gesture, another page
      or tab.
-  5. The question is a floating element of its own (`floating.md`): Back, Esc and a press outside
-     answer it as staying, and the form stays open under it with every change as written. Only its
-     discard throws the changes away and goes.
+  5. The question is the interface's question dialog (`notices.md`), a floating element of its own
+     (`floating.md`): Back, Esc and a press outside answer it as staying, and the form stays open
+     under it with every change as written. Only its discard throws the changes away and goes.
   6. It is built only through the shared form-save module, once for the whole interface. In bmo-ui
      that module's `useCloseGuard` guards a dialog or a sheet and `useLeaveGuard` a page, both fed
      by its helper that keeps a form's opened-with values once its data has loaded. No screen keeps a

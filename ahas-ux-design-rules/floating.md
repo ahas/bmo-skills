@@ -9,9 +9,9 @@ every screen answers to and the sweep.
   1. A side panel, or a region that chooses what the body shows — a list, a tree, a table.
   2. An auxiliary region pulled up to consult — sources, references, properties.
   3. A large modal that is a screen of its own — a log, an item's full detail, a record's full view.
-- A dialog that is not a part of the page — a confirmation with something to fill in, a small form, a
-  rename, a search — must stay a centered modal on mobile too, never a drawer. A yes-or-no question
-  with nothing to fill in stands in the message pill instead.
+- A dialog that is not a part of the page — a question before an action, a confirmation with
+  something to fill in, a small form, a rename, a search — must stay a centered modal on mobile too,
+  never a drawer. A question never stands in the message pill (`notices.md`).
 - A list to pick from, opened at a point on the screen, must be a popover at every width.
 - A modal on mobile must be centered in the visible part of the screen, so the virtual keyboard never
   covers its fields or its buttons.
@@ -28,8 +28,8 @@ every screen answers to and the sweep.
 - Back must undo whatever the reader has to get out of — anything drawn over the screen and equally
   anything the screen has gone into — and the page must stay where it is.
   1. Drawn over the screen: modals, drawers, sheets, popovers, dropdown menus, select lists, context
-     menus, lightboxes, command palettes, a yes-or-no question standing in the message pill, and the
-     question asked before changes are thrown away.
+     menus, lightboxes, command palettes, and the question asked before an action — whether to
+     throw changes away included.
   2. Gone into: a state the screen changed into and the reader has to leave — a selection mode, a
      full-window view, an editing state, a reordering state. A press that was about the mode must
      not take the page with it.
@@ -37,9 +37,9 @@ every screen answers to and the sweep.
      rather than by a registration each screen has to remember: a mode never gets a Back of its own
      written beside the one the overlays use.
   4. When several are stacked, Back undoes the top one only, one per press.
-     - A question asked before something closes — whether to throw changes away — is the top one:
-       Back answers it as staying, as Esc and a press outside do, and what asked it stays open as it
-       was. The next Back asks again (「Forms」 in `controls.md`).
+     - A question asked before an action is the top one: Back answers it no, as Esc and a press
+       outside do. Where it asked before something closes — whether to throw changes away — what
+       asked it stays open as it was, and the next Back asks again (「Forms」 in `controls.md`).
      - Wrong: Back on that question closing the dialog under it with the question, or leaving the
        page.
   5. Only when nothing is open and nothing has been entered does Back leave the page.
