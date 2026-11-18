@@ -300,7 +300,8 @@ screen says otherwise, the work follows these rules for what it builds and repor
 - `controls.md` — Forms; Buttons and menus; Search. Read it when the screen has a field, a button,
   a menu or a search. Where a submit button stands (add, send, approve, save) or a button shares a
   row with a field or a select, its place is the first rule of 「Buttons and menus」. When a dialog, a
-  sheet or a page form asks before its changes are thrown away is 「Forms」 too.
+  sheet or a page form asks before its changes are thrown away is 「Forms」 too. When a select's list
+  searches is 「Search」.
 - `notices.md` — Messages and notices; Always-visible indicators. Read it when the screen tells the
   user something — a result, an error, a warning, a confirmation — asks before an action, or keeps
   an indicator in view.

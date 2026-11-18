@@ -204,3 +204,23 @@ every screen answers to and the sweep.
      under the row, so it is clear where it matched.
   4. List search must not be built separately per screen: it must use the project's shared search
      module.
+- A dropdown that picks a value — a select of one value or of several — searches by what its list
+  holds, never by a screen's choice.
+  1. It searches once it holds more than seven choices, and with seven or fewer it does not, save
+     where the next point says. Only choices are counted: a group heading and a separator are none. A
+     list read from data takes its search the moment it grows past seven, on every screen at once.
+  2. A list found on the server, asked for the words typed, always searches, and so does one that
+     takes a value it does not hold, typed new, so there is a field to type into.
+  3. The search field stands at the top of the opened list, above the choices, with its search icon
+     leading. Opened by a pointer or a key, it takes the focus, so typing searches at once; opened by
+     a finger, it does not, so the keyboard covers nothing until the field is pressed.
+  4. It matches every text a choice shows, its label and the line under it, through the shared
+     search module, and marks the matched part where it stands. A group heading stays while any
+     choice under it stays, and a separator stands only between groups that both stay.
+  5. Its words are one set everywhere: the search placeholder, the line for nothing matched, and
+     the line for a list with no choices, or the screen's own word for its list where the wording
+     guide gives one. A list found on the server adds the line for a search that failed.
+  6. It is applied once, by the interface's shared select. No screen sets the count its list searches
+     at, builds a search field of its own, or words these lines itself.
+  - Wrong: a select of three choices opening on a search field, a select of forty without one, or one
+    screen's select given a search field above its list by hand.
