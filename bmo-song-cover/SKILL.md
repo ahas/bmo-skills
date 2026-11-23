@@ -1,12 +1,12 @@
 ---
 name: bmo-song-cover
-description: Making a song sung in the chat agent's voice from its title alone, on a GPU node with the song bench of the bmo-song repository — by default a cover, YuE2 singing it afresh from the original's melody and lyrics in the chat agent's range over the original backing, or a remix over a new backing in a given style — every candidate video handed to the owner and a chosen take kept as a preset. Use when the owner or the chat agent asks for the chat agent to sing a song, for a cover, a remix or replay of a song already made, when `make` stops asking for lyrics to be put into YuE2's form, or for any change to a song's sound, tempo, style or video.
+description: Making a song sung in the chat agent's voice from its title alone, on a GPU node with the song bench of the song unit's repository — by default a cover, YuE2 singing it afresh from the original's melody and lyrics in the chat agent's range over the original backing, or a remix over a new backing in a given style — every candidate video handed to the owner and a chosen take kept as a preset. Use when the owner or the chat agent asks for the chat agent to sing a song, for a cover, a remix or replay of a song already made, when `make` stops asking for lyrics to be put into YuE2's form, or for any change to a song's sound, tempo, style or video.
 bundle: project
 ---
 
 # A song in the chat agent's voice
 
-The song bench is the bmo-song repository: every relative path below is inside its checkout,
+The song bench is the song unit's repository: every relative path below is inside its checkout,
 and every command runs there. Its `docs/song.md` is the canonical account — 「Made from a title」 above
 all: the command, its output, the style, the lyrics search, the backing finder and the YuE2 form. Read it before the first run.
 This skill is how a job carries a song request through it.

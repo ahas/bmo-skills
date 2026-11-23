@@ -85,7 +85,7 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 | a coder's run | the `coder` bundle | the agency's coder plugin directory, through its launch line | its coding and design work reads those skills |
 | a producer's run | the `producer` bundle | the agency's producer plugin directory, through its launch line | its video work reads those skills |
 | bmo-job | nothing placed | | its closing policy takes the word `ahas-ux-design-rules` in a report as the mark that a changed screen was swept against the design rules |
-| bmo-song | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
+| the song unit | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
 | the agency's chat procedures | nothing placed | | the song procedure names `bmo-song-cover` when it files a song item, and the TODO procedure names the builder's three skills |
 | bmo-research | the research skills its runner names: every `bmo-research-…` skill and `bmo-docs-plain-writing` | its own deploy tree's `prompts/skills/`, each placed with `place --skill <name>` for every name `bmo-research skills` prints, at its deployment | its runner composes a run's instructions of the skills' bodies, and its tool's two skill readers answer one whole |
 | the chat agent's sessions | the research skills | bmo-research's placed copy, through the tool `research/skill` the chat line's `research` namespace carries | the tool's description names each skill with the kind of request it binds; the chat agent reads the one that fits, with the asker's own rule for it, before it answers such a request itself |
@@ -132,7 +132,7 @@ brief` stand there as not served yet.
 | `bmo-research-routine` | the brain; the arbiter's card holds; the archive; the voice | bmo-brain; bmo-arbiter; bmo-artifact; bmo-voice | `bmo-research-deep-dives`, `bmo-research-study-material`, `bmo-research-kinds` |
 | `bmo-research-security-advisories` | | | `bmo-research-deep-dives`, `bmo-research-routine`, `bmo-research-kinds` |
 | `bmo-research-study-material` | | | `bmo-research-kinds` |
-| `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking` |
+| `bmo-song-cover` | the song bench, its commands and its canonical document | the song unit | `bmo-asking` |
 | `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter | `bmo-asking`, `bmo-research-deep-dives`, `bmo-research-routine`, `bmo-research-kinds` |
 | `bmo-ux-wording` | bmo-web's `WORDING.md` at that repository's root and the console's Korean pack, which the guide names | bmo-web | |
 | `bmo-waiting-on-long-work` | `check`; `job close`; a test or build through `bmo-testbed`; the call clock a job's shell calls are held to | bmo-testbed; bmo-job; bmo-testbed; bmo-agency | |
