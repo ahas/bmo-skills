@@ -101,7 +101,7 @@ Quality comes from this pipeline as much as from the way of working, and Remotio
 
 ## The pipeline as a command
 
-The stages should be a reusable command, not a memory of one film: one subcommand per stage, each runnable alone and resumed from what it produced; the stage prompts as files that name no film; every film's settings in its own project folder, so a new film touches no tool file. The producer's repository keeps one (`tools/produce.py` in video-app, stated in `docs/production.md`): treatment, timing, voice audition, takes and fitting, one author per scene, contact-sheet review, revisions, the sentence check, the brightness measurement, the render, the partial re-render and join, and filing. A stage that needs an agent opens a role's session through the agency's own road rather than starting a program by hand; where no such road is open it hands the filled prompt to the running agent as a step.
+The stages should be a reusable command, not a memory of one film: one subcommand per stage, each runnable alone and resumed from what it produced; the stage prompts as files that name no film; every film's settings in its own project folder, so a new film touches no tool file. The producer's repository keeps one (`tools/produce.py` in the video producer's repository, stated in its `docs/production.md`): treatment, timing, voice audition, takes and fitting, one author per scene, contact-sheet review, revisions, the sentence check, the brightness measurement, the render, the partial re-render and join, and filing. A stage that needs an agent opens a role's session through the agency's own road rather than starting a program by hand; where no such road is open it hands the filled prompt to the running agent as a step.
 
 ## Rights
 
