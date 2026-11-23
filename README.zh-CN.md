@@ -44,7 +44,6 @@
 | `bmo-research-routine/` | 调研、测量并报告别人做出的东西 |
 | `bmo-research-security-advisories/` | 回答漏洞或安全公告：暴露情况、修复与补丁步骤 |
 | `bmo-research-study-material/` | 撰写教授一个主题的学习资料 |
-| `bmo-song-cover/` | 用歌曲工作台以聊天智能体的声音制作歌曲；一个 project 技能 |
 | `bmo-tools-researching-and-benching/` | 调研、基准测试或调优实验室运行的东西 |
 | `bmo-ux-wording/` | 控制台 UI 用语指南放在哪里、如何添加术语以及如何修正用法 |
 | `bmo-waiting-on-long-work/` | 在后台启动超过几分钟的工作，并用一次有上限的等待来等它完成 |

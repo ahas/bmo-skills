@@ -45,7 +45,6 @@ Code의 표준 플러그인 구조로, 또는 스킬 하나를 그 자체 폴더
 | `bmo-research-routine/` | 누군가 만든 것을 조사하고, 측정하고, 보고하기 |
 | `bmo-research-security-advisories/` | 취약점이나 보안 권고에 답하기: 노출, 수정, 패치 절차 |
 | `bmo-research-study-material/` | 주제를 가르치는 학습 자료 쓰기 |
-| `bmo-song-cover/` | 노래 벤치로 채팅 에이전트의 목소리로 노래 만들기. project 스킬 |
 | `bmo-tools-researching-and-benching/` | 랩이 돌리는 것을 조사, 벤치마크, 튜닝하기 |
 | `bmo-ux-wording/` | 콘솔 UI 용어 가이드의 위치, 용어 추가 방법, 사용처 고치는 방법 |
 | `bmo-waiting-on-long-work/` | 몇 분 넘게 걸리는 작업을 백그라운드로 시작하고, 제한 있는 대기 한 번으로 기다리기 |

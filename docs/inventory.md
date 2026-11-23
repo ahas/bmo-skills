@@ -22,7 +22,7 @@ what is changed on the way in.
 | Files taken from the source tree | 70 | `git ls-tree` at the source commit answers 71 paths; the design rules' wording link is not carried (「Worker skills」 below) |
 | of which worker skill files (`prompts/agents/worker/plugin/skills/` → `<skill>/`) | 67, in 20 folders | the same listing, the wording link left out |
 | of which the plugin manifest | 1 | the same listing |
-| of which the project skill `song-cover`, here `bmo-song-cover` | 1 | the same listing |
+| of which the project skill `song-cover`, `bmo-song-cover`, which the song unit's repository now holds | 1 | the same listing |
 | of which the rule for writing a skill | 1 | the same listing; it becomes text of this repository's own documents rather than a file of its own |
 | The UI wording guide | 0 carried | bmo-web's `WORDING.md` at that repository's root, read through `bmo-ux-wording`; this repository holds no copy (「Worker skills」 below) |
 | Crates | 0 | #301: a data repository takes no code; the code this repository carries is its own placer and checks |
@@ -78,7 +78,7 @@ from.
 | Old path | New place | What changes |
 |---|---|---|
 | `prompts/agents/worker/plugin/.claude-plugin/plugin.json` | `.claude-plugin/plugin.json` | the description names this repository instead of an agent; the version is the repository's (`boundary.md`) |
-| `.claude/skills/song-cover/SKILL.md` | `bmo-song-cover/SKILL.md` | its bundle, `project`; names replaced (below); its bench and its document are named as the song unit's |
+| `.claude/skills/song-cover/SKILL.md` | the song unit's repository, `skills/bmo-song-cover/SKILL.md`; none here | its bundle, `project`; names replaced (below); its bench and its document are named as the song unit's |
 | `.claude/rules/skills.md` | the 「Writing a skill」 section of `CLAUDE.md`, and `format.md` | the rule's path scoping goes, since every folder here is a skill; names replaced (below) |
 
 ## Research skills
@@ -227,5 +227,5 @@ account-shaped package scope. No IP address, room id or other machine name occur
   named its own repository, which name the repository that owns each thing instead.
 - **What stays as written.** The keywords a process matches on: 미결 and the two strand marks that
   open each of its strands, which bmo-job's close reads (`boundary.md`). The 12 paths of the installed
-  `bmo` entry point, and the song bench's work folder path, which carry no account or machine name.
+  `bmo` entry point, which carry no account or machine name.
   The deep dive rule path gives way to the research skills' names (「Research skills」).

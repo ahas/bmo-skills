@@ -46,7 +46,6 @@ front matter にどのバンドルに属するかを記します。バンドル�
 | `bmo-research-routine/` | 誰かが作ったものを調べ、測り、報告する |
 | `bmo-research-security-advisories/` | 脆弱性やセキュリティ勧告に答える：影響、修正、パッチ手順 |
 | `bmo-research-study-material/` | 主題を教える学習資料を書く |
-| `bmo-song-cover/` | ソングベンチでチャットエージェントの声の歌を作る。project スキル |
 | `bmo-tools-researching-and-benching/` | ラボで動かしているものの調査、ベンチマーク、チューニング |
 | `bmo-ux-wording/` | コンソールの UI 用語ガイドの置き場所、用語の追加方法、使用箇所の直し方 |
 | `bmo-waiting-on-long-work/` | 数分を超える作業をバックグラウンドで始め、上限付きの一度の待機で待つ |

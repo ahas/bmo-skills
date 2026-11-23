@@ -124,17 +124,14 @@ fn a_skill_is_placed_in_its_own_folder_and_nothing_beside_it_is_touched() {
   fs::create_dir_all(skills.join("its-own")).unwrap();
   fs::write(skills.join("its-own/SKILL.md"), "the consumer's own skill").unwrap();
 
-  let output = run(
-    &repository(),
-    &["place", "--skill", "bmo-song-cover", "--into", skills.to_str().unwrap()],
-  );
+  let output = run(&repository(), &["place", "--skill", "bmo-asking", "--into", skills.to_str().unwrap()]);
   assert_eq!(exit(&output), 0, "{}", stderr(&output));
   assert_eq!(
-    fs::read(skills.join("bmo-song-cover/SKILL.md")).unwrap(),
-    fs::read(repository().join("bmo-song-cover/SKILL.md")).unwrap()
+    fs::read(skills.join("bmo-asking/SKILL.md")).unwrap(),
+    fs::read(repository().join("bmo-asking/SKILL.md")).unwrap()
   );
   assert_eq!(fs::read_to_string(skills.join("its-own/SKILL.md")).unwrap(), "the consumer's own skill");
-  assert_eq!(names_in(&skills), BTreeSet::from(["its-own".to_owned(), "bmo-song-cover".to_owned()]));
+  assert_eq!(names_in(&skills), BTreeSet::from(["its-own".to_owned(), "bmo-asking".to_owned()]));
 }
 
 #[test]
