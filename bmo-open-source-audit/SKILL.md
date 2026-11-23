@@ -2,7 +2,7 @@
 name: "bmo-open-source-audit"
 bundle: coder
 version: "1.0.0"
-description: "What a public BMO repository must never carry and how to check before a commit, a push or a repository going public: secrets, personal data, internal addresses, and the names of the owner's other projects and machines, read from a private list kept outside every repository. Use before committing in any public BMO repository, before changing a repository's visibility, when writing tests, fixtures, docs or examples that need a sample value, and when a scan finds a hit."
+description: "What a public BMO repository must never carry and how to check before a commit, a push or a repository going public: secrets, personal data, internal addresses, the names of the owner's other projects and machines, and any runtime default that would send an outside user's machine to the owner's own hosts, read from a private list kept outside every repository. Use before committing in any public BMO repository, before changing a repository's visibility, when writing tests, fixtures, docs or examples that need a sample value, when adding a default address, an installer, an updater or a download, and when a scan finds a hit."
 ---
 
 # Open-source audit
@@ -29,6 +29,16 @@ tests, fixtures, docs, commit messages, branch names or file names.
   `name => replacement` giving the neutral word to use). Use the replacement it names, so every repository agrees.
 - **Services kept private,** by more than their bare existence: the company-specific services listed in the same
   file under `[private]` are not described, linked or depended on by a public repository.
+- **A default that reaches the owner's own hosts.** The owner's servers cannot carry outside traffic, so nothing an
+  outside user installs may send their machine there on its own: no code constant or compiled-in value, default
+  setting, example config an install recipe copies as it stands, installer or updater feed, download or model URL,
+  tool source template, plugin or skill marketplace address, telemetry endpoint, or document telling a reader to
+  install from such an address. The hosts are listed in the same private file under `[hosts]`. Such a default
+  becomes either no default, the program refusing to start or asking, with a message naming the setting, or the
+  public service the program is meant to use (GitHub Releases, Hugging Face), whichever the unit's documents make
+  right. The owner's own value moves into his deployment's settings under the data root, and is written there
+  before the change can deploy, so his deployment keeps working. GitHub, Hugging Face and the static project site
+  are not his servers; a link a person clicks is no runtime reach.
 
 ## How to check
 
@@ -36,6 +46,11 @@ tests, fixtures, docs, commit messages, branch names or file names.
    personal-data step holds the allowed values, and then the forbidden-names scan over what you are committing:
    `git diff --cached -U0 | grep '^+' | grep -i -E -f <(sed '/^\[private\]/,$d; /^#/d; /^$/d; s/ *=>.*//' "$BMO_DATA_DIR/env/oss-forbidden-names")`.
    No output is the pass.
+   Then the hosts scan over the whole tree, since a default may already stand there:
+   `git grep -n -I -E -f <(sed -n '/^\[hosts\]/,/^\[/{/^\[/d; /^#/d; /^$/d; p}' "$BMO_DATA_DIR/env/oss-forbidden-names")`.
+   Every hit is read: a runtime default as above is a finding and is fixed before the repository is published or
+   pushed; the owner's host named in prose, in a deployment document of his own or in history is the names rule's
+   business, not this one's.
 2. **Before a repository goes public, and after any doubt,** scan its whole history:
    - secrets: `gitleaks git --redact <repo>`; a finding is checked against the real secret files without printing
      it, and a test stand-in is no finding;
