@@ -1,7 +1,7 @@
 ---
 name: "bmo-asking"
 bundle: worker
-version: "2.1.2"
+version: "2.2.0"
 description: "How a job asks: anything it cannot settle or do itself goes to its supervisor with bmo job ask — a decision that is not the job's, a command on a node it cannot reach, a deployment it waits on — and the supervisor settles it or puts it to the owner; and a document for the owner to read or approve filed in the deployment's 아카이브. Use before asking anything and before handing the owner any document."
 ---
 
@@ -15,7 +15,7 @@ description: "How a job asks: anything it cannot settle or do itself goes to its
   owner's standing word already settles — it does, and answers with the result; a decision that is the owner's
   — hard to undo, his own taste, money, an account — it puts to him in its own words; where it is unclear what
   you ask or why, it talks it over with you first. You never word a question for the owner and never write
-  "the owner need not answer this": the supervisor decides who answers.
+  "the owner need not answer this": the supervisor decides who answers, within its minute.
 - **Ask only what the work cannot settle itself.** What reading the code, the documents or the brain settles,
   you settle and write under 정한 것: a question about something you could have looked up is worse than never
   asking. A request that is no one's to grant — a road the rules close to jobs, a node your account must not
@@ -32,18 +32,21 @@ description: "How a job asks: anything it cannot settle or do itself goes to its
     question with no options is the supervisor's alone: it never reaches the owner until the supervisor writes
     its choices.
 - **Write it for someone who knows nothing of the work.** The supervisor may hand your question to the owner as
-  you wrote it, so say what the work is, what each option does, how the options differ and what follows under
-  each, with no step number, internal name or term left unexplained. An option says what it does in words of
+  you wrote it, and the job service does once the supervisor's minute passes, so say what the work is, what
+  each option does, how the options differ and what follows under each, with no step number, internal name or
+  term left unexplained. An option says what it does in words of
   its own: `bmo job ask` refuses a bare label or a step number (`1`, `B`, `Option 2`, `Step 12`) as an option.
 - **The command does not return until it is answered: your own run is what waits,** holding its
   checkout's lock, and nothing else is named for that checkout, so nothing else is held up.
 - **Settled, it prints the answer on stdout and nothing else**, exit code 0. The supervisor's answer comes as
   it wrote it, a result of several lines among it; the owner's, once the supervisor put the question to him, is
-  one line: the option's own text where he picked one, or his own words. Carry on with what it says. While the
-  supervisor holds the question, only an answer settles it. Once it is put to the owner, he has the job
-  service's person wait, a minute, and where he has not answered by then the question settles on
-  the recommendation it was put to him with, which comes back as his line would, with a line on stderr saying it
-  was the recommendation.
+  one line: the option's own text where he picked one, or his own words. Carry on with what it says. The
+  supervisor has the job service's question wait, a minute, to settle the question or put it to the owner; where
+  it has done neither by then, the job service puts it to the owner as you wrote it, with your recommendation or
+  none, and says so on stderr. Once it is the owner's, he has a minute too, and where he has not answered by then
+  the question settles on the recommendation it was put to him with, yours where the service put it there, which
+  comes back as his line would, with a line on stderr saying it was the recommendation; with none, it waits on
+  his answer.
 - **That answer stands, and the question is over.** Never run the same ask again to check it, to see whether it
   still waits or to read the answer a second time; the answer stays for the rest of the job, across its stages.
   Carry it into your report as the supervisor's word or the owner's, whichever gave it.
@@ -71,12 +74,11 @@ description: "How a job asks: anything it cannot settle or do itself goes to its
     never carry on while the question is open: answer what asks something with `--talk`, and acknowledge what
     asks nothing with `--ack`, until an answer comes back.
   - Each word is printed under the voice that said it, the supervisor's or the owner's.
-- **A question waits for its answer, however long that takes.** No clock settles it and none cuts the talk
-  short. While the supervisor holds it, nothing counts; a supervisor busy or restarting delays the answer and
-  loses nothing. Where the supervisor does not take it up — its notice let go untaken, or the turn that took it
-  ended with no word on it — the command wakes the supervisor again, at longer rests, up to six times, and says
-  so on stderr; the question stays with the supervisor, and only the supervisor ever puts it to the owner. You go
-  on waiting. Since your run waits holding its checkout's lock
+- **Each holder has a minute, and nothing lengthens it.** A talk does not stop the supervisor's minute; once it
+  passes, the question is the owner's. Where the supervisor does not take it up within it — its notice let go
+  untaken, or the turn that took it ended with no word on it — the command wakes the supervisor again and says so
+  on stderr. Only a question put to the owner with no recommendation can wait past his minute, on his answer. You
+  go on waiting. Since your run waits holding its checkout's lock
   the whole while, ask only what you need.
 - **The Bash tool waits for the command however long it runs,** as long as the call names no
   `timeout` or names the largest, 2147483647 ms, which the tool hook asks of this command. Where the

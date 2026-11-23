@@ -251,7 +251,7 @@ fn the_rules_only_some_jobs_meet_stand_in_skills_of_their_own_each_saying_when_i
     &skill_flat("bmo-asking"),
     &[
       "`bmo job ask --todo <id>",
-      "A question waits for its answer, however long that takes.",
+      "Each holder has a minute, and nothing lengthens it.",
       "it exits 1, prints nothing on stdout and closes the question unsent",
       "An acknowledgement is written on the question and handed to nobody, so it wakes nobody",
       "`bmo archive doc --title",
