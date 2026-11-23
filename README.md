@@ -1,3 +1,5 @@
+**English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
+
 # bmo-skills
 
 The skills a job worker is given, one folder per skill named by its scope, `bmo` or `ahas`, and its category first, and the placer that
