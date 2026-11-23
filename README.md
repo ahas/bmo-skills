@@ -31,6 +31,7 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `bmo-code-korean-out/` | Taking the Korean out of a bundle of code files |
 | `bmo-docs-conventions/` | Where and how new information is recorded in a repository |
 | `bmo-docs-eli5/` | Explaining a topic in pictures, as simply as it goes |
+| `bmo-open-source-audit/` | What a public repository never carries, and the checks before a commit or a publication |
 | `bmo-song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
 | `bmo-tools-researching-and-benching/` | Researching, benching or tuning something the lab runs |
 | `bmo-ux-wording/` | Where the console's UI wording guide lives, how a term is added and how a use is fixed |
