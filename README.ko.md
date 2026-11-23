@@ -33,7 +33,18 @@ Code의 표준 플러그인 구조로, 또는 스킬 하나를 그 자체 폴더
 | `bmo-code-korean-out/` | 코드 파일 묶음에서 한국어 빼내기 |
 | `bmo-docs-conventions/` | 저장소에 새 정보를 어디에, 어떻게 기록하는지 |
 | `bmo-docs-eli5/` | 주제를 그림으로, 최대한 쉽게 설명하기 |
+| `bmo-docs-plain-writing/` | 사람이 읽는 모든 글을 기계가 쓴 것처럼 읽히지 않게 쓰기 |
 | `bmo-open-source-audit/` | 공개 저장소에 절대 들어가면 안 되는 것과, 커밋·공개 전 검사 |
+| `bmo-research-deep-dives/` | 딥다이브가 질문을 세우고, 만든 쪽 자료부터 읽고, 페이지를 검토받는 방법 |
+| `bmo-research-economy-brief/` | 하루치 경제 뉴스와 수치를 브리프로 쓰기 |
+| `bmo-research-investment/` | 돈을 어디에 둘지 답하기: 전략, 종목, 진입과 청산 |
+| `bmo-research-kinds/` | 모든 검색이 질문 종류별로 확인하고 붙이는 것, 결과의 모양 |
+| `bmo-research-products/` | 살 물건 찾기: 판매처 순서, 제품군 소식, 재고, 진짜 할인, 해외 실구매가 |
+| `bmo-research-references/` | 그림을 위한 참고 이미지를 도시에로 모으기 |
+| `bmo-research-restaurants/` | 먹을 곳이나 배달 음식 추천하기. 묻는 사람의 규칙, 없으면 기본 규칙으로 |
+| `bmo-research-routine/` | 누군가 만든 것을 조사하고, 측정하고, 보고하기 |
+| `bmo-research-security-advisories/` | 취약점이나 보안 권고에 답하기: 노출, 수정, 패치 절차 |
+| `bmo-research-study-material/` | 주제를 가르치는 학습 자료 쓰기 |
 | `bmo-song-cover/` | 노래 벤치로 채팅 에이전트의 목소리로 노래 만들기. project 스킬 |
 | `bmo-tools-researching-and-benching/` | 랩이 돌리는 것을 조사, 벤치마크, 튜닝하기 |
 | `bmo-ux-wording/` | 콘솔 UI 용어 가이드의 위치, 용어 추가 방법, 사용처 고치는 방법 |

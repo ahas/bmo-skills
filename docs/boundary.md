@@ -87,7 +87,9 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 | bmo-job | nothing placed | | its closing policy takes the word `ahas-ux-design-rules` in a report as the mark that a changed screen was swept against the design rules |
 | bmo-song | `bmo-song-cover` | its own checkout's `.claude/skills/bmo-song-cover/`, placed with `place --skill bmo-song-cover` | a song job reads it as the skill its item names; worker launch lines load no checkout's project skills, so it is read as a file at that path |
 | the agency's chat procedures | nothing placed | | the song procedure names `bmo-song-cover` when it files a song item, and the TODO procedure names the builder's three skills |
-| chat sessions and gates | none | | |
+| bmo-research | the research skills its runner names: every `bmo-research-…` skill and `bmo-docs-plain-writing` | its own deploy tree's `prompts/skills/`, each placed with `place --skill <name>` for every name `bmo-research skills` prints, at its deployment | its runner composes a run's instructions of the skills' bodies, and its tool's two skill readers answer one whole |
+| the chat agent's sessions | the research skills | bmo-research's placed copy, through the tool `research/skill` the chat line's `research` namespace carries | the tool's description names each skill with the kind of request it binds; the chat agent reads the one that fits, with the asker's own rule for it, before it answers such a request itself |
+| gates | none | | |
 
 A consumer that keeps a skill's name in its own text or policy relies on that name: renaming or removing
 a skill is a major change (「Versions」).
@@ -113,14 +115,25 @@ brief` stand there as not served yet.
 | `ahas-ux-design-rules` | | | `ahas-ux-nuxt-ui`, `bmo-ux-wording` |
 | `ahas-ux-nuxt-style` | | | `ahas-code-refactoring` |
 | `ahas-ux-nuxt-ui` | the Nuxt UI MCP server's `search-components`, `search-composables` and `search-icons`; the launch line document that says which line carries it; the outside documentation sites it links | outside every unit, handed over by the agency's launch line; bmo-agency; outside every unit | `bmo-warm-prefix` |
-| `bmo-asking` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach`; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-agency | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching` |
+| `bmo-asking` | `job ask`, both to ask and to answer a talk; `archive doc`; `brief-attach` | bmo-job; bmo-artifact; the unit command of that name | `bmo-closing-a-job`, `bmo-docs-conventions`, `bmo-tools-researching-and-benching`, `bmo-research-kinds` |
 | `bmo-beyond-the-checkout` | `job borrow`; the close's `--unfinished`; the checkout's own `CLAUDE.md`; the owner's infrastructure repository | bmo-agency; bmo-job; the checkout; outside every unit | |
 | `bmo-closing-a-job` | `todo` with `--done`, `--stop-here` and `--add`; the close and the suite it runs; the testbed declaration's check steps and the static and change checks that make a Cargo step redundant; the document reload; `STRUCTURE.md` | bmo-job; bmo-job; bmo-testbed; bmo-agency; the umbrella repository | `bmo-beyond-the-checkout`, `bmo-tools-researching-and-benching`, `ahas-ux-design-rules` |
 | `bmo-code-korean-out` | `check korean` and its `--settle`; `check quick`; `cargo clippy` and `cargo fmt`; the language pack and its document | bmo-testbed; bmo-testbed; bmo-testbed; bmo-web | `bmo-closing-a-job` |
 | `bmo-docs-conventions` | the checkout's own `AGENTS.md`, `CHANGELOG.md`, `CLAUDE.md` and `.claude/rules/` | the checkout | `bmo-asking` |
 | `bmo-docs-eli5` | `archive doc --html` | bmo-artifact | |
+| `bmo-docs-plain-writing` | the chat agent's answer-shape rulebook; the send path's dash replacement | bmo-agency; bmo-agency | |
+| `bmo-research-deep-dives` | `web_fetch` | the web tools of the tool host's `web` namespace | `bmo-research-routine`, `bmo-research-kinds` |
+| `bmo-research-economy-brief` | | | `bmo-research-kinds`, `bmo-research-investment`, `bmo-research-routine`, `bmo-docs-plain-writing` |
+| `bmo-research-investment` | the site tools the task's catalogue lists | the web tools of the tool host's `web` namespace | `bmo-research-kinds` |
+| `bmo-research-kinds` | `eye/see`; `web_fetch` and the site tools the task's catalogue lists; the voice that speaks the narration | bmo-eye; the web tools of the tool host's `web` namespace; bmo-voice | `bmo-research-products`, `bmo-research-restaurants`, `bmo-research-investment`, `bmo-research-study-material`, `bmo-research-deep-dives` |
+| `bmo-research-products` | `web_fetch` and the site tools the task's catalogue lists; the chat agent's answer-shape rulebook | the web tools of the tool host's `web` namespace; bmo-agency | `bmo-research-kinds`, `bmo-docs-plain-writing` |
+| `bmo-research-references` | | the drawing service reads the dossier | |
+| `bmo-research-restaurants` | `eye/see`; the asker's own rule, through `research/rulebook` in a run and `research/skill` elsewhere | bmo-eye; bmo-research | `bmo-research-kinds` |
+| `bmo-research-routine` | the brain; the arbiter's card holds; the archive; the voice | bmo-brain; bmo-arbiter; bmo-artifact; bmo-voice | `bmo-research-deep-dives`, `bmo-research-study-material`, `bmo-research-kinds` |
+| `bmo-research-security-advisories` | | | `bmo-research-deep-dives`, `bmo-research-routine`, `bmo-research-kinds` |
+| `bmo-research-study-material` | | | `bmo-research-kinds` |
 | `bmo-song-cover` | the song bench, its commands and its canonical document | bmo-song | `bmo-asking` |
-| `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter; the deep dive rule file the agency deploys | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter; bmo-agency | `bmo-asking` |
+| `bmo-tools-researching-and-benching` | `job ask`; `archive doc`; `brief-attach`; the brain's knowledge chunk on the compute nodes; a card's hold through its node's arbiter | bmo-job; bmo-artifact; the unit command of that name; bmo-brain; bmo-arbiter | `bmo-asking`, `bmo-research-deep-dives`, `bmo-research-routine`, `bmo-research-kinds` |
 | `bmo-ux-wording` | bmo-web's `WORDING.md` at that repository's root and the console's Korean pack, which the guide names | bmo-web | |
 | `bmo-waiting-on-long-work` | `check`; `job close`; a test or build through `bmo-testbed`; the call clock a job's shell calls are held to | bmo-testbed; bmo-job; bmo-testbed; bmo-agency | |
 | `bmo-warm-prefix` | the launch lines and the document reload | bmo-agency | |
@@ -135,17 +148,22 @@ The skills keep these exactly as written, since another unit reads them as writt
   and `[멈춤 요청]`.
 - **The skill name bmo-job's closing policy reads in a report,** `ahas-ux-design-rules`, as 「Who receives
   what」 says.
+- **The names and the sections bmo-research composes a run of:** every research skill's name as its
+  `prompts/runner.toml` names it; each heading it cuts a skill at, `Whether this rulebook applies at all` in
+  every research skill but `bmo-research-kinds` and `bmo-research-references`, `The narration` in
+  `bmo-research-kinds` and `The review` in `bmo-research-deep-dives`; the structure lines a result writes
+  (`ANSWERED:`, `TITLE:`, `RULE:`, `VERDICT:`, `SECTION:`, `UNCONFIRMED:` and the rest), which its document
+  reader matches; and the line `THE ASKER'S OWN RULE:` its skill readers answer a person's own rule under,
+  which `bmo-research-restaurants` names.
 - **The command forms** of every `bmo` command in the table above, as bmo-cli and the unit behind it read
   them. A skill names each by the bare `bmo`, the entry point bmo-cli links onto `PATH`.
 
 ## Paths named as they stand
 
-Three paths stand in the skills literally, so the units behind them keep them reachable:
+Two paths stand in the skills literally, so the units behind them keep them reachable:
 
 - **bmo-web's `WORDING.md` at that repository's root,** the UI wording guide `bmo-ux-wording` sends a job
   to read and to grow; that repository keeps it by hand.
-- **`~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md`,** the deep dive rule file in the
-  agency's own deploy tree.
 - **`~/.local/share/bmo-script/songs/`,** where the song bench keeps each song's work folder, which
   `bmo-song-cover` names.
 

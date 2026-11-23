@@ -13,8 +13,8 @@ use std::sync::LazyLock;
 use support::{ROOT, files_under, shown, skill_names};
 
 /// The hosts that stand as they are, each also allowing its subdomains: the public sites a skill
-/// teaches about and the repository's own domain.
-const ALLOWED_HOSTS: [&str; 17] = [
+/// teaches about or sends a search to, and the repository's own domain.
+const ALLOWED_HOSTS: [&str; 19] = [
   "github.com",
   "skills.sh",
   "claude.ai",
@@ -32,6 +32,8 @@ const ALLOWED_HOSTS: [&str; 17] = [
   "site3.com",
   "slow-site.com",
   "ahas.io",
+  "news.hada.io",
+  "ssg.com",
 ];
 
 /// What may follow an `@`: the repository's own name, the public package scopes, CSS at-rules, Vue's

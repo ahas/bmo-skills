@@ -33,7 +33,18 @@ plugin in Claude Code's standard plugin layout, or one skill into its own folder
 | `bmo-code-korean-out/` | Taking the Korean out of a bundle of code files |
 | `bmo-docs-conventions/` | Where and how new information is recorded in a repository |
 | `bmo-docs-eli5/` | Explaining a topic in pictures, as simply as it goes |
+| `bmo-docs-plain-writing/` | Writing any text a person reads so it does not read as machine-written |
 | `bmo-open-source-audit/` | What a public repository never carries, and the checks before a commit or a publication |
+| `bmo-research-deep-dives/` | How a deep dive frames its question, reads a made thing's maker first and has its page reviewed |
+| `bmo-research-economy-brief/` | Writing a brief of a day's economic news and figures |
+| `bmo-research-investment/` | Answering where to put money: strategies, picks, entry and exit |
+| `bmo-research-kinds/` | What any search checks and attaches by kind of question, and the shape of its result |
+| `bmo-research-products/` | Finding a thing to buy: the seller order, the line's news, stock, real discounts and landed prices |
+| `bmo-research-references/` | Gathering reference pictures for a drawing into a dossier |
+| `bmo-research-restaurants/` | Recommending places to eat or food to order, by the asker's own rule or the default rule |
+| `bmo-research-routine/` | Researching, measuring and reporting on a thing somebody made |
+| `bmo-research-security-advisories/` | Answering a vulnerability or an advisory: exposure, fix and patch steps |
+| `bmo-research-study-material/` | Writing study material that teaches a subject |
 | `bmo-song-cover/` | Making a song in the chat agent's voice with the song bench; a project skill |
 | `bmo-tools-researching-and-benching/` | Researching, benching or tuning something the lab runs |
 | `bmo-ux-wording/` | Where the console's UI wording guide lives, how a term is added and how a use is fixed |

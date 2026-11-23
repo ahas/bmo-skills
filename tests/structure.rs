@@ -9,7 +9,7 @@ use std::path::Path;
 use support::{ROOT, files_under, front_matter, holds, read, skill, skill_names};
 
 /// The categories a skill's name takes after its scope (`docs/format.md`, 「Names」).
-const CATEGORIES: [&str; 5] = ["code", "ux", "docs", "tools", "video"];
+const CATEGORIES: [&str; 6] = ["code", "ux", "docs", "tools", "video", "research"];
 
 #[test]
 fn every_skill_name_opens_with_its_scope_then_its_category() {

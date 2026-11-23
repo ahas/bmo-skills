@@ -81,7 +81,38 @@ from.
 | `.claude/skills/song-cover/SKILL.md` | `bmo-song-cover/SKILL.md` | its bundle, `project`; names replaced (below); its bench and its document are named as the song unit's |
 | `.claude/rules/skills.md` | the 「Writing a skill」 section of `CLAUDE.md`, and `format.md` | the rule's path scoping goes, since every folder here is a skill; names replaced (below) |
 
-## Left to other units
+## Research skills
+
+The research unit's rulebooks, taken from bmo-research's `prompts/rules/` at its commit `485fa9c`, 11
+files, each a skill of the `worker` bundle in the `research` category, or `docs` for plain writing. Each
+`SKILL.md` gains its front matter, and its body is the rulebook's text with what the table and the list
+below change. bmo-research keeps the platform's rule against destroying the system under its own
+`prompts/rules/`, which is no research skill.
+
+| Old path in bmo-research | New place |
+|---|---|
+| `prompts/rules/search-kinds.md` | `bmo-research-kinds/SKILL.md` |
+| `prompts/rules/product-search.md` | `bmo-research-products/SKILL.md` |
+| `prompts/rules/restaurant-search.md` | `bmo-research-restaurants/SKILL.md` |
+| `prompts/rules/investment-search.md` | `bmo-research-investment/SKILL.md` |
+| `prompts/rules/study-material.md` | `bmo-research-study-material/SKILL.md` |
+| `prompts/rules/deep-dives.md` | `bmo-research-deep-dives/SKILL.md` |
+| `prompts/rules/research.md` | `bmo-research-routine/SKILL.md` |
+| `prompts/rules/security-advisory.md` | `bmo-research-security-advisories/SKILL.md` |
+| `prompts/rules/economy-brief.md` | `bmo-research-economy-brief/SKILL.md` |
+| `prompts/rules/references.md` | `bmo-research-references/SKILL.md` |
+| `prompts/rules/plain-writing.md` | `bmo-docs-plain-writing/SKILL.md` |
+
+- **A rulebook named by its file** is named by its skill's name, and the chat agent's answer-shape
+  rulebook, which no skill carries, by its description.
+- **The owner's personal restaurant checklist leaves the skill.** Its five checks, the price limit among
+  them, are his private data, a rule of his own in the research unit's people's rules under the data root
+  (bmo-research's `docs/settings.md`). The skill states the rule's shape instead: a person may keep a
+  restaurant rule of their own, the asker's own stands where they keep one, and the default rule, the
+  four checks without a price limit, stands otherwise.
+- **A preference told as the owner's** is told as no one's: what products are compared on, how a reader
+  judges places by setting like against like, and whom the economy brief is gathered for.
+
 
 The other 9 files of `prompts/agents/worker/` in the source tree are the agent engine's, which already
 holds them: they define the worker and its co-workers, not a skill.
@@ -197,4 +228,4 @@ account-shaped package scope. No IP address, room id or other machine name occur
 - **What stays as written.** The keywords a process matches on: 미결 and the two strand marks that
   open each of its strands, which bmo-job's close reads (`boundary.md`). The 12 paths of the installed
   `bmo` entry point, and the song bench's work folder path, which carry no account or machine name.
-  The deep dive rule path names the agent engine's own deploy tree, where that engine deploys it.
+  The deep dive rule path gives way to the research skills' names (「Research skills」).

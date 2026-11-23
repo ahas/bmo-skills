@@ -27,7 +27,7 @@ readers did.
 | `bmo` | A skill that means something only where this system stands: a procedure of its own jobs, or work carried out through its commands, its archive, its services or its worker's texts |
 | `ahas` | A skill whose rules hold in any harness and any project without this system: the owner's own standards and the outside tools used anywhere. A line naming how this system carries out one of its rules leaves it `ahas` |
 
-- **The categories are these five,** and a skill takes the one its work belongs to:
+- **The categories are these six,** and a skill takes the one its work belongs to:
 
 | Category | Holds |
 |---|---|
@@ -36,11 +36,12 @@ readers did.
 | `docs` | How a document, an explanation or the git record is written |
 | `tools` | Driving an outside program, or a kind of work carried out with one |
 | `video` | How a video is made: the studio it is made with, its shots and timing, the render and the frames checked before it goes out |
+| `research` | How a question is researched and its result written: which kind of request it is, what each kind reads, checks and attaches, and the shape and the words its document takes |
 
 - **An `ahas` skill always takes a category.** A `bmo` skill takes one where its work belongs to one of
   them, and a procedure of this system's own jobs takes none: its words follow the scope, as
   `bmo-closing-a-job`.
-- **A third scope or a fifth category is added here first,** with what it holds, and the structure
+- **A third scope or a seventh category is added here first,** with what it holds, and the structure
   check's lists with it; a skill in a scope and category already here changes nothing outside its
   folder.
 

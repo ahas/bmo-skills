@@ -1,7 +1,7 @@
 ---
 name: "bmo-tools-researching-and-benching"
 bundle: worker
-version: "1.2.0"
+version: "1.2.1"
 description: "How a job researches, benches or tunes something the lab runs — an engine, a model, a library, a card, a setting: the maker's own material first, then what the lab can do with it, then measurement; every option tried until none the job can try is left, with none handed back to the owner and no interim report; one final document in the deployment's 아카이브, reported once its narration is spoken; and the bench lock released before the report. Use before the first step of any item that measures, compares, tunes or researches something to run on the lab's machines."
 ---
 
@@ -24,8 +24,8 @@ flowchart TD
   maker before anyone writing about it: the official documentation, the repository's README, docs
   and code, the release notes and changelog, the model card, the configuration files, the paper in
   full, and the issues and pull requests for what the documentation leaves out. What others write
-  comes after and is told apart as theirs. The deep dive's rules bind how it is read and told,
-  `~/.local/share/bmo-agency/deploy/prompts/rules/deep-dives.md`.
+  comes after and is told apart as theirs. The deep dive's rules bind how it is read and told: the
+  `bmo-research-deep-dives` skill, and the `bmo-research-routine` skill for the report it makes.
 - **2. What our lab can do with it.** The lab's machines and cards are read from the brain's chunk on
   the compute nodes, `knowledge/compute-nodes-gpu.md`, never from memory. GPU work goes on the GPU node
   pool through each node's card arbiter: a card is taken by its hold, never by stopping
@@ -74,7 +74,8 @@ flowchart TD
   skill's rule for a document's pictures says, never left as a list of attached files.
 - **What is still open is only what no job can reach now,** each with what puts it there. A value a
   job could have measured is measured, never marked `추정` or `확인 필요`.
-- **The narration** is written by the rules of a deep dive's, `deep-dives.md` 「The narration」.
+- **The narration** is written by the research skills' rule for it, the `bmo-research-kinds` skill's
+  「The narration」.
 - **It is reported only once its voice is ready.** `bmo brief-attach <document number> <file>` returns once the
   document keeps its sound. Where it ends with a failure, run it again. Only then does the document's address
   go into the report.

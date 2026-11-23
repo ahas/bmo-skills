@@ -32,7 +32,18 @@
 | `bmo-code-korean-out/` | 从一批代码文件中移除韩语 |
 | `bmo-docs-conventions/` | 新信息应在仓库中记录在哪里、如何记录 |
 | `bmo-docs-eli5/` | 用图示把一个主题讲得尽可能简单 |
+| `bmo-docs-plain-writing/` | 写任何给人读的文字，不让它读起来像机器写的 |
 | `bmo-open-source-audit/` | 公开仓库绝不能包含的内容，以及提交或发布前的检查 |
+| `bmo-research-deep-dives/` | 深度调研如何提出问题、先读制作方的资料，以及页面如何被审阅 |
+| `bmo-research-economy-brief/` | 撰写一天的经济新闻与数据简报 |
+| `bmo-research-investment/` | 回答钱该放在哪里：策略、选股、进场与离场 |
+| `bmo-research-kinds/` | 任何搜索按问题类型核查和附上的内容，以及结果的形状 |
+| `bmo-research-products/` | 找要买的东西：卖家顺序、产品线动态、库存、真实折扣与海外到手价 |
+| `bmo-research-references/` | 为一幅画收集参考图片，整理成资料集 |
+| `bmo-research-restaurants/` | 推荐吃饭的地方或外卖，按提问者自己的规则，没有就按默认规则 |
+| `bmo-research-routine/` | 调研、测量并报告别人做出的东西 |
+| `bmo-research-security-advisories/` | 回答漏洞或安全公告：暴露情况、修复与补丁步骤 |
+| `bmo-research-study-material/` | 撰写教授一个主题的学习资料 |
 | `bmo-song-cover/` | 用歌曲工作台以聊天智能体的声音制作歌曲；一个 project 技能 |
 | `bmo-tools-researching-and-benching/` | 调研、基准测试或调优实验室运行的东西 |
 | `bmo-ux-wording/` | 控制台 UI 用语指南放在哪里、如何添加术语以及如何修正用法 |

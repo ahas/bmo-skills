@@ -1,7 +1,7 @@
 ---
 name: "bmo-asking"
 bundle: worker
-version: "2.1.0"
+version: "2.1.1"
 description: "How a job asks: anything it cannot settle or do itself goes to its supervisor with bmo job ask — a decision that is not the job's, a command on a node it cannot reach, a deployment it waits on — and the supervisor settles it or puts it to the owner; and a document for the owner to read or approve filed in the deployment's 아카이브. Use before asking anything and before handing the owner any document."
 ---
 
@@ -91,8 +91,8 @@ description: "How a job asks: anything it cannot settle or do itself goes to its
   - With no `--chat` it is his own.
   - `--replace <id>` rewrites it under its number as the design moves.
   - A long reading he studies — how something is built, a deep investigation — also takes a narration:
-    `bmo brief-attach <document number> <file>` with a script for the ear by the rules of a deep dive's, in
-    `~/.local/share/bmo-research/deploy/prompts/rules/deep-dives.md` 「The narration」, spoken in the supervisor's
+    `bmo brief-attach <document number> <file>` with a script for the ear by the research skills' rule for
+    a narration, the `bmo-research-kinds` skill's 「The narration」, spoken in the supervisor's
     voice and kept at the document's head as its 들으며 보세요 band.
   - The narration file is the written words, kept as the narration's transcript: names, acronyms and
     figures stand as you would write them. The voice unit derives the spoken words from it, the same

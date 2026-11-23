@@ -34,7 +34,18 @@ front matter にどのバンドルに属するかを記します。バンドル�
 | `bmo-code-korean-out/` | コードファイル一式から韓国語を取り除く |
 | `bmo-docs-conventions/` | リポジトリに新しい情報をどこに、どう記録するか |
 | `bmo-docs-eli5/` | トピックを図で、できるかぎり簡単に説明する |
+| `bmo-docs-plain-writing/` | 人が読むあらゆる文章を、機械が書いたように読まれないように書く |
 | `bmo-open-source-audit/` | 公開リポジトリに決して含めてはならないものと、コミット・公開前のチェック |
+| `bmo-research-deep-dives/` | ディープダイブが問いを立て、作り手の資料を先に読み、ページのレビューを受ける方法 |
+| `bmo-research-economy-brief/` | 一日の経済ニュースと数値のブリーフを書く |
+| `bmo-research-investment/` | お金をどこに置くかに答える：戦略、銘柄、エントリーとエグジット |
+| `bmo-research-kinds/` | あらゆる検索が質問の種類ごとに確かめ添えるものと、結果の形 |
+| `bmo-research-products/` | 買う物を探す：販売先の順序、製品ラインのニュース、在庫、本当の割引、海外の実質価格 |
+| `bmo-research-references/` | 描画のための参考画像を資料集にまとめる |
+| `bmo-research-restaurants/` | 食べる場所や出前を勧める。尋ねた人自身のルール、なければ既定のルールで |
+| `bmo-research-routine/` | 誰かが作ったものを調べ、測り、報告する |
+| `bmo-research-security-advisories/` | 脆弱性やセキュリティ勧告に答える：影響、修正、パッチ手順 |
+| `bmo-research-study-material/` | 主題を教える学習資料を書く |
 | `bmo-song-cover/` | ソングベンチでチャットエージェントの声の歌を作る。project スキル |
 | `bmo-tools-researching-and-benching/` | ラボで動かしているものの調査、ベンチマーク、チューニング |
 | `bmo-ux-wording/` | コンソールの UI 用語ガイドの置き場所、用語の追加方法、使用箇所の直し方 |
