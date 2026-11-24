@@ -1,7 +1,7 @@
 ---
 name: "bmo-open-source-audit"
 bundle: coder
-version: "1.0.0"
+version: "1.1.0"
 description: "What a public BMO repository must never carry and how to check before a commit, a push or a repository going public: secrets, personal data, internal addresses, the names of the owner's other projects and machines, and any runtime default that would send an outside user's machine to the owner's own hosts, read from a private list kept outside every repository. Use before committing in any public BMO repository, before changing a repository's visibility, when writing tests, fixtures, docs or examples that need a sample value, when adding a default address, an installer, an updater or a download, and when a scan finds a hit."
 ---
 
@@ -51,12 +51,19 @@ tests, fixtures, docs, commit messages, branch names or file names.
    Every hit is read: a runtime default as above is a finding and is fixed before the repository is published or
    pushed; the owner's host named in prose, in a deployment document of his own or in history is the names rule's
    business, not this one's.
-2. **Before a repository goes public, and after any doubt,** scan its whole history:
-   - secrets: `gitleaks git --redact <repo>`; a finding is checked against the real secret files without printing
-     it, and a test stand-in is no finding;
+2. **Before a repository goes public, and after any doubt,** scan what has not been scanned since the last
+   audit: the commits since the commit the last audit of that repository recorded in
+   `$BMO_DATA_DIR/oss-audit/<repository>` (one line, the commit it reached), and the repository's root files
+   (README, LICENSE, its settings files) as they stand. A history once audited and cleaned is not read again;
+   the whole history is scanned only where no audit is recorded, or where a doubt names it. Each scan:
+   - secrets: `gitleaks git --redact <repo>`, with `--log-opts="<recorded>..HEAD --all"` where an audit is
+     recorded; a finding is checked against the real secret files without printing it, and a test stand-in is no
+     finding;
    - patterns: the platform's privacy scan in the umbrella repository's `tools/privacy-scan` folder, run on the
      checkout (it prints counts only);
-   - names: `git log --all -p -U0 | grep '^+' | grep -i -E -f <the list>`.
+   - names: `git log --all -p -U0 <recorded>..` (the whole log where none is recorded) `| grep '^+' | grep -i -E
+     -f <the list>`.
+   An audit that ends clean writes the commit it reached into that file, so the next one starts there.
 3. **A hit in the tree** is replaced in a commit of its own with the list's neutral word or a documentation-range
    sample, and the check run again. **A hit in the history** of a repository that is or will be public needs the
    history rewritten: that is the owner's step (a forced push rewrites a repository's history); prepare the
