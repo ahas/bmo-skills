@@ -108,6 +108,6 @@ Every bundle but `project` is placed as the `bmo-worker` plugin, so its skills a
 ## The manifest
 
 `.claude-plugin/plugin.json` is the bmo-worker plugin's manifest, in Claude Code's plugin manifest
-format: its `name`, a `description`, a `version` equal to the repository's `VERSION`, and the
-repository's licence, `MIT`. It names no skill folder: the placer writes the bundle in Claude Code's
+format: its `name`, a `description`, a placeholder `version` that never moves, and the repository's
+licence, `MIT`. It names no skill folder: the placer writes the bundle in Claude Code's
 standard plugin layout, where the skills folder is found by default (`boundary.md`).

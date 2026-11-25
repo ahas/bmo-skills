@@ -77,7 +77,7 @@ from.
 
 | Old path | New place | What changes |
 |---|---|---|
-| `prompts/agents/worker/plugin/.claude-plugin/plugin.json` | `.claude-plugin/plugin.json` | the description names this repository instead of an agent; the version is the repository's (`boundary.md`) |
+| `prompts/agents/worker/plugin/.claude-plugin/plugin.json` | `.claude-plugin/plugin.json` | the description names this repository instead of an agent; its version is a placeholder (`boundary.md`, 「Versions」) |
 | `.claude/skills/song-cover/SKILL.md` | the song unit's repository, `skills/bmo-song-cover/SKILL.md`; none here | its bundle, `project`; names replaced (below); its bench and its document are named as the song unit's |
 | `.claude/rules/skills.md` | the 「Writing a skill」 section of `CLAUDE.md`, and `format.md` | the rule's path scoping goes, since every folder here is a skill; names replaced (below) |
 
@@ -169,7 +169,7 @@ table. A test name holding a Korean word takes the English for it as its functio
 | a skill copied from elsewhere keeps its origin and licence beside it | `bmo-docs-eli5` | |
 
 Beside them, the repository's own checks hold the rest of `format.md`: every name's scope and category, every
-skill's description, the manifest's version against `VERSION`, every file of a skill named by its
+skill's description, the manifest's name, every file of a skill named by its
 `SKILL.md` and every file it names there, every skill a skill names, and no personal value by its shape.
 
 ### Left to the units that own the mechanism

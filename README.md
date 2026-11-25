@@ -67,9 +67,9 @@ At the root stand the Cargo manifest, the version, `testbed.toml` with its Korea
 
 ## Version
 
-- **One version for the repository,** in semver. `VERSION` holds it, and the package's version and the
-  manifest's equal it.
-- **How a change moves it** is stated in `docs/boundary.md`, 「Versions」.
+- **The version is the set's,** read off the git tag `v<version>` a release puts on the commit; no file in the
+  repository holds it, and the package's and the manifest's versions are placeholders that never move.
+- **How a change counts toward the next release** is stated in `docs/boundary.md`, 「Versions」.
 
 ## Commands
 

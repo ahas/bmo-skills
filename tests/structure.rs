@@ -40,11 +40,6 @@ fn and_they_are_carried_by_a_plugin_the_launch_line_can_name() {
   let manifest: serde_json::Value =
     serde_json::from_str(&read(".claude-plugin/plugin.json")).expect("the manifest is JSON");
   assert_eq!(manifest["name"], "bmo-worker");
-  assert_eq!(
-    manifest["version"],
-    read("VERSION").trim(),
-    "the manifest's version is the repository's"
-  );
 }
 
 #[test]

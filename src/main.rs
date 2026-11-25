@@ -1,7 +1,7 @@
 //! `bmo-skills`: lists the skills of a checkout of this repository and places a bundle or one skill into
 //! a consumer's tree (`docs/boundary.md`).
 
-use bmo_skills::{Bundle, Fault, place_bundle, place_skill, read_skills};
+use bmo_skills::{Bundle, Fault, VERSION, place_bundle, place_skill, read_skills};
 use clap::{Args, Parser, Subcommand, ValueEnum};
 use std::path::PathBuf;
 use std::process::ExitCode;
@@ -9,7 +9,7 @@ use std::process::ExitCode;
 #[derive(Parser)]
 #[command(
   name = "bmo-skills",
-  version,
+  version = VERSION,
   about = "List the skills and place a bundle or a skill into a consumer's tree."
 )]
 struct Cli {

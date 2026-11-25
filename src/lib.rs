@@ -10,6 +10,14 @@ pub use skill::{Bundle, Skill, read_skills};
 use std::fmt;
 use std::path::Path;
 
+/// The version `bmo-skills --version` prints: the set's version the build was made at, which the testbed
+/// hands the build as `BMO_VERSION`, else the manifest's placeholder (bmo-chat's `docs/conventions.md`,
+/// 「Versions」).
+pub const VERSION: &str = match option_env!("BMO_VERSION") {
+  Some(version) => version,
+  None => env!("CARGO_PKG_VERSION"),
+};
+
 /// Why a verb did not do what it was asked. Each kind answers with its own exit code.
 #[derive(Debug)]
 pub enum Fault {

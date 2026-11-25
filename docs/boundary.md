@@ -72,7 +72,7 @@ bmo-skills place --skill <name> --into <dir> [--from <root>]
 
 - **The plugin is named `bmo-worker`,** and every skill of any placed bundle is called as
   `bmo-worker:<name>`.
-- **Its version is the repository's `VERSION`.**
+- **Its version is a placeholder that never moves;** the set's version is the release tag (「Versions」).
 - **Its licence is `MIT`,** the repository's, stated in the manifest beside the root `LICENSE`.
 - **It names no skill folder,** since a placement puts the skills in the standard layout's own folder.
 
@@ -164,7 +164,9 @@ repository keeps it by hand.
 
 ## Versions
 
-`VERSION` holds the repository's version in semantic versioning, and the manifest carries the same.
+The version is the set's, the git tag `v<version>` a release puts on the commit (bmo-chat's
+`docs/conventions.md`, 「Versions」); no file here holds it, and the package's and the manifest's versions are
+placeholders that never move. A change counts toward the next release as follows:
 
 - **Major:** a skill renamed or removed, a skill moved to another bundle, a word another unit matches
   changed, or a change to the `bmo-skills` grammar, its exit codes or the fields of its JSON.
