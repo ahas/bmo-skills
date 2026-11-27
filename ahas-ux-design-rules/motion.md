@@ -39,9 +39,13 @@ every screen answers to and the sweep.
   2. An item that comes unfolds its height from nothing where it lands, and one that goes folds its
      height to nothing where it stood, the items around it closing up as it does. Its content is
      laid out at its full size throughout and only clipped.
-  3. Every item moves at once and for the same length: no item waits for the one before it.
-  4. Its items are keyed by their own lasting id, never by their position, or the wrong item moves.
-  5. This is one shared list component, not a transition written per list.
+  3. A list filled or lengthened is no list added to: the first page read into an empty list and the
+     next page an endless scroll or a 더 보기 puts at its end stand where they land at once, filling
+     the skeleton's place, and nothing moves. Only an item that comes before or between items already
+     standing unfolds.
+  4. Every item moves at once and for the same length: no item waits for the one before it.
+  5. Its items are keyed by their own lasting id, never by their position, or the wrong item moves.
+  6. This is one shared list component, not a transition written per list.
 - Switching tabs that show one list in different ways moves the list as one panel sideways.
   1. The new panel comes in from the side its tab stands on in the tab order, and the old one leaves
      to the other side, both together: a tab to the right comes in from the right.
