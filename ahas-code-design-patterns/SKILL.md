@@ -97,6 +97,32 @@ references. Open only the file for the family being judged.
   Event Sourcing and DDD tactics; the functional patterns; and the shared "do not use" list every
   entry is measured against.
 
+## A change that meets running work
+
+Every change to a setting or a state the system acts on — a model, an agent, a node, a provider, a role, a label,
+a limit, a deployment, a queue's state — meets the work already running under it. Decide, for each kind of change,
+exactly one of three branches, and write it in the document that states the change:
+
+- **Run to the end, the new setting from the next run.** The default: what runs finishes as it started, and
+  the change takes the next run.
+- **Graceful resume.** Only where the running work cannot go on — the node under it died, its session is
+  replaced, the service restarts for a deployment — and then by a checkpoint or a handover the next run takes up.
+- **Stop.** Only where somebody said in so many words to stop it, or where going on is unsafe.
+
+A change never ends running work as a side effect: a limit lowered under running jobs leaves them running and
+holds the jobs past the new limit in the queue, rather than letting them fail on the next request. The verb's
+answer and the notice it raises say which branch the change took.
+
+## Verbs and notices
+
+- **A noun the system keeps has its whole set of verbs:** create, list, read, change by `PATCH` naming only the
+  fields it changes, and remove. A verb the caller may not use is refused with a permission refusal whose
+  sentence says who may and what to do next, never left out or answered as not found.
+- **A noun whose rows are a record is closed or archived,** never deleted: its removal verb ends it and keeps it.
+- **A notice carries the fact and the next step it calls for:** the data of what changed, then one line of what
+  its reader does now, computed where the system can compute it ("launch #12 on coder-01"), and the standing its
+  reader needs to judge it.
+
 ## What this pass hands on
 
 - A list of sites, each with its axis of variation, the shape found, the verdict and, where the

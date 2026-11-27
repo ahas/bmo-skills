@@ -53,6 +53,12 @@ agent memory stays minimal** — memory is local, not shared across teammates or
 - Asked to "remember" something, first find its place in the table above: usually a repository
   document, memory last.
 
+## What an agent is given, it is handed
+
+- **No document is written for an agent to find and read by its own choice.** What an agent must know reaches it
+  through its prompt, a memory injected into its turn, or its brain, where it is handed to it when it applies; a
+  document it might or might not open is no way to tell it anything.
+
 ## Language and shape
 
 These bind every document written into the repository — `docs/`, the README, design notes and
