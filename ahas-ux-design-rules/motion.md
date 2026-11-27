@@ -6,8 +6,9 @@ every screen answers to and the sweep.
 ## Motion
 
 - A fade is for a thing that comes and goes on its own over the screen — a toast, a notice's
-  content, a popover, a menu, a modal, a tooltip — and for nothing else.
-  1. An item of a list never fades in or out, whatever brought it or took it away.
+  content, a popover, a menu, a modal, a tooltip — and for the first page read into an empty list, and
+  for nothing else.
+  1. Any other item of a list never fades in or out, whatever brought it or took it away.
   2. The content of a page, a panel or a tab never fades as it is replaced.
 - One screen moves along one axis at a time.
   1. A fade and a movement — a slide, a scroll, items changing places — never run on the same
@@ -35,15 +36,20 @@ every screen answers to and the sweep.
      the movement.
 - A list whose items come, go or change places while it is read — filtered, searched, added to,
   taken from, reordered — must show it by position alone.
-  1. The items that stay slide from where they stood to their new places rather than jumping.
+  1. The items that stay slide from where they stood in the list to their new places in it rather than
+     jumping. Where they stand is read within the list's own box: a list the page moves as a whole, a
+     head or a skeleton above it changing size, slides none of its items.
   2. An item that comes unfolds its height from nothing where it lands, and one that goes folds its
      height to nothing where it stood, the items around it closing up as it does. Its content is
      laid out at its full size throughout and only clipped.
-  3. A list filled or lengthened is no list added to: the first page read into an empty list and the
-     next page an endless scroll or a 더 보기 puts at its end stand where they land at once, filling
-     the skeleton's place, and nothing moves. Only an item that comes before or between items already
-     standing unfolds.
-  4. Every item moves at once and for the same length: no item waits for the one before it.
+  3. A list filled or lengthened is no list added to: the first page read into an empty list, or read
+     afresh in place of everything it held, and the next page an endless scroll or a 더 보기 puts at
+     its end stand where they land, filling the skeleton's place, and nothing moves or unfolds. The
+     first page fades in where it stands, its top item first and each next one a short step after the
+     one before, the steps stopping after a few so a long page is not waited on; the next page stands
+     at once. Only an item that comes before or between items already standing unfolds.
+  4. Every item that moves moves at once and for the same length: no sliding or unfolding item waits for
+     the one before it. The first page's fade is the one stagger.
   5. Its items are keyed by their own lasting id, never by their position, or the wrong item moves.
   6. This is one shared list component, not a transition written per list.
 - Switching tabs that show one list in different ways moves the list as one panel sideways.
