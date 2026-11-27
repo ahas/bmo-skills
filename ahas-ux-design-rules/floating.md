@@ -18,6 +18,15 @@ every screen answers to and the sweep.
 - A modal's layout must be designed for the modal. A list/detail layout made for a narrow side
   panel must not be moved into a wide modal as is; the extra width must be used for multiple columns or
   tabs, and a desktop modal must be wide enough for its content.
+- Everything floating follows one order of layers, kept in one table every kind takes its place from;
+  no screen picks a number of its own.
+  1. From the bottom: the page; the side panel; a modal's shade; the modal (a later modal over an earlier
+     one); a picture-in-picture player while it plays; what drops from a control (menus, lists,
+     popovers, tooltips); notices.
+  2. A modal's shade covers the side panel: nothing of the page or the panel is pressed while a modal
+     is open.
+  3. A playing picture-in-picture player stands over a modal, so what was started from the modal is
+     seen and stopped there.
 - Everything floating over the screen must keep its content until it is off the screen.
   1. Closing is animated and watched throughout: what it draws must not be emptied on the closing
      press, or a blank frame slides away and the reader sees what they were reading vanish first.
