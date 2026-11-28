@@ -145,7 +145,18 @@ every screen answers to and the sweep.
 
 ## Reordering and choosing
 
-- A reorderable list must have a drag handle on the left of each item.
+- A reorderable list must have a drag handle on the left of each item, and is the layer's sortable list, every
+  reorderable list the same:
+  1. Picked up by its handle — a mouse or a pen once the press has travelled a few pixels, a finger by a long
+     press — the item lifts with a shadow and follows the pointer, its place left as an empty gap of its height.
+  2. The items the pointer passes slide all at once, the same length, so the gap stands where the item would
+     land; nothing jumps.
+  3. Let go over the list, it settles into the gap and the order is saved; let go outside the list, or Escape,
+     and it flies back to its place and nothing changes.
+  4. Carried to the edge of the box that scrolls it, the list scrolls along.
+  5. The keyboard moves it too: Space or Enter picks it up, the arrows move it a place at a time, Space or Enter
+     sets it down, Escape puts it back.
+  6. It is worked by hand at a phone's width and on a wide screen, and a browser test keeps that working.
 - A list that can choose more than one item must let a drag choose a run of them.
   1. The drag chooses every item it passes, from where it began to where the pointer stands, and
      gives them up again when it comes back.
